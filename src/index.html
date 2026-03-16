@@ -20,15 +20,15 @@
     <nav><!--mettre burger menu--></nav>
   </header>
   <main>
-    <section>
+    <section class="choosesection">
       <div class="bigknob">
         <div class="bigknob__center">
           <div class="bigknob__light"></div>
         </div>
       </div>
       <div class="songInfos">
-        <div class="songInfos__topHits">
-          <select name="songs" id="songs-select"><!--En javascript il faudra remplir les balises options-->
+        <div class="songinfos__topHits">
+          <select name="songs" id="songs-select" class="songinfos__selector"><!--En javascript il faudra remplir les balises      options-->
             <option value="">Choose a song</option>
             <option value=""></option>
             <option value=""></option>
@@ -38,27 +38,27 @@
             <option value=""></option>
           </select>
         </div>
-        <div class="songInfos__lyrics">
+        <div class="songinfos__lyrics">
           <h2>Paroles</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum officia ducimus vero alias delectus reprehenderit nemo animi cumque omnis hic, dignissimos ratione veniam ullam velit quisquam ipsa, neque laborum cum!</p>
+          <p class="songinfos__paragraphe">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum officia ducimus vero alias delectus reprehenderit nemo animi cumque omnis hic, dignissimos ratione veniam ullam velit quisquam ipsa, neque laborum cum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus explicabo nesciunt voluptatem, facilis illum hic eius, blanditiis reiciendis ratione accusamus consequatur deserunt deleniti totam, cupiditate non omnis dolor veritatis! Temporibus! uisquam ipsa, neque laborum cum!</p>
         </div>
       </div>
     </section>
 
-    <section class="test">
+    <section class="topmots">
       <h2>Top des mots dans la chanson</h2>
-      <div><!--Mettre le graphique ici--></div>
+      <div class="topmots__graph"><!--Mettre le graphique ici. Pour l'instant c'est un rectangle gris, il faut changer--></div>
     </section>
 
-    <section>
+    <section class="topallwords">
       <div>
         <h2>Top des mots <span>1975<!--Changer en javascript--></span>
         </h2>
-        <div>Graphique?</div>
+        <div class="topallwords__graph">Graphique?</div>
       </div>
       <div>
         <h2>Sur 55 ans</h2>
-        <div>Graphique? Liste? Mots de la date choisie en évidence => A moitié statique</div>
+        <div class="topallwords__graph">Graphique? Liste? Mots de la date choisie en évidence => A moitié statique</div>
       </div>
     </section>
   </main>
