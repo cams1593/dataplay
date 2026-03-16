@@ -9,6 +9,24 @@ body{
   flex-direction: column;
   align-items: center;
 }
+.btn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btn__dates{
+  display: flex;
+  gap: 92px;
+}
+.btn__dates p{
+  margin: 0;
+}
+.inputnumber{
+  border-radius: 8px;
+  border: 2px solid #1e1e1e;
+  background-color: #afafaf;
+  color: white;
+}
 .bigknob{
   background: linear-gradient(0deg,rgba(41, 40, 40, 1) 0%, rgba(24, 24, 24, 1) 100%);
   border-radius: 50%;
