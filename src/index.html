@@ -14,50 +14,59 @@
   <script src="scripts/app.js" defer></script>
 </head>
 <body>
-<header>
-  <h1>Word <span>Finder</span></h1>
-  <a>Le Projet</a>
-</header>
-<main>
-  <section class="selection">
-    <div class="année"> 
-      <div class="bigknob">
-    <div class="bigknob__center">
-      <div class="bigknob__light"></div>
-    </div>
-    <h3>1970</h3>
-    <h3>2025</h3>
-  </div> 
-    </div>
-    <div class="TopChansons">
-      <h2>Top Hits</h2>
-    </div>
-    <div class="paroles__container">
-      <h2>Paroles</h2>
-      <div class="paroles">
-        <p></p>
-      </div>
-    </div>  
-  </section>
-  <section class="TopMotsChanson">
-    <h2>Top des mots dans la chanson</h2>
-    <div class="TopMotsChanson__container">
-    
-    </div>
-  </section>
-  <section class="TopMotsAnnees">
-    <h2>Top des mots en <span class="année"></span></h2>
-    <div class="TopMotsAnnee__container">
-    </div>
-    <h2 class="">Sur 55ans</h2>
-    <div class="TopMots55ans__container">
-    </div>
-  </section>
-  <footer>
-    <a href="#">Crédits</a>
-    <small>© 2026—Interface Design & Development</small>
-  </footer>
 
-</main>
+  <header>
+    <h1>Word Finder</h1>
+    <nav><!--mettre burger menu--></nav>
+  </header>
+  <main>
+    <section>
+      <div class="bigknob">
+        <div class="bigknob__center">
+          <div class="bigknob__light"></div>
+        </div>
+      </div>
+      <div class="songInfos">
+        <div class="songInfos__topHits">
+          <select name="songs" id="songs-select"><!--En javascript il faudra remplir les balises options-->
+            <option value="">Choose a song</option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+          </select>
+        </div>
+        <div class="songInfos__lyrics">
+          <h2>Paroles</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum officia ducimus vero alias delectus reprehenderit nemo animi cumque omnis hic, dignissimos ratione veniam ullam velit quisquam ipsa, neque laborum cum!</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="test">
+      <h2>Top des mots dans la chanson</h2>
+      <div><!--Mettre le graphique ici--></div>
+    </section>
+
+    <section>
+      <div>
+        <h2>Top des mots <span>1975<!--Changer en javascript--></span>
+        </h2>
+        <div>Graphique?</div>
+      </div>
+      <div>
+        <h2>Sur 55 ans</h2>
+        <div>Graphique? Liste? Mots de la date choisie en évidence => A moitié statique</div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <ul>
+      <li>Crédits</li>
+      <li> © 2025—Interface Design & Development</li>
+    </ul>
+  </footer>
 </body>
 </html>
