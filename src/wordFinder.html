@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Word Finder</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="styles/app.css">
+
+  <script src="scripts/app.js" defer></script>
+  <link rel="stylesheet" href="https://use.typekit.net/alo5tfq.css">
+</head>
+<body>
+<header id="top">
+  <h1 class ="title">Word <span class="title__span">Finder</span></h1>
+  <a>Le Projet</a>
+</header>
+<main>
+      <select class="choseword">
+    <option value="default" disabled selected>Choose a word</option>
+      <option value="love">Love</option>
+      <option value="get">Get</option>
+      <option value="go">Go</option>
+    </select>
+    <p>Résultat de la recherche: <span id="result" class="result">Love</span></p>
+  <section class="wordinsong">
+    <h2>Chansons avec le mot <span id="result" class="result">Love</span> dedans</h2>
+        <div class="wordinsong__container">
+            <p>XX chansons</p>
+            <ul class="wordinsong__list">
+                <li><p>Chanson 1</p></li>
+                <li><p>Chanson 2</p></li>
+                <li><p>Chanson 3</p></li>
+                <li><p>Chanson 4</p></li>
+                <li><p>Chanson 5</p></li>
+                <li><p>Chanson 6</p></li>
+                <li><p>Chanson 7</p></li>
+            </ul>
+        </div>
+  </section>
+  <section class="graphicword">
+    <h2>Nombre de fois que le mot <span id="result" class="result">Love</span> apparaît dans le temps</h2>
+    <div class="graphicword__container">
+       
+    </div>
+  </section>
+  <section class="topwordallyears">
+    <h2 class="titletop55ans">top sur 55 ans</h2>
+    <div class="topwordallyears__container">
+      <ul class="topwordallyears__list">
+        <li class="topword__el"><p class="word">oh</p><p class="number">413</p></li>
+        <li class="topword__el"><p class="word">love</p><p class="number">356</p></li>
+        <li class="topword__el"><p class="word">yeah</p><p class="number">303</p></li>
+        <li class="topword__el"><p class="word">know</p><p class="number">256</p></li>
+        <li class="topword__el"><p class="word">like</p><p class="number">207</p></li>
+        <li class="topword__el"><p class="word">baby</p><p class="number">190</p></li>
+        <li class="topword__el"><p class="word">get</p><p class="number">184</p></li>
+        <li class="topword__el"><p class="word">let</p><p class="number">173</p></li>
+        <li class="topword__el"><p class="word">say</p><p class="number">160</p></li> 
+        <li class="topword__el"><p class="word">cause</p><p class="number">158</p></li>
+    </ul>
+    </div>
+  </section>
+  <section class="btn">
+  <a class="btn__acceuil" href="index.html">Voir le top des musiques</a>
+  <a href="#top" class="btn__top"><svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m18.787 9.473s-4.505-4.502-6.259-6.255c-.147-.146-.339-.22-.53-.22-.192 0-.384.074-.531.22-1.753 1.753-6.256 6.252-6.256 6.252-.147.147-.219.339-.217.532.001.19.075.38.221.525.292.293.766.295 1.056.004l4.977-4.976v14.692c0 .414.336.75.75.75.413 0 .75-.336.75-.75v-14.692l4.978 4.978c.289.29.762.287 1.055-.006.145-.145.219-.335.221-.525.002-.192-.07-.384-.215-.529z" fill-rule="nonzero"/></svg></a>
+  </section>
+</main>
+    <footer>
+        <a href="#">Crédits</a>
+        <small>© 2026—Interface Design & Development</small>
+    </footer>
+</body>
+</html>
