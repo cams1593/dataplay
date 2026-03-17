@@ -1,3 +1,17 @@
 @import 'utils/variables';
 @import 'components/type';
 @import 'components/mixins';
+@import 'components/main';
+@import url("https://use.typekit.net/alo5tfq.css");
+@font-face {
+  font-family: 'Excon-Regular';
+  src: url('../fonts/Excon-Regular.woff2') format('woff2'),
+       url('../fonts/Excon-Regular.woff') format('woff'),
+       url('../fonts/Excon-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+
+
