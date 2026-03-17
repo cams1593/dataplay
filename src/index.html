@@ -6,8 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="description" content="">
-  <!-- Meta Partage -->
-  <!-- Favicon -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="styles/app.css">
@@ -15,7 +14,82 @@
   <script src="scripts/app.js" defer></script>
 </head>
 <body>
-  <p>ceci est un test je modifie le contenu</p>
 
+  <header>
+    <h1>Word Finder</h1>
+    <nav><!--mettre burger menu--></nav>
+  </header>
+  <main>
+    <section class="choosesection">
+      <div class="btn">
+        <div class="bigknob">
+          <div class="bigknob__center">
+            <div class="bigknob__light"></div>
+          </div>
+        </div>
+        <div class="btn__dates">
+            <p>1970</p>
+            <p>2025</p>
+          </div>
+          <input type="number" class="inputnumber" placeholder="Choose a year">
+      </div>
+      <div class="songinfos">
+        <div class="songinfos__tophits">
+          <select name="songs" id="songs-select" class="songinfos__selector"><!--En javascript il faudra remplir les balises      options-->
+            <option value="">Choose a song</option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+          </select>
+          <div class="songinfos__hitssection">
+            <h2>Top Hits</h2>
+            <ul>
+              <li>#1 Love Will Keep Us Together</li>
+              <li>#2 Love Will Keep Us Together</li>
+              <li>#3 Love Will Keep Us Together</li>
+              <li>#4 Love Will Keep Us Together</li>
+              <li>#5 Love Will Keep Us Together</li>
+              <li>#6 Love Will Keep Us Together</li>
+              <li>#7 Love Will Keep Us Together</li>
+              <li>#8 Love Will Keep Us Together</li>
+              <li>#9 Love Will Keep Us Together</li>
+              <li>#10</li>
+            </ul>
+            
+          </div>
+        </div>
+        <div class="songinfos__lyrics">
+          <h2>Paroles</h2>
+          <p class="songinfos__paragraphe">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum officia ducimus vero alias delectus reprehenderit nemo animi cumque omnis hic, dignissimos ratione veniam ullam velit quisquam ipsa, neque laborum cum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus explicabo nesciunt voluptatem, facilis illum hic eius, blanditiis reiciendis ratione accusamus consequatur deserunt deleniti totam, cupiditate non omnis dolor veritatis! Temporibus! uisquam ipsa, neque laborum cum!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, quod. Ea optio laborum quis ad, debitis incidunt, repellendus minus quaerat illo beatae vitae repudiandae dolorem. Aliquid odit vero iure dolores. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit obcaecati omnis repellendus provident nobis inventore ad labore in deleniti, cupiditate aspernatur eligendi totam animi consequuntur repudiandae repellat! Numquam, dolor saepe? eiciendis ratione accusamus consequatur deserunt deleniti totam, cupiditate non omnis dolor veritatis! Temporibus! uisquam ipsa, neque laborum cum!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, quod. Ea optio laborum quis ad, debitis incidunt, repellendus minus quaerat illo beatae vitae repudiandae dolorem. Aliquid odit vero iure dolores. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit obcaecati omnis repellendus provident nobis inventore ad labore in deleniti, cupiditate aspernatur eligendi totam animi consequuntur repudiandae repellat! Numquam, dolor saepe?</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="topmots">
+      <h2>Top des mots dans la chanson</h2>
+      <div class="topmots__graph"><!--Mettre le graphique ici. Pour l'instant c'est un rectangle gris, il faut changer--></div>
+    </section>
+
+    <section class="topallwords">
+      <div>
+        <h2>Top des mots <span>1975<!--Changer en javascript--></span>
+        </h2>
+        <div class="topallwords__graph">Graphique?</div>
+      </div>
+      <div>
+        <h2>Sur 55 ans</h2>
+        <div class="topallwords__graph">Graphique? Liste? Mots de la date choisie en évidence => A moitié statique</div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <ul>
+      <li>Crédits</li>
+      <li> © 2025—Interface Design & Development</li>
+    </ul>
+  </footer>
 </body>
 </html>

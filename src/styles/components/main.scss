@@ -1,0 +1,124 @@
+body{
+    background-color: $c-bg;
+    color: $c-text;
+    font-family: $font-Excon-Regular;
+    line-height: 170%;
+}
+.title{
+   font-family: $font-strelka;
+   $size: $size-title;
+   text-align: center;
+   line-height: 90%;
+   span{
+    font-family: $font-ManifoldExtdCF;
+    display: block;
+    font-size: $size-spantitle;
+    font-style: italic;
+    font-weight: 300;
+    
+   }
+}
+section{
+    background-color: $c-bg-section;
+    height: fit-content;
+    padding:35px 20px;
+    margin: 30px 2%;
+    border-radius: 8px;
+    width: 90%;
+}
+.choseword{
+    background-color: $c-bg;
+    font-family: $font-clother;
+    color: $c-text;
+    border: 2px solid $c-text;
+    border-radius: 8px;
+    padding: 5px 30px 5px 5px;
+    margin: 10px auto;
+    background-image: url('../assets/images/arrow-down.svg');
+    background-repeat: no-repeat;
+    background-position: right 5% center;
+    appearance: none;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.result{
+    color: $c-result;
+    font-size: $size-result;
+}
+.wordinsong__list{
+    list-style: none;
+}
+h2{
+    font-size: $size-titlesection;
+    border-bottom: 2px solid $c-text;
+    padding-bottom: 5px;
+    line-height: 130%;
+}
+
+.topwordallyears__list{
+    list-style: none;
+    padding: 0 30px;
+    
+}
+.topword__el{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+.titletop55{
+    text-align: center;
+    color: $c-titletop;
+    font-family: $font-ManifoldExtdCF
+}
+.btn__acceuil{
+    background-color: $c-bg-section;
+    padding: 5px 20px;
+    border-radius: 8px;
+    color: $c-text;
+    text-decoration: none;
+    border: 1px solid #00FFCC ;
+    text-align: center;
+    margin:  auto;
+    align-self: center;
+}
+.btn__top svg{
+    background-color: $c-bg-section;
+    padding: 5px;
+    border-radius: 8px;
+    fill: $c-text;
+    text-decoration: none;
+    border: 1px solid #00FFCC ;
+    width: 24px;
+}
+.btn__top{
+    margin: auto;
+    align-self: center;
+}
+.btn{
+    display: grid;
+    grid-template-columns: 1fr 30px;
+    gap: 20px;
+    margin: 0 2%;
+    align-items: center;
+    padding: 0;
+    background-color: $c-bg;
+}
+.graphicword__container{
+    height: 500px;
+}
+@media (min-width: 1000px) {
+    main{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 75px;
+        margin: 0 110px;
+    }
+    .graphicword{
+        grid-column: 2 / span 3;
+    }
+}
