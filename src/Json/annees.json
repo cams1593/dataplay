@@ -1,0 +1,22 @@
+{
+    "year": "1975",
+    "top_10": [
+        {
+            "rang": 1,
+            "title": "Love Will Keep Us Together",
+            "lyrics": "Love Love will keep us together Think of me babe, whenever Some sweet-talking girl comes along, singing her song Don't mess around, you've just got to be strong, just stop 'Cause I really love you, stop I'll be thinking of you Look in my heart and let love keep us together You You belong to me now Ain't gonna set you free now When those girl start hanging around talking me down Hear with your heart and you won't hear a sound, just stop (stop) 'Cause I really love you, stop (stop) I'll be thinking of you Look in my heart and let love keep us together Whatever Young and beautiful But someday your looks will be gone When the others turn you off Who'll be turning you on? I will, I will, I will I will be there to share forever Love will keep us together I said it before and I'll say it again while others pretend I need you now and I'll need you then, just stop (stop) 'Cause I really love you, stop (stop) I'll be thinking of you Look in my heart and let love keep us together Whatever, ba-ba-ba-ba-ba, whatever I will, I will, I will, I will You better stop 'Cause I really love you, stop (stop) I'll be thinking of you Look in my heart and let love keep us together Whatever, ba-ba-ba-ba-ba, whatever I will, I will, I will, I will",
+            "topwords": [
+                {"mot" :"stop", "occurences": "15"},
+                {"mot" :"love", "occurences": "14"},
+                {"mot" :"really", "occurences": "7"},
+                {"mot" :"keep", "occurences": "6"},
+                {"mot" :"us", "occurences": "6"},
+                {"mot" :"together", "occurences": "6"},
+                {"mot" :"ever", "occurences": "6"},
+                {"mot" :"thinkin'", "occurences": "5"},
+                {"mot" :"heart", "occurences": "5"},
+                {"mot" :"whatever", "occurences": "5"}
+            ]
+        }
+    ]
+}
