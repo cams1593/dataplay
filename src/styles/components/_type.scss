@@ -172,11 +172,22 @@ footer ul{
     display: inline-block;
   }
   .songinfos{
-    display: flex;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 37px;
+    grid-row-gap: 0px;
   }
   .songinfos__lyrics{
     padding: 0;
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  .songinfos__paragraphe{
+    height: 337px;
+   
+  }
+  .songinfos__tophits{
+    grid-area: 1 / 1 / 2 / 2;
   }
   
 }
