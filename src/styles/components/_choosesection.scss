@@ -1,6 +1,12 @@
 .choosesection{
 @include flex-center;
-}
+@media (min-width: $size-desktop) { 
+ display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  @include section-style;
+  grid-row: 1/span 2;
+  grid-column: 1 ;
+}}
 .year__ref{
     font-family: $font-ManifoldExtdCF;
     width: fit-content;
@@ -25,13 +31,19 @@
   border-radius: 50%;
   width: 117px;
   height: 117px;
-  box-shadow: 0 0 39.4px #2e422f;
+  box-shadow: 0 0 69.4px #b7c4b8;
   @include flex-center;
 }
 .btn__years{
   @include flex-center;
   gap: 0;
   @include section-style;
+  @media (min-width: $size-desktop) {
+    width: 200px;
+    margin: auto;
+    grid-column: 1 / span 2;
+    grid-row: 2;
+  }
 }
 .bigknob__center{
   width: 74px;
@@ -55,18 +67,30 @@
     width: fit-content;
     font-size: 15px;
 }
-.songinfos__paragraphe, .songinfos__hitssection{
-  width: 100%;
-  height: 400px;
-  overflow-y: scroll;
-  margin: 0;
+.songinfos__paragraphe{
+@include scrollable;
 }
 .btn__hits{
   @include btn-style;
+  @media (min-width: $size-desktop) {
+    display: none;
+  }
 }
 .songinfos__hitssection{
   @include section-style;
+  
+  ul{
+    list-style: none;
+    padding: 0;
+
+    }
+    @media (min-width: $size-desktop) {
+      align-items: flex-start;
+    }
 }
+  
+  
+
 .songinfos__lyrics{
 
   @include section-style;

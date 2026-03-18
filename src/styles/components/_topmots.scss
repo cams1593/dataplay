@@ -1,5 +1,8 @@
 .topmots{
     @include section-style;
+    @media (min-width : $size-desktop) {
+        grid-column: 2;
+    }
 }
 .topmots__graph{
     @include style-container;

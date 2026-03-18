@@ -17,27 +17,7 @@
   align-items: center;
     flex-direction: column;
 }
-@mixin responsive($screensize, $columns) {
-  	@if $screensize == large {
-		@media (min-width: 1025px) { 
-      .grid{
-        display: grid;
-        grid-template-columns: repeat(#{$columns}, 1fr);
-        gap: 20px;
-      }
-		}
-	} 
-	@if $screensize == medium {
-		@media (min-width: 501px) { 
-			@content;
-    }
-  @if $screensize == small {
-    @media (max-width: 500px) {
-      @content;
-    }
 
-}
-}}
 @mixin section-style {
   background-color: $c-bg-section;
   height: fit-content;
@@ -53,5 +33,11 @@
   height: 250px;
   border-radius: 8px;
   width: 100%;
+}
+@mixin scrollable{
+    width: 100%;
+  height: 400px;
+  overflow-y: scroll;
+  margin: 0;
 }
  

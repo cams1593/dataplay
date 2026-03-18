@@ -1,4 +1,5 @@
 .graphicword{
-    @include section-style;}
+    display: grid;
+}
 .graphicword__container{
     @include style-container;}

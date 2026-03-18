@@ -1,5 +1,9 @@
 .topyear{
     @include section-style;
+    span{
+        font-size: $size-base;
+    }
+
 }
 .topallwords{
     @include section-style;
@@ -16,4 +20,13 @@
    font-size: $size-result;
    margin-left: 10px;
    font-family: $font-ManifoldExtdCF;
+}
+.comparaisonword{
+    @include section-style;
+    @media (min-width: $size-desktop) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column: 2;
+
+    }
 }

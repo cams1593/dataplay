@@ -5,14 +5,20 @@ body{
     line-height: 170%;
     margin: 0;
 }
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0 20px;
+.main__index{
+     @media (min-width: $size-desktop) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 70px;
+    margin: 0;
+    }
 }
-
+.main__wordfinder{
+    @media (min-width: 1025px) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 .result{
     color: $c-result;
     font-size: $size-result;
