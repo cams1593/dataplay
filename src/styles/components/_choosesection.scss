@@ -26,6 +26,9 @@
   
 
 }
+:root{
+  --rotateValue: 0deg;
+}
 .bigknob{
   background: linear-gradient(0deg,rgb(69, 67, 67) 0%, rgb(123, 120, 120) 100%);
   border-radius: 50%;
@@ -33,6 +36,10 @@
   height: 117px;
   box-shadow: 0 0 69.4px #b7c4b8;
   @include flex-center;
+  @media (min-width: $size-desktop){
+    width: 230px;
+    height: 230px;
+  }
 }
 .btn__years{
   @include flex-center;
@@ -53,6 +60,11 @@
   display: flex;
   justify-content: center;
   box-shadow: 0 0 19.1px #060606, 0 23px 24.9px #0000002e;
+  transform: rotate(var(--rotateValue));
+  @media (min-width: $size-desktop){
+    width: 145px;
+    height: 145px;
+  }
 }
 .bigknob__light{
   background-color: #00FFBB;
@@ -61,6 +73,11 @@
   height: 8px;
   margin-top: 10px;
   border-radius: 50%;
+  @media (min-width: $size-desktop){
+    width: 15px;
+    height: 15px;
+    margin-top: 20px;
+  }
 }
 .year__ref{
     font-family: $font-ManifoldExtdCF;
