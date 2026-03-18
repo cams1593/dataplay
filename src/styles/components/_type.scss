@@ -9,19 +9,23 @@ body{
      @media (min-width: $size-desktop) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 70px;
-    margin: 0;
+        column-gap: 70px;
+        row-gap: 0;
+    margin: 0 50px;
     }
 }
 .main__wordfinder{
     @media (min-width: 1025px) {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        row-gap: 0px;
+        margin: 0 50px;
     }
 }
 .result{
     color: $c-result;
     font-size: $size-result;
+    
 }
 .wordinsong__list{
     list-style: none;
@@ -32,69 +36,3 @@ h2{
     justify-self: start;
 }
 
-.topwordallyears__list{
-    list-style: none;
-    padding: 0 30px;
-    
-}
-.topword__el{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 15px 0;
-}
-.titletop55{
-    text-align: center;
-    color: $c-green;
-    font-family: $font-ManifoldExtdCF
-}
-.btn__acceuil{
-    background-color: $c-bg-section;
-    padding: 5px 20px;
-    border-radius: 8px;
-    color: $c-text;
-    text-decoration: none;
-    border: 1px solid #00FFCC ;
-    text-align: center;
-    margin:  auto;
-    align-self: center;
-}
-.btn__top svg{
-    background-color: $c-bg-section;
-    padding: 5px;
-    border-radius: 8px;
-    fill: $c-text;
-    text-decoration: none;
-    border: 1px solid #00FFCC ;
-    width: 24px;
-    
-}
-.btn__top{
-    margin: auto;
-    align-self: center;
-}
-.btn{
-    display: grid;
-    grid-template-columns: 1fr 30px;
-    margin: 0 2%;
-    align-items: center;
-    padding: 0;
-    background-color: $c-bg;
-}
-.graphicword__container{
-    height: 200px;
-}
-@media (min-width: 1000px) {
-    main{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 75px;
-        margin: 0 110px;
-        padding: 0;
-    }
-    .graphicword,.topwordallyears {
-        grid-column: 2 / 4;
-    }
-
-
-}
