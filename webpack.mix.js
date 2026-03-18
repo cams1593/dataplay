@@ -12,6 +12,7 @@ const mix = require('laravel-mix');
  */
 
 mix
+  .copy('src/**/*.json', 'dist/Json/')
   .copy('src/**/*.html', 'dist/')
   .copyDirectory('src/assets', 'dist/assets')
   .js('src/scripts/app.js', 'dist/scripts/')
