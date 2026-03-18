@@ -6,7 +6,7 @@ fetch(url)
 //        console.log(data.top_10[0].title);
 //        console.log(data.top_10[0].rang);
 
-        console.log(data.y_1980.top_10[6].topwords[2].occurences);
+        console.log(data.y_1980.top_10[6].topwords[2]);
 
 
 
