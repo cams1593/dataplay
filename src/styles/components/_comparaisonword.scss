@@ -1,0 +1,19 @@
+.topyear{
+    @include section-style;
+}
+.topallwords{
+    @include section-style;
+    h2{
+        color: $c-green;
+        font-family: $font-ManifoldExtdCF;
+        justify-self: center}
+}
+.topallwords__graph{
+    @include style-container;
+}
+.year{
+   color: $c-green;
+   font-size: $size-result;
+   margin-left: 10px;
+   font-family: $font-ManifoldExtdCF;
+}

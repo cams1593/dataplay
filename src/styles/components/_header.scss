@@ -1,0 +1,13 @@
+.title{
+   font-family: $font-strelka;
+   $size: $size-title;
+   text-align: center;
+   span{
+    font-family: $font-ManifoldExtdCF;
+    display: block;
+    font-size: $size-spantitle;
+    font-style: italic;
+    font-weight: 300;
+    
+   }
+}

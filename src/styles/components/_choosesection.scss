@@ -1,0 +1,73 @@
+.choosesection{
+@include flex-center;
+}
+.year__ref{
+    font-family: $font-ManifoldExtdCF;
+    width: fit-content;
+    font-size: 14px;
+}
+.years__refs{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: -20px;
+}
+.inputnumber{
+   border: none;
+   color: $c-green;
+  appearance: none;
+  background-color: transparent;
+  
+
+}
+.bigknob{
+  background: linear-gradient(0deg,rgb(69, 67, 67) 0%, rgb(123, 120, 120) 100%);
+  border-radius: 50%;
+  width: 117px;
+  height: 117px;
+  box-shadow: 0 0 39.4px #2e422f;
+  @include flex-center;
+}
+.btn__years{
+  @include flex-center;
+  gap: 0;
+  @include section-style;
+}
+.bigknob__center{
+  width: 74px;
+  height: 74px;
+  background: linear-gradient(0deg,rgba(30, 30, 30, 1) 0%, rgba(19, 19, 19, 1) 100%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 19.1px #060606, 0 23px 24.9px #0000002e;
+}
+.bigknob__light{
+  background-color: #00FFBB;
+  box-shadow: 0 0 7.3px #00ffbb5f;
+  width: 8px;
+  height: 8px;
+  margin-top: 10px;
+  border-radius: 50%;
+}
+.year__ref{
+    font-family: $font-ManifoldExtdCF;
+    width: fit-content;
+    font-size: 15px;
+}
+.songinfos__paragraphe, .songinfos__hitssection{
+  width: 100%;
+  height: 400px;
+  overflow-y: scroll;
+  margin: 0;
+}
+.btn__hits{
+  @include btn-style;
+}
+.songinfos__hitssection{
+  @include section-style;
+}
+.songinfos__lyrics{
+
+  @include section-style;
+}

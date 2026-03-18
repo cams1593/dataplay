@@ -1,0 +1,8 @@
+footer {
+    @include flex-center;}
+.credits{
+    color: $c-text;
+    text-decoration: none;
+    font-size: $size-base;
+    margin-bottom: 20px;
+}

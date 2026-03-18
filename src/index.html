@@ -14,39 +14,31 @@
   <script src="scripts/app.js" defer></script>
 </head>
 <body>
-
-  <header>
-    <h1>Word Finder</h1>
-    <nav><!--mettre burger menu--></nav>
-  </header>
-  <main>
+<header id="top">
+  <h1 class ="title">Word <span class="title__span">Finder</span></h1>
+  <nav>
+  <a>Le Projet</a>
+  </nav>
+</header>
+  <main class="main__index">
     <section class="choosesection">
-      <div class="btn">
+      <div class="btn__years">
         <div class="bigknob">
           <div class="bigknob__center">
             <div class="bigknob__light"></div>
           </div>
         </div>
-        <div class="btn__dates">
-            <p>1970</p>
-            <p>2025</p>
+        <div class="years__refs">
+            <p class="year__ref">1970</p>
+            <p class="year__ref">2025</p>
           </div>
           <input type="number" class="inputnumber" placeholder="Choose a year">
       </div>
-      <div class="songinfos">
-        <div class="songinfos__tophits">
-          <select name="songs" id="songs-select" class="songinfos__selector"><!--En javascript il faudra remplir les balises      options-->
-            <option value="">Choose a song</option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-          </select>
+      
           <div class="songinfos__hitssection">
             <h2>Top Hits</h2>
-            <ul>
+            <button class="btn__hits">Choose a song</button>
+            <ul class="songinfos__hitslist">
               <li>#1 Love Will Keep Us Together</li>
               <li>#2 Love Will Keep Us Together</li>
               <li>#3 Love Will Keep Us Together</li>
@@ -73,23 +65,23 @@
       <div class="topmots__graph"><!--Mettre le graphique ici. Pour l'instant c'est un rectangle gris, il faut changer--></div>
     </section>
 
-    <section class="topallwords">
-      <div>
-        <h2>Top des mots <span>1975<!--Changer en javascript--></span>
+    <section class="comparaisonword">
+      <div class="topyear">
+        <h2>Top des mots <span class="year">1975<!--Changer en javascript--></span>
         </h2>
         <div class="topallwords__graph">Graphique?</div>
       </div>
-      <div>
+      <div class="topallwords">
         <h2>Sur 55 ans</h2>
         <div class="topallwords__graph">Graphique? Liste? Mots de la date choisie en évidence => A moitié statique</div>
       </div>
     </section>
+    <a href="wordFinder.html">word finder</a>
   </main>
   <footer>
-    <ul>
-      <li>Crédits</li>
-      <li> © 2025—Interface Design & Development</li>
-    </ul>
-  </footer>
+   <footer>
+        <a href="#" class="credits">Crédits</a>
+        <small>© 2026—Interface Design & Development</small>
+    </footer>
 </body>
 </html>

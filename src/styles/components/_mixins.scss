@@ -1,3 +1,57 @@
-%fond-section{
-    box-shadow: 0 0 23.4px #000000, 0 4px 4px #000000;
+@mixin btn-style {
+  background-color: #151515;
+  color: $c-green;
+  border: 2px solid $c-green;
+  border-radius: 8px;
+  width: 200px;
+  cursor: pointer;
+  font-family: $font-clother;
+  background-image: url(../../assets/images/arrow-down.svg);
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding: 10px 20px;
 }
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    flex-direction: column;
+}
+@mixin responsive($screensize, $columns) {
+  	@if $screensize == large {
+		@media (min-width: 1025px) { 
+      .grid{
+        display: grid;
+        grid-template-columns: repeat(#{$columns}, 1fr);
+        gap: 20px;
+      }
+		}
+	} 
+	@if $screensize == medium {
+		@media (min-width: 501px) { 
+			@content;
+    }
+  @if $screensize == small {
+    @media (max-width: 500px) {
+      @content;
+    }
+
+}
+}}
+@mixin section-style {
+  background-color: $c-bg-section;
+  height: fit-content;
+  margin: 30px 2%;
+  border-radius: 8px;
+  padding: 15px 20px;
+  box-shadow: #111111 0px 0px 10px;
+  max-width: 100%;
+  
+}
+@mixin style-container{ 
+  background-color: $c-bg-containner;
+  height: 250px;
+  border-radius: 8px;
+  width: 100%;
+}
+ 
