@@ -17,6 +17,159 @@
                 {"mot" :"heart", "occurences": "5"},
                 {"mot" :"whatever", "occurences": "5"}
             ]
+        },
+        {
+            "rang": 2,
+            "title": "Rhinestone Cowboy",
+            "lyrics": "I've been walkin' these streets so long Singin' the same old song I know every crack in these dirty sidewalks of Broadway Where hustle's the name of the game And nice guys get washed away like the snow and the rain There's been a load of compromisin' On the road to my horizon But I'm gonna be where the lights are shinin' on me Like a rhinestone cowboy Riding out on a horse in a star-spangled rodeo Like a rhinestone cowboy Getting cards and letters from people I don't even know And offers comin' over the phone Well, I really don't mind the rain And a smile can hide all the pain But you're down when you're ridin' the train That's takin' the long way And I dream of the things I'll do With a subway token and a dollar tucked inside my shoe There'll be a load of compromisin' On the road to my horizon But I'm gonna be where the lights are shinin' on me Like a rhinestone cowboy Riding out on a horse in a star-spangled rodeo Rhinestone cowboy Gettin' cards and letters from people I don't even know And offers comin' over the phone Like a rhinestone cowboy Riding out on a horse in a star-spangled rodeo Like a rhinestone cowboy Gettin' cards and letters from people I don't even know....",
+            "topwords": [
+                {"mot" :"like", "occurences": "7"},
+                {"mot" :"rhinestone", "occurences": "7"},
+                {"mot" :"cowboy", "occurences": "7"},
+                {"mot" :"know", "occurences": "4"},
+                {"mot" :"riding", "occurences": "3"},
+                {"mot" :"horse", "occurences": "3"},
+                {"mot" :"star-spangled", "occurences": "3"},
+                {"mot" :"rodeo", "occurences": "3"},
+                {"mot" :"cards", "occurences": "3"},
+                {"mot" :"letters", "occurences": "3"}
+            ]
+        },
+        {
+           "rang": 3,
+            "title": "Philadelphia Freedom",
+            "lyrics": "I used to be a rolling stone, you know If a cause was right I'd leave, to find the answer on the road I used to be a heart beatin' for someone But the times have changed The less I say, the more my work gets done 'Cause I live and breathe this Philadelphia freedom From the day that I was born, I've waved the flag Philadelphia freedom took me knee-high to a man, yeah Gave me peace of mind my daddy never had Oh, Philadelphia freedom Shine on me, I love ya Shine a light through the eyes of the ones left behind Shine a light, shine the light Shine the light, won't you shine the light? Philadelphia freedom, I love ya Yes, I do If you choose to you can live your life alone Some people choose the city (some people choose the city) Some others choose the good old family home (Some others choose the good old family home) I like living easy without family ties ('cause it's easy) 'Til the whip or will of freedom zapped me, right between the eyes 'Cause I live and breathe this Philadelphia freedom From the day that I was born, I've waved the flag Philadelphia freedom took me knee-high to a man, mmh-mmh Gave me peace of mind my daddy never had Oh, Philadelphia freedom Shine on me, I love ya Shine a light through the eyes of the ones left behind Shine a light, shine the light Shine the light, won't you shine the light? Philadelphia freedom, I love ya Yes, I do Oh, Philadelphia freedom Shine on me, I love ya Shine a light through the eyes of the ones left behind, mmh Shine a light, shine the light Shine the light, won't you shine the light? Philadelphia freedom, I love ya You know, I love you, yeah You know, I love you Yes, I do! (Philadelphia freedom) I love you, yes I do! (Philadelphia freedom) you know that I love you Yes, I do! (Philadelphia) oh (freedom) Don't you know that I love you? Yes, I do! (Philadelphia freedom) Don't you know that I love you? Yes, I do! (Philadelphia) oh, oh (freedom) Don't you know that I love you?",
+            "topwords": [
+                {"mot" :"shine", "occurences": "18"},
+                {"mot" :"freedom", "occurences": "16"},
+                {"mot" :"philadelphia", "occurences": "15"},
+                {"mot" :"light", "occurences": "15"},
+                {"mot" :"love", "occurences": "13"},
+                {"mot" :"know", "occurences": "7"},
+                {"mot" :"yes", "occurences": "7"},
+                {"mot" :"oh", "occurences": "6"},
+                {"mot" :"ya", "occurences": "6"},
+                {"mot" :"choose", "occurences": "5"}
+            ] 
+        },
+        {
+            "rang": 4,
+            "title": "Before The Next Teardrop Falls",
+            "lyrics": "If he brings you happiness Then I wish you all the best It's your happiness that matters most of all But if he ever breaks your heart If the teardrops ever start I'll be there before the next teardrop falls Si te quiere de verdad Y te da felicidad Te deseo lo más bueno pa' los dos Pero si te hace llorar A mé me puedes hablar Y estaré contigo cuando triste estás I'll be there anytime You need me by your side To drive away every teardrop that you cried And if he ever leaves you blue Just remember, I love you And I'll be there before the next teardrop falls And I'll be there before the next teardrop falls",
+            "topwords": [
+                {"mot" :"teardrop", "occurences": "4"},
+                {"mot" :"te", "occurences": "4"},
+                {"mot" :"ever", "occurences": "3"},
+                {"mot" :"next", "occurences": "3"},
+                {"mot" :"falls", "occurences": "3"},
+                {"mot" :"happiness", "occurences": "2"},
+                {"mot" :"si", "occurences": "2"},
+                {"mot" :"brings", "occurences": "1"},
+                {"mot" :"wish", "occurences": "1"},
+                {"mot" :"best", "occurences": "1"}
+            ] 
+        },
+        {
+            "rang": 5,
+            "title": "My Eyes Adored You",
+            "lyrics": "My eyes adored you though I never laid a hand on you My eyes adored you like a million miles away from me You couldn't see how I adored you So close, so close and yet so far Carried your books from school Playin' make believe you're married to me You were fifth grade, I was sixth when we came to be Walkin' home every day over Barnegat Bridge and Bay Till we grew into the me and you who went our separate ways My eyes adored you though I never laid a hand on you My eyes adored you like a million miles away from me You couldn't see how I adored you So close, so close and yet so far Headed for city lights, climbed the ladder up to fortune and fame I worked my fingers to the bone made myself a name Funny I seemed to find that no matter how the years unwind Still I reminisce 'bout the girl I miss and the love I left behind My eyes adored you though I never laid a hand on you My eyes adored you like a million miles away from me You couldn't see how I adored you So close, so close and yet so far All my life I will remember how warm and tender we were way back then Whoa baby Oh the feeling, sad regrets I know I won't ever forget you My childhood friend My eyes adored you though I never laid a hand on you My eyes adored you like a million miles away from me You couldn't see how I adored you So close, so close and yet so far",
+            "topwords": [
+                {"mot" :"adored", "occurences": "17"},
+                {"mot" :"eyes", "occurences": "12"},
+                {"mot" :"close", "occurences": "10"},
+                {"mot" :"though", "occurences": "6"},
+                {"mot" :"never", "occurences": "6"},
+                {"mot" :"laid", "occurences": "6"},
+                {"mot" :"hand", "occurences": "6"},
+                {"mot" :"like", "occurences": "5"},
+                {"mot" :"million", "occurences": "5"},
+                {"mot" :"miles", "occurences": "5"}
+            ] 
+        },
+        {
+            "rang": 6,
+            "title": "Shining Star",
+            "lyrics": "Yeah, hey When you wish upon a star Your dreams will take you very far, yeah But when you wish upon a dream Life ain't always what it seems, oh yeah What'd you see on a night so clear In the sky so very dear You're a shining star, no matter who you are Shining bright to see what you could truly be What you could truly be Shining star come into view Shine its watchful light on you, yeah Gives you strength to carry on Make your body big and strong Born a man child of the sun Saw my work had just begun Yeah, found I had to stand alone Bless it now I've got my own oh yeah So, if you find yourself in need Why don't you listen to these words of heed Be a giant or grain of sand Words of Wisdom: Yes I can You're a shining star, no matter who you are Shining bright to see what you can truly be You're a shining star, no matter who you are Shining bright to see what you can truly be You're a shining star, no matter who you are Shining bright to see what you can truly be Shining star for you to see, what your life can truly be Shining star for you to see, what your life can truly be Shining star for you to see, what your life can truly be",
+            "topwords": [
+                {"mot" :"yeah", "occurences": "14"},
+                {"mot" :"shining", "occurences": "12"},
+                {"mot" :"star", "occurences": "9"},
+                {"mot" :"see", "occurences": "8"},
+                {"mot" :"truly", "occurences": "8"},
+                {"mot" :"could", "occurences": "5"},
+                {"mot" :"life", "occurences": "4"},
+                {"mot" :"matter", "occurences": "4"},
+                {"mot" :"bright", "occurences": "4"},
+                {"mot" :"oh", "occurences": "3"}
+            ] 
+        },
+        {
+            "rang": 7,
+            "title": "Fame",
+            "lyrics": "Fame (fame) makes a man take things over Fame (fame) lets him lose hard to swallow Fame (fame) puts you there where things are hollow Fame (fame) Fame not your brain it's just the flame That puts your change to keep you sane (sane) Fame (fame) Fame (fame) what you like is in the limo Fame (fame) what you get is no tomorrow Fame (fame) what you need you have to borrow Fame (fame) Fame nein it's mine is just his line To bind our time it drives you to crime (crime) Fame (fame) Could it be the best could it be? Really be really babe Could it be my babe could it babe? Could it babe could it babe? Is it any wonder I reject you first Fame (fame) fame fame Is it any wonder you are too cool to fool Fame (fame) Fame bully for you chilly for me Got to get a rain check on pain (pain) Fame Fame fame fame fame fame Fame fame fame fame fame Fame fame fame fame fame Fame fame fame fame fame Fame fame fame Fame What's your name? What's your name? What's your name?... Feeling so gay",
+            "topwords": [
+                {"mot" :"fame", "occurences": "54"},
+                {"mot" :"could", "occurences": "6"},
+                {"mot" :"babe", "occurences": "5"},
+                {"mot" :"what's", "occurences": "3"},
+                {"mot" :"name", "occurences": "3"},
+                {"mot" :"things", "occurences": "2"},
+                {"mot" :"puts", "occurences": "2"},
+                {"mot" :"sane", "occurences": "2"},
+                {"mot" :"get", "occurences": "2"},
+                {"mot" :"crime", "occurences": "2"}
+            ] 
+        },
+        {
+            "rang": 8,
+            "title": "Laughter In The Rain",
+            "lyrics": "Strolling along country roads with my baby It starts to rain, it begins to pour Without an umbrella, we're soaked to the skin I feel a shiver run up my spine I feel the warmth of her hand in mine Ooh, I hear laughter in the rain Walking hand in hand with the one I love Ooh, how I love the rainy days And the happy way I feel inside After a while, we run under a tree I turn to her and she kisses me There with the beat of the rain on the leaves Softly she breathes and I close my eyes Sharing our love under stormy skies Ooh, I hear laughter in the rain Walking hand in hand with the one I love Ooh, how I love the rainy days And the happy way I feel inside After a while, we run under a tree I turn to him and he kisses me There with the beat of the rain on the leaves Softly she breathes and I close my eyes Sharing our love under stormy skies Ooh, I hear laughter in the rain Walking hand in hand with the one I love Ooh, how I love the rainy days And the happy way I feel inside Ooh, I hear laughter in the rain Walking hand in hand with the one I love Oh-ooh, how I love the rainy days And the happy way I feel inside Ooh, I hear laughter in the rain Walking hand in hand with the one I love Oh-ooh, how I love the rainy days And the happy way I feel inside",
+            "topwords": [
+                {"mot" :"love", "occurences": "12"},
+                {"mot" :"hand", "occurences": "11"},
+                {"mot" :"rain", "occurences": "8"},
+                {"mot" :"ooh", "occurences": "8"},
+                {"mot" :"feel", "occurences": "7"},
+                {"mot" :"hear", "occurences": "5"},
+                {"mot" :"laughter", "occurences": "5"},
+                {"mot" :"walking", "occurences": "5"},
+                {"mot" :"one", "occurences": "5"},
+                {"mot" :"rainy", "occurences": "5"}
+            ]
+        },
+        {
+           "rang": 9,
+            "title": "One Of These Night",
+            "lyrics": "One of these nights One of these crazy old nights We're gonna find out Pretty mama What turns on your lights The full moon is calling The fever is high And the wicked wind whispers And moans You got your demons And you got desires Well, I got a few of my own Oh, someone to be kind to in Between the dark and the light Oh, coming right behind you Swear I'm gonna find you One of these nights One of these dreams One of these lost and lonely dreams now We're gonna find one One that really screams I've been searching for the daughter Of the devil himself I've been searching for an angel in white I've been waiting for a woman who's a little Of both And I can feel her but she's nowhere In sight Oh, loneliness will blind you In between the wrong and the right Oh, coming right behind you Swear I'm gonna find you One of these nights One of these nights In between the dark and the light Coming right behind you Swear I'm gonna find you Get ya baby one of these nights One of these nights One of these nights I can feel it I can feel it One of these nights Coming right behind you Swear I'm gonna find you now One of these nights And it gets so dark, so dark In the cold and lonely One of these nights One of these crazy, crazy, crazy nights One of these nights Swear I'm gonna find you Coming right behind you now One of these nights Ooh ooh One of these nights Ah and I wanna say ah! One of these nights Yes ah one of these one of these One of these nights Ah coming right behind you Swear I'm gonna find you One of these nights One of these nights One of these crazy old nights One of these nights",
+            "topwords": [
+                {"mot" :"one", "occurences": "27"},
+                {"mot" :"nights", "occurences": "21"},
+                {"mot" :"gonna", "occurences": "8"},
+                {"mot" :"find", "occurences": "8"},
+                {"mot" :"right", "occurences": "7"},
+                {"mot" :"coming", "occurences": "6"},
+                {"mot" :"behind", "occurences": "6"},
+                {"mot" :"swear", "occurences": "6"},
+                {"mot" :"crazy", "occurences": "5"},
+                {"mot" :"ooh", "occurences": "5"}
+            ] 
+        },
+        {
+            "rang": 10,
+            "title": "Thank God I'm A Country Boy",
+            "lyrics": "Well, life’s on a farm is kinda laid back, ain’t much an old country boy like me can’t hack. It’s early to rise, early in the sack thank God I’m a country boy. Well, a simple kind of life never did me no harm, raising me a family and working on the farm. My days are all filled with an easy country charm, thank God I’m a country boy. Well, I got me a fine wife, I got me old fiddle. When the sun’s coming up, I got cakes on the griddle. And life ain’t nothing but a funny, funny riddle, thank God I’m a country boy. When the work’s all done and the sun’s setting low, I pull out my fiddle and I rosin up the bow. The kids are asleep so I keep it kinda low, thank God I’m a country boy. I’d play Sally Gooding all day if I could, but the lord and my wife wouldn’t take it very  good. So I fiddle when I can and I work when I should, thank God I’m a country boy. Well, I got me a fine wife, I got me old fiddle. When the sun’s coming up, I got cakes on the griddle. And life ain’t nothing but a funny, funny riddle, thank God I’m a country boy. I wouldn’t trade my life for diamonds or jewels, I never was one of them money hungry fools. I’d rather have my fiddle and my farming tools, thank God I’m a country boy. Yeah, city folk driving in a black limousine, a lotta sad people thinking that’s-a mighty keen. Son, let me tell you now exactly what I mean, thank God I’m a country boy. Well, I got me a fine wife, I got me old fiddle. When the sun’s coming up, I got cakes on the griddle. And life ain’t nothing but a funny, funny riddle, thank God I’m a country boy. Well, my fiddle was my daddy’s till the day he died, and he took me by the hand and held me close to his  side. He said, “Live a good life and play my fiddle with pride, and thank God you’re a country boy. My Daddy taught me young how to hunt and how to whittle, he taught me how to work and play a tune on the fiddle. He taught me how to love and how to give just a little, thank God I’m a country boy. Well, I got me a fine wife, I got me old fiddle. When the sun’s coming up, I got cakes on the griddle. And life ain’t nothing but a funny, funny riddle, thank God I’m a country boy.",
+            "topwords": [
+                {"mot" :"country", "occurences": "14"},
+                {"mot" :"boy", "occurences": "13"},
+                {"mot" :"thank", "occurences": "12"},
+                {"mot" :"god", "occurences": "12"},
+                {"mot" :"got", "occurences": "12"},
+                {"mot" :"fiddle", "occurences": "10"},
+                {"mot" :"well", "occurences": "9"},
+                {"mot" :"life", "occurences": "8"},
+                {"mot" :"funny", "occurences": "8"},
+                {"mot" :"ain't", "occurences": "5"}
+            ]
         }
     ]
 }
