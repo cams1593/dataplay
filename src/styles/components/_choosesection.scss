@@ -1,6 +1,6 @@
 .choosesection{
 @include flex-center;
-@media (min-width: $size-tablet) { 
+@media (min-width: $size-desktop) { 
  display: grid;
   grid-template-columns: repeat(2, 1fr);
   @include section-style;
@@ -11,18 +11,12 @@
     font-family: $font-ManifoldExtdCF;
     width: fit-content;
     font-size: 14px;
-    @media (min-width: $size-tablet) {
-      margin: 0 20% 0 20%;
-    }
 }
 .years__refs{
     display: flex;
     justify-content: space-between;
     width: 100%;
     margin-top: -20px;
-    @media (min-width: $size-tablet) {
-      margin: 0 150%;
-    }
 }
 .inputnumber{
    border: none;
@@ -60,15 +54,13 @@
   @include flex-center;
   gap: 0;
   @include section-style;
-  @media (min-width: $size-tablet) {
+  @media (min-width: $size-desktop) {
     padding: 30px 70px;
     margin: auto;
     grid-column: 1 / span 2;
     grid-row: 2;
     border-top: 1px solid $c-text;
-    border-radius: 0;
-    width: 50%;
-  }
+    border-radius: 0;}
     
 }
 .bigknob__center{
@@ -101,7 +93,7 @@
 .year__ref{
     font-family: $font-ManifoldExtdCF;
     width: fit-content;
-    font-size: 15px
+    font-size: 15px;
 }
 .songinfos__el{
   cursor: pointer
