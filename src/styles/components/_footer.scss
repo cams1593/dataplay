@@ -1,5 +1,6 @@
 footer {
-    @include flex-center;}
+    @include flex-center;
+    margin-top: 30px;}
 .credits{
     color: $c-text;
     text-decoration: none;
