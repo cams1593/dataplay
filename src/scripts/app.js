@@ -26,19 +26,11 @@ let mousePosition = 0;
 
 knob.addEventListener("mousedown", onKnobClick);
 
-
-
-
-
 function onKnobClick () {
     document.addEventListener("mousemove", onMouseMove);
 }
 function onMouseMove (event) {
     const click = event.clientX;
-    
-    const root = document.querySelector(":root");
-    const style = getComputedStyle(root);
-    const rotate = style.getPropertyValue("--rotateValue");
     
     if (mousePosition > click) {
         console.log("tu vas à gauche");
@@ -46,9 +38,7 @@ function onMouseMove (event) {
     }
     if (mousePosition < click) {
         console.log("tu vas à droite");
-
-        document.documentElement.style.setProperty("--textColor", "1deg");
-        console.log(rotate);
+        
     }
     mousePosition = click;
 }
