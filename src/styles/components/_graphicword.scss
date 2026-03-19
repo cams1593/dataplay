@@ -1,5 +1,8 @@
 .graphicword{
-    display: grid;
+    @include section-style;
+    @media (min-width: $size-desktop) {
+        grid-column: 2 /span 3;
+    }
 }
 .graphicword__container{
     @include style-container;}
