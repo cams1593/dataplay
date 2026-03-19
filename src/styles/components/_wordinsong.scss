@@ -4,6 +4,19 @@
         border-bottom: 1px solid $c-text;
         padding-bottom: 5px;
     }
+    ul{
+        padding: 0;
+        li{
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            span{
+                font-family: $font-ManifoldExtdCF;
+                font-size: $size-year ;
+                margin-left: 5px;
+            }
+        }
+    }
     @media (min-width: $size-desktop) {
         grid-column: 1;
         grid-row: 2 / 4;
