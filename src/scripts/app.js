@@ -84,15 +84,17 @@ function getInputNumber () {
 
         const listeLi = document.querySelectorAll(".songinfos__el");
 
+
+
         listeLi.forEach(function(li){
             li.addEventListener("click", showLyrics);
             function showLyrics () {
             const elId = li.id;
-            
             const lyricsParagraphe = document.querySelector(".songinfos__paragraphe");
             lyricsParagraphe.innerHTML = data[choosenYear].top_10[elId - 1].lyrics;
 
             li.classList.toggle("songinfos__el--active");
+            
         }
         })    
     })
