@@ -1,6 +1,6 @@
 .topyear{
     @include section-style;
-    span{
+    h2{
         font-size: $size-base;
     }
 
@@ -11,6 +11,9 @@
         color: $c-green;
         font-family: $font-ManifoldExtdCF;
         justify-self: center}
+    @media (min-width: $size-desktop) {
+        align-self: flex-start;
+    }
 }
 .topallwords__graph{
     @include style-container;

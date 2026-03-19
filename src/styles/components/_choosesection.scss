@@ -22,13 +22,22 @@
    border: none;
    color: $c-green;
   appearance: none;
-  background-color: transparent;
-  
-
+  font-size: $size-result;
+  text-align: center;
+  background-color: transparent; }
+  .inputnumber::placeholder{
+    border: none;
+    font-size: $size-base;
+    color: $c-green;
+    width: fit-content;
+    text-align: center;
 }
 :root{
   --rotateValue: 0deg;
 }
+  .inputnumber:hover{
+    color: $c-green;
+  }
 .bigknob{
   background: linear-gradient(0deg,rgb(69, 67, 67) 0%, rgb(123, 120, 120) 100%);
   border-radius: 50%;
@@ -46,11 +55,13 @@
   gap: 0;
   @include section-style;
   @media (min-width: $size-desktop) {
-    width: 200px;
+    padding: 30px 70px;
     margin: auto;
     grid-column: 1 / span 2;
     grid-row: 2;
-  }
+    border-top: 1px solid $c-text;
+    border-radius: 0;}
+    
 }
 .bigknob__center{
   width: 74px;
@@ -99,16 +110,21 @@
   ul{
     list-style: none;
     padding: 0;
-
+    @include scrollable;
+      li{
+        margin: 15px 0;
+      }
     }
     @media (min-width: $size-desktop) {
-      align-items: flex-start;
+      align-items: flex-start; 
+      padding-right: 10px;
+      border-right: 1px solid $c-text;
+      border-radius: 0;
+      
     }
 }
-  
-  
-
 .songinfos__lyrics{
-
   @include section-style;
-}
+  @media(min-width: $size-desktop){
+    align-self: start;
+  }}

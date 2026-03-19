@@ -1,4 +1,11 @@
 .choseword{
     @include btn-style;
+    height: fit-content;
     appearance: none;
+    @media(min-width:$size-desktop){
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: center;
+        align-self: center;
+    }
 }
