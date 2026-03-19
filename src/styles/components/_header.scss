@@ -2,6 +2,10 @@
    font-family: $font-strelka;
    $size: $size-title;
    text-align: center;
+  width: 50%;
+  padding-bottom: 30px;
+   background-color: $c-bg;
+   background-size: 50%;
    span{
     font-family: $font-ManifoldExtdCF;
     display: block;
@@ -10,4 +14,16 @@
     font-weight: 300;
     
    }
+}
+header{
+   margin: 20px 2%;
+ display: flex;
+ flex-direction: row-reverse;
+ padding: 0;
+ justify-content: center;
+
+ nav{
+   align-self: center;
+   justify-self: start;
+ }
 }
