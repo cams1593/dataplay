@@ -84,12 +84,22 @@ function getInputNumber () {
 
 
 
-        const pushLi = document.getElementById("1");
-        pushLi.addEventListener("click", showLyrics);
-        function showLyrics () {
+        const listeLi = document.querySelectorAll(".songinfos__el");
+
+        listeLi.forEach(function(li){
+            li.addEventListener("click", showLyrics);
+
+            function showLyrics () {
+            const elId = li.id;
             const lyricsParagraphe = document.querySelector(".songinfos__paragraphe");
-            lyricsParagraphe.innerHTML = data[choosenYear].top_10[0].lyrics;
+            
+            lyricsParagraphe.innerHTML = data[choosenYear].top_10[elId - 1].lyrics;
         }
+
+
+        })
+        
+        
     })
     .catch(error => console.error("Erreur du fetch, l'année choisie n'est pas disponible :", error));
 }
