@@ -92,7 +92,6 @@ function getInputNumber () {
             if (songActive){
                songActive.classList.remove("songinfos__el--active");  
             }
-           
             li.classList.add("songinfos__el--active");
             const lyricsParagraphe = document.querySelector(".songinfos__paragraphe");
             lyricsParagraphe.innerHTML = data[choosenYear].top_10[elId - 1].lyrics;
