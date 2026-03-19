@@ -2,6 +2,8 @@
     @include btn-style;
     height: fit-content;
     appearance: none;
+     margin: auto;
+
     @media(min-width:$size-desktop){
         grid-column: 3;
         grid-row: 1;
