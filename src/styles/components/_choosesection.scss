@@ -32,6 +32,9 @@
     width: fit-content;
     text-align: center;
 }
+:root{
+  --rotateValue: 0deg;
+}
   .inputnumber:hover{
     color: $c-green;
   }
@@ -42,6 +45,10 @@
   height: 117px;
   box-shadow: 0 0 69.4px #b7c4b8;
   @include flex-center;
+  @media (min-width: $size-desktop){
+    width: 230px;
+    height: 230px;
+  }
 }
 .btn__years{
   @include flex-center;
@@ -64,6 +71,11 @@
   display: flex;
   justify-content: center;
   box-shadow: 0 0 19.1px #060606, 0 23px 24.9px #0000002e;
+  transform: rotate(var(--rotateValue));
+  @media (min-width: $size-desktop){
+    width: 145px;
+    height: 145px;
+  }
 }
 .bigknob__light{
   background-color: #00FFBB;
@@ -72,6 +84,11 @@
   height: 8px;
   margin-top: 10px;
   border-radius: 50%;
+  @media (min-width: $size-desktop){
+    width: 15px;
+    height: 15px;
+    margin-top: 20px;
+  }
 }
 .year__ref{
     font-family: $font-ManifoldExtdCF;
