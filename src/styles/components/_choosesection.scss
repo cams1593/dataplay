@@ -95,6 +95,15 @@
     width: fit-content;
     font-size: 15px;
 }
+.songinfos__el{
+  cursor: pointer
+}
+.songinfos__el:hover{
+  color: #00FFBB
+}
+.songinfos__el--active{
+  color: #00FF40
+}
 .songinfos__paragraphe{
 @include scrollable;
 }
