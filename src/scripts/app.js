@@ -1,3 +1,5 @@
+//Je pense qu'on peut supprimer cette partie prce qu'elle est dans une fonction (en bas)
+
 const url = '../Json/annees.json';
 fetch(url)
     .then(response => response.json())
@@ -14,7 +16,7 @@ fetch(url)
 //            console.log(`Rang ${chanson.rang} : ${chanson.title}`);
 //        });
     })
-    .catch(error => console.error("Erreur du fetch :", error));
+    .catch(error => console.error("Erreur du fetch, l'année choisie n'est pas disponible:", error));
 
 //----------------Le Bouton Qui Tourne-------------------
 
@@ -79,6 +81,20 @@ function getInputNumber () {
         top8.innerText = "#8 " + data[choosenYear].top_10[7].title;
         top9.innerText = "#9 " + data[choosenYear].top_10[8].title;
         top10.innerText = "#10 " + data[choosenYear].top_10[9].title;
+
+        const listeLi = document.querySelectorAll(".songinfos__el");
+
+        listeLi.forEach(function(li){
+            li.addEventListener("click", showLyrics);
+            function showLyrics () {
+            const elId = li.id;
+            
+            const lyricsParagraphe = document.querySelector(".songinfos__paragraphe");
+            lyricsParagraphe.innerHTML = data[choosenYear].top_10[elId - 1].lyrics;
+
+            li.classList.toggle("songinfos__el--active");
+        }
+        })    
     })
-    .catch(error => console.error("Erreur du fetch :", error));
+    .catch(error => console.error("Erreur du fetch, l'année choisie n'est pas disponible :", error));
 }
