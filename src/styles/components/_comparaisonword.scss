@@ -2,6 +2,11 @@
     @include section-style;
     h2{
         font-size: $size-base;
+        align-items: center;
+        span{
+            font-size: $size-titlesection;
+            color: $c-green;
+        }
     }
 
 }
@@ -18,18 +23,14 @@
 .topallwords__graph{
     @include style-container;
 }
-.year{
-   color: $c-green;
-   font-size: $size-result;
-   margin-left: 10px;
-   font-family: $font-ManifoldExtdCF;
-}
+
 .comparaisonword{
     @include section-style;
     @media (min-width: $size-desktop) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-column: 2;
+        align-self: start;
 
     }
 }

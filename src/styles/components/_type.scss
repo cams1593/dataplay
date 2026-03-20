@@ -6,6 +6,7 @@ body{
     margin: 0;
 }
 .main__index{
+    margin-top: 50px;
      @media (min-width: $size-desktop) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -15,6 +16,10 @@ body{
     }
 }
 .main__wordfinder{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
     @media (min-width: 1025px) {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
