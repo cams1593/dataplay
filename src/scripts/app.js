@@ -25,7 +25,7 @@ const knobRect = knob.getBoundingClientRect();
 const knobX = knobRect.left + knobRect.width / 2 ;
 
 let mousePosition = 0;
-
+let rotation = 0;
 knob.addEventListener("mousedown", onKnobClick);
 
 function onKnobClick () {
@@ -33,14 +33,18 @@ function onKnobClick () {
 }
 function onMouseMove (event) {
     const click = event.clientX;
+
+    const rootStyle = getComputedStyle(document.documentElement);
+    const rotateValue = rootStyle.getPropertyValue('--rotateValue');
+
     
     if (mousePosition > click) {
-        console.log("tu vas à gauche");
-        
+        rotation -= 3;
+        document.documentElement.style.setProperty("--rotateValue", rotation + "deg");
     }
     if (mousePosition < click) {
-        console.log("tu vas à droite");
-        
+        rotation += 3;
+        document.documentElement.style.setProperty("--rotateValue", rotation + "deg");
     }
     mousePosition = click;
 }
