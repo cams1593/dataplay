@@ -25,6 +25,7 @@ const knobRect = knob.getBoundingClientRect();
 const knobX = knobRect.left + knobRect.width / 2 ;
 
 let mousePosition = 0;
+let rotation = 0;
 
 knob.addEventListener("mousedown", onKnobClick);
 
@@ -33,16 +34,25 @@ function onKnobClick () {
 }
 function onMouseMove (event) {
     const click = event.clientX;
-    
+
+    const rootStyle = getComputedStyle(document.documentElement);
+    const rotateValue = rootStyle.getPropertyValue('--rotateValue');
+
     if (mousePosition > click) {
-        console.log("tu vas à gauche");
+        rotation -= 3;
+        document.documentElement.style.setProperty("--rotateValue", rotation + "deg");
         
+            input.stepDown(1);
+    
     }
     if (mousePosition < click) {
-        console.log("tu vas à droite");
-        
+        rotation += 3;
+        document.documentElement.style.setProperty("--rotateValue", rotation + "deg");
+        input.stepUp(1);
     }
     mousePosition = click;
+    console.log(mousePosition);
+
 }
 //------------Input et changer le texte selon la date choisie
 
@@ -95,7 +105,8 @@ function getInputNumber () {
             li.classList.add("songinfos__el--active");
             const lyricsParagraphe = document.querySelector(".songinfos__paragraphe");
             lyricsParagraphe.innerHTML = data[choosenYear].top_10[elId - 1].lyrics;
-           
+
+            li.classList.toggle("songinfos__el--active");
         }
         })    
     })
