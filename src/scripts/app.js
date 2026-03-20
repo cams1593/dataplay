@@ -105,8 +105,6 @@ function getInputNumber () {
             li.classList.add("songinfos__el--active");
             const lyricsParagraphe = document.querySelector(".songinfos__paragraphe");
             lyricsParagraphe.innerHTML = data[choosenYear].top_10[elId - 1].lyrics;
-
-            li.classList.toggle("songinfos__el--active");
         }
         })    
     })
