@@ -5,9 +5,10 @@
   /* width: 50%; */
   margin: 0 5%;
   padding-bottom: 30px;
-   background-color: $c-bg;
-   background-size: 50%;
-   span{
+  background-color: $c-bg;
+  background-size: 50%;
+  line-height: 120%;
+  span{
     font-family: $font-ManifoldExtdCF;
     display: block;
     font-size: $size-spantitle;
@@ -34,7 +35,7 @@ header{
   width: 15%;
 }
  nav{
-   align-self: center;
-   justify-self: start;
+  align-self: center;
+  justify-self: start;
  }
 }
