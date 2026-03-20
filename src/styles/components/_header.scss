@@ -2,7 +2,8 @@
    font-family: $font-strelka;
    $size: $size-title;
    text-align: center;
-  width: 50%;
+  /* width: 50%; */
+  margin: 0 5%;
   padding-bottom: 30px;
    background-color: $c-bg;
    background-size: 50%;
@@ -17,11 +18,21 @@
 }
 header{
    margin: 20px 2%;
- display: flex;
- flex-direction: row-reverse;
- padding: 0;
- justify-content: center;
-
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0;
+  justify-content: space-around;
+  a{
+    padding-right: 5%;
+  }
+.header__line{
+  align-self: center;
+  width: 25%;
+}
+.header__line2{
+  align-self: center;
+  width: 15%;
+}
  nav{
    align-self: center;
    justify-self: start;
