@@ -26,6 +26,7 @@ const knobX = knobRect.left + knobRect.width / 2 ;
 
 let mousePosition = 0;
 let rotation = 0;
+
 knob.addEventListener("mousedown", onKnobClick);
 
 function onKnobClick () {
@@ -37,16 +38,23 @@ function onMouseMove (event) {
     const rootStyle = getComputedStyle(document.documentElement);
     const rotateValue = rootStyle.getPropertyValue('--rotateValue');
 
-    
     if (mousePosition > click) {
         rotation -= 3;
         document.documentElement.style.setProperty("--rotateValue", rotation + "deg");
+
+        
+            input.stepDown(1);
+        
+        
     }
     if (mousePosition < click) {
         rotation += 3;
         document.documentElement.style.setProperty("--rotateValue", rotation + "deg");
+        input.stepUp(1);
     }
     mousePosition = click;
+    console.log(mousePosition);
+
 }
 //------------Input et changer le texte selon la date choisie
 
@@ -87,8 +95,6 @@ function getInputNumber () {
         top10.innerText = "#10 " + data[choosenYear].top_10[9].title;
 
         const listeLi = document.querySelectorAll(".songinfos__el");
-
-
 
         listeLi.forEach(function(li){
             li.addEventListener("click", showLyrics);
