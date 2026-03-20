@@ -18,14 +18,13 @@
                     {"mot" :"mind", "occurences": "2"},
                     {"mot" :"weary", "occurences": "1"}
                 ]
-
             },
             {
                 "rang": 2,
                 "title":"(They Long To Be) Close To You",
                 "lyrics":"Why do birds suddenly appearEvery time you are near?Just like me, they long to beClose to youWhy do stars fall down from the skyEvery time you walk by?Just like me, they long to beClose to youOn the day that you were born the angels got togetherAnd decided to create a dream come trueSo they sprinkled moon dust in your hair of goldAnd starlight in your eyes of blueThat is why all the girls in townFollow you all aroundJust like me, they long to beClose to youOn the day that you were born the angels got togetherAnd decided to create a dream come trueSo they sprinkled moon dust in your hair of goldAnd starlight in your eyes of blueThat is why all the girls in townFollow you all aroundJust like me, they long to beClose to youJust like me, they long to beClose to youWa, close to youWa, close to youHa, close to youLa, close to you",
                 "topwords":[
-                                        {"mot" :"stop", "occurences": "15"},
+                    {"mot" :"stop", "occurences": "15"},
                     {"mot" :"close", "occurences": "9"},
                     {"mot" :"like", "occurences": "5"},
                     {"mot" :"long", "occurences": "5"},
