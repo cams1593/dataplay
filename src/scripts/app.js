@@ -41,11 +41,9 @@ function onMouseMove (event) {
     if (mousePosition > click) {
         rotation -= 3;
         document.documentElement.style.setProperty("--rotateValue", rotation + "deg");
-
         
             input.stepDown(1);
-        
-        
+    
     }
     if (mousePosition < click) {
         rotation += 3;
