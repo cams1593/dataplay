@@ -1242,173 +1242,175 @@
     "top_10":[
         {
             "rang":1,
-            "title":"",
-            "lyrics":"",
+            "title":"We Belong Together",
+            "lyrics":"Sweet love yeah I didn't mean it when I said I didn't love you so I should have held on tight, I never should have let you go I didn't know nothing I was stupid I was foolish, I was lying to myself I couldn't have fathomed I would ever be without your love Never imagined I'd be sitting here beside myself 'Cause I didn't know you, 'cause I didn't know me But I thought I knew everything I never felt The feeling that I'm feeling now that I don't hear your voice Or have your touch and kiss your lips 'Cause I don't have a choice Or what I wouldn't give to have you lying by my side Right here 'Cause baby When you left I lost a part of me It's still so hard to believe Come back baby please 'Cause we belong together Who else am I gon' lean on when times get rough? Who's going to talk to me on The phone 'til the sun comes up? Who's going to take your place? There ain't nobody better Oh, baby baby, we belong together I can't sleep at night, when you're on my mind Bobby Womack's on the radio Saying to me, If you think you're lonely now Wait a minute this is too deep (too deep) I gotta change the station So I turn the dial trying to catch a break And then I hear Babyface I only think of you And it's breaking my heart I'm trying to keep it together but I'm falling apart I'm feeling all out of my element Throwing things crying trying to figure out Where the hell I went wrong Pain reflected in this song Ain't even half of what I'm feeling inside I need you need you back in my life baby When you left I lost a part of me It's still so hard to believe Come back baby please 'Cause we belong together Who else am I gon' lean on when times get rough? Who's going to talk to me on the phone 'til the sun comes up? Who's going to take your place? There ain't nobody better Oh, baby baby, we belong together, baby When you left I lost a part of me It's still so hard to believe Come back baby please 'Cause we belong together Who am I gon' lean on when times get rough? Who's going to talk to me on the phone 'til the sun comes up? Who's going to take your place? There ain't nobody better Oh, baby baby, we belong together",
               "topwords": [
-                {"mot" : "love", "occurences": "6"},
-                {"mot" : "say", "occurences": "4"},
-                {"mot" : "afraid", "occurences": "3"},
-                {"mot" : "never", "occurences": "3"},
-                {"mot" : "soul", "occurences": "2"},
-                {"mot" : "seed", "occurences": "2"},
-                {"mot" : "learns", "occurences": "2"},
-                {"mot" : "river", "occurences": "1"},
-                {"mot" : "drowns", "occurences": "1"},
-                {"mot" : "tender", "occurences": "1"}
+                {"mot" : "baby", "occurences": "12"},
+                {"mot" : "cause", "occurences": "7"},
+                {"mot" : "together", "occurences": "7"},
+                {"mot" : "belong", "occurences": "6"},
+                {"mot" : "who's", "occurences": "6"},
+                {"mot" : "going", "occurences": "6"},
+                {"mot" : "feeling", "occurences": "4"},
+                {"mot" : "back", "occurences": "4"},
+                {"mot" : "ain't", "occurences": "4"},
+                {"mot" : "love", "occurences": "3"}
             ]
         },
         {
             "rang":2,
-            "title":"",
-            "lyrics":"",
+            "title":"Hollaback Girl",
+            "lyrics":"Uh-huh, this my shit All the girls stomp your feet like this A few times I've been around that track So it's not just gonna happen like that 'Cause I ain't no hollaback girl I ain't no hollaback girl A few times I've been around that track So it's not just gonna happen like that 'Cause I ain't no hollaback girl I ain't no hollaback girl Ooh, this my shit, this my shit Ooh, this my shit, this my shit Ooh, this my shit, this my shit Ooh, this my shit, this my shit I heard that you were talking shit And you didn't think that I would hear it People hear you talking like that Getting everybody fired up So I'm ready to attack, gonna lead the pack Gonna get a touchdown, gonna take you out That's right, put your pom-poms down Getting everybody fired up A few times I've been around that track So it's not just gonna happen like that 'Cause I ain't no hollaback girl I ain't no hollaback girl A few times I've been around that track So it's not just gonna happen like that 'Cause I ain't no hollaback girl I ain't no hollaback girl Ooh, this my shit, this my shit Ooh, this my shit, this my shit Ooh, this my shit, this my shit Ooh, this my shit, this my shit So that's right dude, meet me at the bleachers No principals, no student teachers Both of us wanna be the winner But there can only be one So I'm gonna fight, gonna give it my all Gonna make you fall, gonna sock it to you That's right, I'm the last one standing Another one bites the dust A few times I've been around that track So it's not just gonna happen like that 'Cause I ain't no hollaback girl I ain't no hollaback girl A few times I've been around that track So it's not just gonna happen like that 'Cause I ain't no hollaback girl I ain't no hollaback girl Ooh, this my shit, this my shit Ooh, this my shit, this my shit Ooh, this my shit, this my shit Ooh, this my shit, this my shit Lemme hear you say this shit is bananas B-A-N-A-N-A-S This shit is bananas B-A-N-A-N-A-S Again, this shit is bananas B-A-N-A-N-A-S This shit is bananas B-A-N-A-N-A-S A few times I've been around that track So it's not just gonna happen like that 'Cause I ain't no hollaback girl I ain't no hollaback girl A few times I've been around that track So it's not just gonna happen like that 'Cause I ain't no hollaback girl I ain't no hollaback girl Ooh, this my shit, this my shit Ooh, this my shit, this my shit Ooh, this my shit, this my shit Ooh, this my shit, this my shit",
               "topwords": [
-                {"mot" : "love", "occurences": "6"},
-                {"mot" : "say", "occurences": "4"},
-                {"mot" : "afraid", "occurences": "3"},
-                {"mot" : "never", "occurences": "3"},
-                {"mot" : "soul", "occurences": "2"},
-                {"mot" : "seed", "occurences": "2"},
-                {"mot" : "learns", "occurences": "2"},
-                {"mot" : "river", "occurences": "1"},
-                {"mot" : "drowns", "occurences": "1"},
-                {"mot" : "tender", "occurences": "1"}
+                {"mot" : "shit", "occurences": "38"},
+                {"mot" : "ain't", "occurences": "16"},
+                {"mot" : "hollaback", "occurences": "16"},
+                {"mot" : "girl", "occurences": "16"},
+                {"mot" : "ooh", "occurences": "16"},
+                {"mot" : "gonna", "occurences": "15"},
+                {"mot" : "like", "occurences": "10"},
+                {"mot" : "times", "occurences": "8"},
+                {"mot" : "around", "occurences": "8"},
+                {"mot" : "track", "occurences": "8"}
             ]
         },
         {
             "rang":3,
-            "title":"",
-            "lyrics":"",
+            "title":"Let Me Love You",
+            "lyrics":"Mm, uh Mm, yeah Mm-mm Yeah, yeah, yeah Mm, uh Mm, yeah Mm-mm Yeah, yeah Baby, I just don't get it Do you enjoy being hurt? I know you smelled the perfume The makeup on his shirt You don't believe his stories You know that they're all lies Bad as you are, you stick around And I just don't know why If I was your man (baby, you'd) Never worry 'bout (what I do) I'd be coming home (back to you) Every night, doing you right You're the type of woman (deserves good things) Fist full of diamonds (hand full of rings) Baby, you're a star (I just want to show you, you are) You should let me love you Let me be the one to Give you everything you want and need Baby, good love and protection Make me your selection Show you the way love's supposed to be Baby, you should let me love you, love you, love you Love you, yeah Listen Your true beauty's description Looks so good that it hurts You're a dime plus 99 And it's a shame don't even know what you're worth Everywhere you go, they stop and stare 'Cause you're bad and it shows From your head to your toes, out of control, baby you know If I was your man (baby, you'd) Never worry 'bout (what I do) I'd be coming home (back to you) Every night doin' you right You're the type of woman (deserves good things) Fist full of diamonds (a handful of rings) Baby, you're a star (I just want to show you, you are) You should let me love you Let me be the one to Give you everything you want and need Ooh, baby, good love and protection Make me your selection Show you the way love's supposed to be Baby, you should let me You deserve better, girl (you know you deserve better) We should be together girl (baby, ooh) With me and you, it's whatever girl, hey! (Ooh) So can we make this thing ours? You should let me love you (you should let me love you) Let me be the one to (let me be the one to give) Give you everything you want and need (everything you need, yeah) Good love and protection (said everything) Make me your selection (will you take me, baby?) Show you the way love's supposed to be (ooh) You should let me love you (baby, you should let me love you) Let me be the one to Give you everything you want and need (I'll give you everything) Good love and protection (that good love & protection) Make me your selection Show you the way love's supposed to be (hey) You should let me love you (ayy, love you) Let me be the one to (the one to) Give you everything you want and need (everything you need, ooh baby) Good love and protection (protection) Make me your selection (selection, baby) Show you the way love's supposed to be yeah (ooh, yeah) Let me love you That's all you need, baby",
               "topwords": [
-                {"mot" : "love", "occurences": "6"},
-                {"mot" : "say", "occurences": "4"},
-                {"mot" : "afraid", "occurences": "3"},
-                {"mot" : "never", "occurences": "3"},
-                {"mot" : "soul", "occurences": "2"},
-                {"mot" : "seed", "occurences": "2"},
-                {"mot" : "learns", "occurences": "2"},
-                {"mot" : "river", "occurences": "1"},
-                {"mot" : "drowns", "occurences": "1"},
-                {"mot" : "tender", "occurences": "1"}
+                {"mot" : "love", "occurences": "19"},
+                {"mot" : "baby", "occurences": "16"},
+                {"mot" : "let", "occurences": "16"},
+                {"mot" : "yeah", "occurences": "11"},
+                {"mot" : "good", "occurences": "9"},
+                {"mot" : "everything", "occurences": "9"},
+                {"mot" : "need", "occurences": "8"},
+                {"mot" : "want", "occurences": "7"},
+                {"mot" : "show", "occurences": "7"},
+                {"mot" : "one", "occurences": "7"}
             ]
         },
           {
             "rang":4,
-            "title":"",
-            "lyrics":"",
+            "title":"Since U Been Gone",
+            "lyrics":"Here's the thing: we started out friends It was cool but it was all pretend Yeah, yeah Since you've been gone You dedicated, you took the time Wasn't long 'til I called you mine Yeah, yeah Since you've been gone And all you'd ever hear me say Is how I pictured me with you That's all you'd ever hear me say But since you've been gone I can breathe for the first time I'm so moving on Yeah, yeah Thanks to you Now I get what I want Since you've been gone How can I put it? You put me on I even fell for that stupid love song Yeah, yeah Since you've been gone How come I'd never hear you say, I just wanna be with you. I guess you never felt that way But since you've been gone I can breathe for the first time I'm so moving on Yeah, yeah Thanks to you Now I get (I get) what I want Since you've been gone You had your chance, you blew it Out of sight, out of mind Shut your mouth, I just can't take it Again and again, and again, and again Since you've been gone (Since you've been gone) I can breathe for the first time I'm so moving on Yeah, yeah Thanks to you (thanks to you) Now I get, I get what I want I can breathe for the first time I'm so moving on Yeah, yeah Thanks to you (thanks to you) Now I get (I get) You should know (you should know) That I get, I get what I want Since you've been gone Since you've been gone Since you've been gone",
               "topwords": [
-                {"mot" : "love", "occurences": "6"},
-                {"mot" : "say", "occurences": "4"},
-                {"mot" : "afraid", "occurences": "3"},
-                {"mot" : "never", "occurences": "3"},
-                {"mot" : "soul", "occurences": "2"},
-                {"mot" : "seed", "occurences": "2"},
-                {"mot" : "learns", "occurences": "2"},
-                {"mot" : "river", "occurences": "1"},
-                {"mot" : "drowns", "occurences": "1"},
-                {"mot" : "tender", "occurences": "1"}
+                {"mot" : "yeah", "occurences": "14"},
+                {"mot" : "since", "occurences": "12"},
+                {"mot" : "gone", "occurences": "12"},
+                {"mot" : "get", "occurences": "9"},
+                {"mot" : "thanks", "occurences": "6"},
+                {"mot" : "time", "occurences": "5"},
+                {"mot" : "breathe", "occurences": "4"},
+                {"mot" : "first", "occurences": "4"},
+                {"mot" : "moving", "occurences": "4"},
+                {"mot" : "want", "occurences": "4"}
             ]
         },
           {
             "rang":5,
-            "title":"",
-            "lyrics":"",
+            "title":"1, 2 Step",
+            "lyrics":"Ladies and gentlemen (Ladies and gentlemen, ooh-wee) This is a Jazze Phizzle Productshizzle (Jazze Phizzle) Missy (Missy) The princess is here (Ooh-wee) (She's here) Ciara Automatic, supersonic, hypnotic, funky fresh Work my body, so melodic This beat flows right through my chest Everybody, Ma and Papi came to party Grab somebody, work your body, work your body Let me see you one, two step (Here we go) Rock it, don't stop it Everybody get on the floor Crank the party up We about to get it on Let me see ya One, two step I love it when ya One, two step Everybody One, two step We about to get it on (This beat is) Outrageous, so contagious, make you crave it (Jazze made it) So retarded, top-charted Ever since the day I started Strut my stuff and yes I flaunt it Goodies make the boys jump on it No, I can't control myself Now let me do my one, two step (Come on) Rock it, don't stop it Everybody get on the floor Crank the party up We about to get it on Let me see ya One, two step I love it when ya One, two step Everybody One, two step We about to get it on It don't matter to me We can dance slow (Ladies and gentlemen) Which ever way the beat drop Our bodies will go (I like this) So swing it over here, Mr. DJ (Hey, hey) And we will, we will rock you (Oh yeah) It don't matter to me We can dance slow (Dance slow ya, ya, ya) Which ever way the beat drop Our bodies will go (Hey, hey) So swing it over here, Mr. DJ (Ladies and gentlemen) And we will, we will rock you (Wee) I shake it like jello, make the boys say hello 'Cause they know I'm rockin' the beat I know you heard about a lot of great MC's But they ain't got nothing on me Because I'm five foot two, I wanna dance with you And I'm sophisticated fun I eat fillet mignon And I'm nice and young Best believe I'm number one (Ooh) Rock it, don't stop it Everybody get on the floor Crank the party up (Oh) We about to get it on Let me see ya One, two step I love it when ya One, two step Everybody One, two step We about to get it on Rock it, don't stop it Everybody get on the floor Crank the party up We about to get it on Let me see ya One, two step I love it when ya One, two step Everybody One, two step We about to get it on This is for the hearing impaired A Jazze Pha production (Ooh-wee, ooh-wee)",
               "topwords": [
-                {"mot" : "love", "occurences": "6"},
-                {"mot" : "say", "occurences": "4"},
-                {"mot" : "afraid", "occurences": "3"},
-                {"mot" : "never", "occurences": "3"},
-                {"mot" : "soul", "occurences": "2"},
-                {"mot" : "seed", "occurences": "2"},
-                {"mot" : "learns", "occurences": "2"},
-                {"mot" : "river", "occurences": "1"},
-                {"mot" : "drowns", "occurences": "1"},
-                {"mot" : "tender", "occurences": "1"}
+                {"mot" : "2", "occurences": "15"},
+                {"mot" : "1", "occurences": "14"},
+                {"mot" : "step", "occurences": "14"},
+                {"mot" : "get", "occurences": "12"},
+                {"mot" : "everybody", "occurences": "9"},
+                {"mot" : "beat", "occurences": "6"},
+                {"mot" : "let", "occurences": "6"},
+                {"mot" : "rock", "occurences": "6"},
+                {"mot" : "party", "occurences": "5"},
+                {"mot" : "see", "occurences": "5"}
             ]
         },  
         {
             "rang":6,
-            "title":"",
-            "lyrics":"",
+            "title":"Gold Digger",
+            "lyrics":"She take my money when I'm in need Yeah, she's a triflin' friend indeed Oh, she's a gold digger Way over town that digs on me (She give me money) Now, I ain't sayin' she a gold digger (When I'm in need) But she ain't messin' with no broke niggas (She give me money) Now, I ain't sayin' she a gold digger (When I'm in need) But she ain't messin' with no broke niggas (I gotta leave) Get down girl, go 'head, get down (I gotta leave) Get down girl, go 'head, get down (I gotta leave) Get down girl, go 'head, get down (I gotta leave) Get down girl, go 'head Cutie the bomb, met her at a beauty salon With a baby Louis Vuitton under her underarm She said, I can tell you rock, I can tell by your charm Far as girls, you got a flock I can tell by your charm and your arm But I'm lookin' for the one, have you seen her? My psychic told me she'll have a ass like Serena Trina, Jennifer Lopez, four kids And I gotta take all they bad asses to ShowBiz? Okay, get your kids, but then they got their friends I pulled up in the Benz, they all got up in We all went to din' and then I had to pay If you fuckin' with this girl, then you better be paid You know why? It take too much to touch her From what I heard she got a baby by Busta My best friend said she used to fuck with Usher I don't care what none of y'all say, I still love her (She give me money) Now, I ain't sayin' she a gold digger (When I'm in need) But she ain't messin' with no broke niggas (She give me money) Now, I ain't sayin' she a gold digger (When I'm in need) But she ain't messin' with no broke niggas (I gotta leave) Get down girl, go 'head, get down (I gotta leave) Get down girl, go 'head, get down (I gotta leave) Get down girl, go 'head, get down (I gotta leave) Get down girl, go 'head Eighteen years, eighteen years She got one of your kids, got you for eighteen years I know somebody payin' child support for one of his kids His baby mama car and crib is bigger than his You will see him on TV any given Sunday Win the Super Bowl and drive off in a Hyundai She was supposed to buy your shorty Tyco with your money She went to the doctor, got lipo with your money She walkin' around lookin' like Michael with your money Should've got that insured, Geico for your money If you ain't no punk Holla, We want prenup! We want prenup! (Yeah!) It's somethin' that you need to have 'Cause when she leave yo' ass, she gon' leave with half Eighteen years, eighteen years And on the 18th birthday, he found out it wasn't his? (She give me money) Now, I ain't sayin' she a gold digger (When I'm in need) But she ain't messin' with no broke niggas (She give me money) Now, I ain't sayin' she a gold digger (When I'm in need) But she ain't messin' with no broke niggas (I gotta leave) Get down girl, go 'head, get down (I gotta leave) Get down girl, go 'head, get down (I gotta leave) Get down girl, go 'head, get down (I gotta leave) Get down girl, go 'head Now, I ain't sayin' you're a gold digger, you got needs You don't want a dude to smoke, but he can't buy weed You go out to eat, he can't pay, y'all can't leave There's dishes in the back, he gotta roll up his sleeves But while y'all washin', watch him He gon' make it to a Benz out of that Datsun He got that ambition, baby, look at his eyes This week he moppin' floors, next week it's the fries So stick by his side I know there's dudes ballin', and yeah, that's nice And they gonna keep callin' and tryin', but you stay right, girl And when he get on, he'll leave yo' ass for a white girl (I gotta leave) Get down girl, go 'head, get down (I gotta leave) Get down girl, go 'head, get down (I gotta leave) Get down girl, go 'head, get down (I gotta leave) Get down girl, go 'head Let me hear that back",
               "topwords": [
-                {"mot" : "love", "occurences": "6"},
-                {"mot" : "say", "occurences": "4"},
-                {"mot" : "afraid", "occurences": "3"},
-                {"mot" : "never", "occurences": "3"},
-                {"mot" : "soul", "occurences": "2"},
-                {"mot" : "seed", "occurences": "2"},
-                {"mot" : "learns", "occurences": "2"},
-                {"mot" : "river", "occurences": "1"},
-                {"mot" : "drowns", "occurences": "1"},
-                {"mot" : "tender", "occurences": "1"}
+                {"mot" : "get", "occurences": "30"},
+                {"mot" : "leave", "occurences": "20"},
+                {"mot" : "girl", "occurences": "19"},
+                {"mot" : "gotta", "occurences": "18"},
+                {"mot" : "go", "occurences": "17"},
+                {"mot" : "head", "occurences": "16"},
+                {"mot" : "ain't", "occurences": "14"},
+                {"mot" : "money", "occurences": "11"},
+                {"mot" : "got", "occurences": "10"},
+                {"mot" : "need", "occurences": "8"}
             ]
         },
           {
             "rang":7,
-            "title":"",
-            "lyrics":"",
+            "title":"Boulevard of Broken Dreams",
+            "lyrics":"I walk a lonely road The only one that I have ever known Don't know where it goes But it's home to me, and I walk alone I walk this empty street On the Boulevard of Broken Dreams Where the city sleeps And I'm the only one, and I walk alone I walk alone, I walk alone I walk alone, I walk a- My shadow's the only one that walks beside me My shallow heart's the only thing that's beating Sometimes, I wish someone out there will find me 'Til then, I walk alone Ah-ah, ah-ah, ah-ah, ah-ah Ah-ah, ah-ah, ah-ah I'm walking down the line That divides me somewhere in my mind On the borderline Of the edge, and where I walk alone Read between the lines What's fucked up, and everything's alright Check my vital signs To know I'm still alive, and I walk alone I walk alone, I walk alone I walk alone, I walk a- My shadow's the only one that walks beside me My shallow heart's the only thing that's beating Sometimes, I wish someone out there will find me 'Til then, I walk alone Ah-ah, ah-ah, ah-ah, ah-ah Ah-ah, ah-ah, I walk alone, I walk a- I walk this empty street On the Boulevard of Broken Dreams Where the city sleeps And I'm the only one, and I walk a- My shadow's the only one that walks beside me My shallow heart's the only thing that's beating Sometimes, I wish someone out there will find me 'Til then, I walk alone",
               "topwords": [
-                {"mot" : "love", "occurences": "6"},
-                {"mot" : "say", "occurences": "4"},
-                {"mot" : "afraid", "occurences": "3"},
-                {"mot" : "never", "occurences": "3"},
-                {"mot" : "soul", "occurences": "2"},
-                {"mot" : "seed", "occurences": "2"},
-                {"mot" : "learns", "occurences": "2"},
-                {"mot" : "river", "occurences": "1"},
-                {"mot" : "drowns", "occurences": "1"},
-                {"mot" : "tender", "occurences": "1"}
-            ]
+                                
+                    {"mot": "walk", "occurences": "21"},
+                    {"mot": "alone", "occurences": "14"},
+                    {"mot": "ah-ah", "occurences": "13"},
+                    {"mot": "one", "occurences": "6"},
+                    {"mot": "a-", "occurences": "4"},
+                    {"mot": "shadow's", "occurences": "3"},
+                    {"mot": "walks", "occurences": "3"},
+                    {"mot": "beside", "occurences": "3"},
+                    {"mot": "shallow", "occurences": "3"},
+                    {"mot": "heart's", "occurences": "3"}
+                ]
+            
         },
           {
             "rang":8,
-            "title":"",
-            "lyrics":"",
+            "title":"Candy Shop",
+            "lyrics":"Yeah Uh-huh So seductive I'll take you to the candy shop I'll let you lick the lollipop Go 'head, girl, don't you stop Keep goin' 'til you hit the spot, whoa I'll take you to the candy shop (yeah) Boy, one taste of what I got (uh-huh) I'll have you spendin' all you got (come on) Keep goin' 'til you hit the spot, whoa You could have it your way, how do you want it? You gon' back that thing up, or should I push up on it? Temperature risin', okay, let's go to the next level Dance floor jam-packed, hot as a tea kettle I break it down for you now, baby, it's simple If you be a nympho, I'll be a nympho In the hotel, or in the back of the rental On the beach or in the park, it's whatever you into Got the magic stick, I'm the love doctor Have your friends teasin' you 'bout how sprung I got ya Wanna show me how you work it, baby? No problem, get on top Then get to bouncin' 'round like a little rider I'm seasoned vet when it come to this shit After you work up a sweat you can play with this stick I'm trying to explain, baby, the best way I can I melt in your mouth girl, not in your hands, ha-ha I'll take you to the candy shop I'll let you lick the lollypop Go 'head, girl, don't you stop Keep goin' 'til you hit the spot, whoa I'll take you to the candy shop Boy, one taste of what I got I'll have you spendin' all you got Keep goin' 'til you hit the spot, whoa Girl, what we do (what we do) And where we do (and where we do) The things we do (things we do) Are just between me and you, yeah (oh yeah) Give it to me, baby, nice and slow Climb on the top, ride like you in a rodeo You ain't never heard a sound like this before 'Cause I ain't never put it down like this Soon as I come through the door, she get to pullin' on my zipper It's like it's a race, who could get undressed quicker Isn't it ironic how erotic it is to watch her in thongs? Had me thinkin' 'bout that ass after I'm gone I touch the right spot at the right time Lights on or lights off, she like it from behind So seductive you should see the way she whine Her hips in slow mo' on the floor when we grind Long as she ain't stoppin', homie, I ain't stoppin' Drippin' wet with sweat, man, it's on and poppin' On my champagne campaign, bottle after bottle, it's on And we gon' sip 'til every bubble in every bottle is gone I'll take you to the candy shop I'll let you lick the lollypop Go 'head, girl, don't you stop Keep goin' 'til you hit the spot, whoa I'll take you to the candy shop Boy, one taste of what I got I'll have you spendin' all you got Keep goin' 'til you hit the spot, whoa I'll take you to the candy shop I'll let you lick the lollypop Go 'head, girl, don't you stop Keep goin' 'til you hit the spot, whoa I'll take you to the candy shop Boy, one taste of what I got I'll have you spendin' all you got Keep goin' 'til you hit the spot, whoa",
               "topwords": [
-                {"mot" : "love", "occurences": "6"},
-                {"mot" : "say", "occurences": "4"},
-                {"mot" : "afraid", "occurences": "3"},
-                {"mot" : "never", "occurences": "3"},
-                {"mot" : "soul", "occurences": "2"},
-                {"mot" : "seed", "occurences": "2"},
-                {"mot" : "learns", "occurences": "2"},
-                {"mot" : "river", "occurences": "1"},
-                {"mot" : "drowns", "occurences": "1"},
-                {"mot" : "tender", "occurences": "1"}
-            ]
+                  {"mot": "got", "occurences": "10"},
+                  {"mot": "til", "occurences": "9"},
+                  {"mot": "spot", "occurences": "9"},
+                  {"mot": "take", "occurences": "8"},
+                  {"mot": "candy", "occurences": "8"},
+                  {"mot": "shop", "occurences": "8"},
+                  {"mot": "keep", "occurences": "8"},
+                  {"mot": "goin'", "occurences": "8"},
+                  {"mot": "hit", "occurences": "8"},
+                  {"mot": "whoa", "occurences": "8"}
+              ]
         },
           {
             "rang":9,
-            "title":"",
-            "lyrics":"",
-              "topwords": [
-                {"mot" : "love", "occurences": "6"},
-                {"mot" : "say", "occurences": "4"},
-                {"mot" : "afraid", "occurences": "3"},
-                {"mot" : "never", "occurences": "3"},
-                {"mot" : "soul", "occurences": "2"},
-                {"mot" : "seed", "occurences": "2"},
-                {"mot" : "learns", "occurences": "2"},
-                {"mot" : "river", "occurences": "1"},
-                {"mot" : "drowns", "occurences": "1"},
-                {"mot" : "tender", "occurences": "1"}
-            ]
+            "title":"Don't Cha",
+            "lyrics":"OK Oh, we about to get it just a little hot and sweaty in this motherfucker (oh, baby) Ladies, let's go Soldiers let's go (dolls) Let me talk to y'all and just you know Give you a little situation. Listen (fellas) You see this shit get hot Every time I come through when I step up in the spot (are you ready) Make the place sizzle like a summertime cookout Prowl for the best chick Yes I'm on the lookout (let's dance) Slow banging shorty like a belly dancer with it Smell good, pretty skin, so gangster with it (oh, baby) No tricks only diamonds under my sleeve Gimme the number But make sure you call before you leave I know you like me (I know you like me) I know you do (I know you do) That's why whenever I come around She's all over you And I know you want it (I know you want it) It's easy to see (it's easy to see) And in the back of your mind I know you should be on with me (babe) Don't you wish your girlfriend was hot like me? Don't you wish your girlfriend was a freak like me? Don't you? Don't you? Don't you wish your girlfriend was raw like me? Don't you wish your girlfriend was fun like me? Don't you? Don't you? Fight the feeling (fight the feeling) Leave it alone (leave it alone) 'Cause if it ain't love It just ain't enough to leave a happy home Let's keep it friendly (let's keep it friendly) You have to play fair (you have to play fair) See I don't care But I know she ain't gon' wanna share Don't you wish your girlfriend was hot like me? Don't you wish your girlfriend was a freak like me, like me? Don't you? Don't you, baby? Don't you? Alright, sing Don't you wish your girlfriend was raw like me? Raw Don't you wish your girlfriend was fun like me? Big fun Don't you? Don't you? OK, I see how it's goin' down (ah, don't you) Seems like shorty wanna little ménage pop off or something (let's go) Well let me get straight to it Every broad wanna watch a nigga when I come through it It's the God almighty, looking all brand-new If shorty wanna jump in my Aston Vanquish Looking at me all like she really wanna do it Tryna put it on me 'til my balls black and blueish You wanna play with a player girl then play on Strip out the Chanel And leave the lingerie on Watch me and I'mma watch you at the same time Looking at you wanna break my back You're the very reason why I keep a pack of the Magnum And with the wagon hit you in the back of the Magnum For the record: I don't think it was something you did Shorty all on me 'cause it's hard to resist the kid I got a idea that's dope for y'all As y'all could get cold so I could hit the both of y'all I know she loves you (I know she loves you) I understand (I understand) Yeah I'd probably be just as crazy about you If you were my own man Maybe next lifetime (maybe next lifetime) Possibly (possibly) Until then old friend Your secret is safe with me Don't you wish your girlfriend was hot like me? Don't you wish your girlfriend was a freak like me, like me? Don't you? Don't you, baby? Don't you? Alright, sing Don't you wish your girlfriend was raw like me? Raw Don't you wish your girlfriend was fun like me? Big fun Don't you? Don't you?",
+            "topwords": [
+                {"mot": "cha", "occurences": "24"},
+                {"mot": "know", "occurences": "16"},
+                {"mot": "like", "occurences": "14"},
+                {"mot": "wish", "occurences": "12"},
+                {"mot": "girlfriend", "occurences": "12"},
+                {"mot": "ain't", "occurences": "9"},
+                {"mot": "fun", "occurences": "6"},
+                {"mot": "let's", "occurences": "4"},
+                {"mot": "see", "occurences": "4"},
+                {"mot": "mind", "occurences": "4"}
+]
         },
           {
             "rang":10,
-            "title":"",
-            "lyrics":"",
+            "title":"Behind These Hazel Eyes",
+            "lyrics":"Oh-oh, oh, oh Oh-oh-oh Oh-oh, oh, oh Seems like just yesterday You were a part of me I used to stand so tall I used to be so strong Your arms around me tight Everything, it felt so right Unbreakable, like nothing could go wrong Now I can't breathe, no, I can't sleep I'm barely hanging on Here I am, once again I'm torn into pieces Can't deny it, can't pretend Just thought you were the one Broken up, deep inside But you won't get to see the tears I cry Behind these hazel eyes I told you everything Opened up and let you in You made me feel alright For once in my life Now all that's left of me Is what I pretend to be So together, but so broken up inside 'Cause I can't breathe, no, I can't sleep I'm barely hanging on Here I am, once again I'm torn into pieces Can't deny it, can't pretend Just thought you were the one Broken up, deep inside But you won't get to see the tears I cry Behind these hazel eyes Swallow me, then spit me out For hating you, I blame myself Seeing you, it kills me now No, I don't cry on the outside anymore Anymore Here I am, once again I'm torn into pieces Can't deny it, can't pretend Just thought you were the one Broken up, deep inside But you won't get to see the tears I cry Behind these hazel eyes Here I am, once again I'm torn into pieces Can't deny it, can't pretend Just thought you were the one Broken up, deep inside But you won't get to see the tears I cry Behind these hazel eyes",
               "topwords": [
-                {"mot" : "love", "occurences": "6"},
-                {"mot" : "say", "occurences": "4"},
-                {"mot" : "afraid", "occurences": "3"},
-                {"mot" : "never", "occurences": "3"},
-                {"mot" : "soul", "occurences": "2"},
-                {"mot" : "seed", "occurences": "2"},
-                {"mot" : "learns", "occurences": "2"},
-                {"mot" : "river", "occurences": "1"},
-                {"mot" : "drowns", "occurences": "1"},
-                {"mot" : "tender", "occurences": "1"}
-            ]
+                  {"mot": "can't", "occurences": "12"},
+                  {"mot": "pretend", "occurences": "5"},
+                  {"mot": "broken", "occurences": "5"},
+                  {"mot": "inside", "occurences": "5"},
+                  {"mot": "cry", "occurences": "5"},
+                  {"mot": "oh", "occurences": "4"},
+                  {"mot": "torn", "occurences": "4"},
+                  {"mot": "pieces", "occurences": "4"},
+                  {"mot": "deny", "occurences": "4"},
+                  {"mot": "thought", "occurences": "4"}
+              ]
         }
 
 
