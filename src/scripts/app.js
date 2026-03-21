@@ -168,7 +168,7 @@ function getInputNumber () {
                     ]
                   }
                 }
-                Chart.update()
+            
               );
             })();
         }
