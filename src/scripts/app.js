@@ -96,6 +96,7 @@ function getInputNumber () {
 
         listeLi.forEach(function(li){
             li.addEventListener("click", showLyrics);
+
             function showLyrics () {
             const elId = li.id;
             const songActive = document.querySelector(".songinfos__el--active");
@@ -105,8 +106,58 @@ function getInputNumber () {
             li.classList.add("songinfos__el--active");
             const lyricsParagraphe = document.querySelector(".songinfos__paragraphe");
             lyricsParagraphe.innerHTML = data[choosenYear].top_10[elId - 1].lyrics;
+
+
+            console.log(data[choosenYear].top_10[elId - 1].topwords[0].occurences);//connaitre le nombre d'occurences pour tel mot 
         }
-        })    
+
+        
+
+
+
+            
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        })
     })
     .catch(error => console.error("Erreur du fetch, l'année choisie n'est pas disponible :", error));
 }
+
