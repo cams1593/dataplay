@@ -34,19 +34,16 @@ function onKnobClick () {
 }
 function onMouseMove (event) {
     const click = event.clientX;
-
     const rootStyle = getComputedStyle(document.documentElement);
     const rotateValue = rootStyle.getPropertyValue('--rotateValue');
 
     if (mousePosition > click) {
-        rotation -= 3;
+        rotation -= 4;
         document.documentElement.style.setProperty("--rotateValue", rotation + "deg");
-        
-            input.stepDown(1);
-    
+        input.stepDown(1);
     }
     if (mousePosition < click) {
-        rotation += 3;
+        rotation += 4;
         document.documentElement.style.setProperty("--rotateValue", rotation + "deg");
         input.stepUp(1);
     }
