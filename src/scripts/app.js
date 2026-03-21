@@ -133,7 +133,8 @@ function getInputNumber () {
 
 //--------------Le Graphique chartjs-----------------
             
-            (async function() {
+        (async function() {
+            
                 const donnees = [
                     { year: data[choosenYear].top_10[elId - 1].topwords[0].mot, count: data[choosenYear].top_10[elId - 1].topwords[0].occurences },
                     { year: data[choosenYear].top_10[elId - 1].topwords[1].mot, count: data[choosenYear].top_10[elId - 1].topwords[1].occurences },
@@ -149,6 +150,7 @@ function getInputNumber () {
 
               new Chart(
                 document.getElementById('myChart'),
+                
                 {
                   type: 'bar',
                   options: {
@@ -166,6 +168,7 @@ function getInputNumber () {
                     ]
                   }
                 }
+                Chart.update()
               );
             })();
         }
