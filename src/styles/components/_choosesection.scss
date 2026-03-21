@@ -6,6 +6,7 @@
   @include section-style;
   grid-row: 1/span 2;
   grid-column: 1 ;
+  height: 100%;
 }}
 .year__ref{
     font-family: $font-ManifoldExtdCF;
@@ -125,7 +126,7 @@
       }
     }
     @media (min-width: $size-desktop) {
-      align-items: flex-start; 
+      align-self: start; 
       padding-right: 10px;
       border-right: 1px solid $c-text;
       border-radius: 0;
