@@ -22,38 +22,56 @@ fetch(url)
 
 const knob = document.querySelector(".bigknob__center");
 const knobRect = knob.getBoundingClientRect();
-const knobX = knobRect.left + knobRect.width / 2 ;
 
 let mousePosition = 0;
 let rotation = 0;
 
 knob.addEventListener("mousedown", onKnobClick);
 
-function onKnobClick () {
+function onKnobClick(event) {
+    // Crucial : enregistrer la position de départ au clic
+    mousePosition = event.clientX; 
+    
     document.addEventListener("mousemove", onMouseMove);
+    document.addEventListener("mouseup", onMouseStop); // On écoute quand on relâche
 }
-function onMouseMove (event) {
-    const click = event.clientX;
 
-    const rootStyle = getComputedStyle(document.documentElement);
-    const rotateValue = rootStyle.getPropertyValue('--rotateValue');
+function onMouseMove(event) {
+    const click = event.clientX;
+    const margin = 200; 
+
+    const isOutside = 
+        event.clientX < knobRect.left - margin || 
+        event.clientX > knobRect.right + margin || 
+        event.clientY < knobRect.top - margin || 
+        event.clientY > knobRect.bottom + margin;
+
+    if (isOutside) {
+        onMouseStop();
+        return; 
+    }
+
 
     if (mousePosition > click) {
         rotation -= 3;
-        document.documentElement.style.setProperty("--rotateValue", rotation + "deg");
-        
-            input.stepDown(1);
-    
-    }
-    if (mousePosition < click) {
+        input.stepDown(1);
+    } else if (mousePosition < click) {
         rotation += 3;
-        document.documentElement.style.setProperty("--rotateValue", rotation + "deg");
         input.stepUp(1);
     }
-    mousePosition = click;
-    console.log(mousePosition);
 
+    document.documentElement.style.setProperty("--rotateValue", rotation + "deg");
+    mousePosition = click;
 }
+
+function onMouseStop() {
+
+    document.removeEventListener("mousemove", onMouseMove);
+    document.removeEventListener("mouseup", onMouseStop);
+}
+
+
+
 //------------Input et changer le texte selon la date choisie
 
 
