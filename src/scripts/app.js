@@ -28,46 +28,35 @@ let rotation = 0;
 
 knob.addEventListener("mousedown", onKnobClick);
 
-function onKnobClick(event) {
-    // Crucial : enregistrer la position de départ au clic
-    mousePosition = event.clientX; 
-    
+function onKnobClick (event) {
+    event.preventDefault();
     document.addEventListener("mousemove", onMouseMove);
-    document.addEventListener("mouseup", onMouseStop); // On écoute quand on relâche
+    document.addEventListener("mouseup", knobStop);
+}
+
+function knobStop(){
+    document.removeEventListener("mousemove", onMouseMove);
 }
 
 function onMouseMove(event) {
     const click = event.clientX;
-    const margin = 200; 
-
-    const isOutside = 
-        event.clientX < knobRect.left - margin || 
-        event.clientX > knobRect.right + margin || 
-        event.clientY < knobRect.top - margin || 
-        event.clientY > knobRect.bottom + margin;
-
-    if (isOutside) {
-        onMouseStop();
-        return; 
-    }
-
+    const rootStyle = getComputedStyle(document.documentElement);
+    const rotateValue = rootStyle.getPropertyValue('--rotateValue');
 
     if (mousePosition > click) {
-        rotation -= 3;
+        rotation -= 4;
+        document.documentElement.style.setProperty("--rotateValue", rotation + "deg");
         input.stepDown(1);
-    } else if (mousePosition < click) {
-        rotation += 3;
+    }
+    if (mousePosition < click) {
+        rotation += 4;
+        document.documentElement.style.setProperty("--rotateValue", rotation + "deg");
         input.stepUp(1);
     }
 
     document.documentElement.style.setProperty("--rotateValue", rotation + "deg");
     mousePosition = click;
-}
-
-function onMouseStop() {
-
-    document.removeEventListener("mousemove", onMouseMove);
-    document.removeEventListener("mouseup", onMouseStop);
+    console.log(mousePosition);
 }
 
 
