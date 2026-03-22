@@ -32,6 +32,7 @@ function onKnobClick (event) {
     event.preventDefault();
     document.addEventListener("mousemove", onMouseMove);
     document.addEventListener("mouseup", knobStop);
+    document.addEventListener("mouseup", getInputNumber);
 }
 
 function knobStop(){
