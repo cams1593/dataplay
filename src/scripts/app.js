@@ -29,8 +29,14 @@ let rotation = 0;
 
 knob.addEventListener("mousedown", onKnobClick);
 
-function onKnobClick () {
+function onKnobClick (event) {
+    event.preventDefault();
     document.addEventListener("mousemove", onMouseMove);
+    document.addEventListener("mouseup", knobStop);
+}
+
+function knobStop(){
+    document.removeEventListener("mousemove", onMouseMove);
 }
 function onMouseMove (event) {
     const click = event.clientX;
@@ -49,7 +55,6 @@ function onMouseMove (event) {
     }
     mousePosition = click;
     console.log(mousePosition);
-
 }
 //------------Input et changer le texte selon la date choisie
 
