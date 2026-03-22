@@ -1,5 +1,5 @@
 //Je pense qu'on peut supprimer cette partie prce qu'elle est dans une fonction (en bas)
-
+import Chart from 'chart.js/auto'
 const url = '../Json/annees.json';
 fetch(url)
     .then(response => response.json())
@@ -22,7 +22,6 @@ fetch(url)
 
 const knob = document.querySelector(".bigknob__center");
 const knobRect = knob.getBoundingClientRect();
-const knobX = knobRect.left + knobRect.width / 2 ;
 
 let mousePosition = 0;
 let rotation = 0;
@@ -38,7 +37,8 @@ function onKnobClick (event) {
 function knobStop(){
     document.removeEventListener("mousemove", onMouseMove);
 }
-function onMouseMove (event) {
+
+function onMouseMove(event) {
     const click = event.clientX;
     const rootStyle = getComputedStyle(document.documentElement);
     const rotateValue = rootStyle.getPropertyValue('--rotateValue');
@@ -53,9 +53,14 @@ function onMouseMove (event) {
         document.documentElement.style.setProperty("--rotateValue", rotation + "deg");
         input.stepUp(1);
     }
+
+    document.documentElement.style.setProperty("--rotateValue", rotation + "deg");
     mousePosition = click;
     console.log(mousePosition);
 }
+
+
+
 //------------Input et changer le texte selon la date choisie
 
 
@@ -98,6 +103,7 @@ function getInputNumber () {
 
         listeLi.forEach(function(li){
             li.addEventListener("click", showLyrics);
+
             function showLyrics () {
             const elId = li.id;
             const songActive = document.querySelector(".songinfos__el--active");
@@ -108,9 +114,57 @@ function getInputNumber () {
             const lyricsParagraphe = document.querySelector(".songinfos__paragraphe");
             lyricsParagraphe.innerHTML = data[choosenYear].top_10[elId - 1].lyrics;
 
-            li.classList.toggle("songinfos__el--active");
+
+            
+
+
+
+
+//--------------Le Graphique chartjs-----------------
+            
+        (async function() {
+            
+                const donnees = [
+                    { year: data[choosenYear].top_10[elId - 1].topwords[0].mot, count: data[choosenYear].top_10[elId - 1].topwords[0].occurences },
+                    { year: data[choosenYear].top_10[elId - 1].topwords[1].mot, count: data[choosenYear].top_10[elId - 1].topwords[1].occurences },
+                    { year: data[choosenYear].top_10[elId - 1].topwords[2].mot, count: data[choosenYear].top_10[elId - 1].topwords[2].occurences },
+                    { year: data[choosenYear].top_10[elId - 1].topwords[3].mot, count: data[choosenYear].top_10[elId - 1].topwords[3].occurences },
+                    { year: data[choosenYear].top_10[elId - 1].topwords[4].mot, count: data[choosenYear].top_10[elId - 1].topwords[4].occurences},
+                    { year: data[choosenYear].top_10[elId - 1].topwords[5].mot, count: data[choosenYear].top_10[elId - 1].topwords[5].occurences},
+                    { year: data[choosenYear].top_10[elId - 1].topwords[6].mot, count: data[choosenYear].top_10[elId - 1].topwords[6].occurences },
+                    { year: data[choosenYear].top_10[elId - 1].topwords[7].mot, count: data[choosenYear].top_10[elId - 1].topwords[7].occurences },
+                    { year: data[choosenYear].top_10[elId - 1].topwords[8].mot, count: data[choosenYear].top_10[elId - 1].topwords[8].occurences },
+                    { year: data[choosenYear].top_10[elId - 1].topwords[9].mot, count: data[choosenYear].top_10[elId - 1].topwords[9].occurences },
+                ];
+
+              new Chart(
+                document.getElementById('myChart'),
+                
+                {
+                  type: 'bar',
+                  options: {
+                    tooltip: {
+                        enabled: false
+                    },
+                  },
+                  data: {
+                    labels: donnees.map(row => row.year),
+                    datasets: [
+                      {
+                        label: 'Réccurence du mot dans la chanson',
+                        data: donnees.map(row => row.count)
+                      }
+                    ]
+                  }
+                }
+            
+              );
+            })();
         }
-        })    
+
+
+        })
     })
     .catch(error => console.error("Erreur du fetch, l'année choisie n'est pas disponible :", error));
 }
+
