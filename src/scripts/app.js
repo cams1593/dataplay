@@ -1,6 +1,7 @@
 //Je pense qu'on peut supprimer cette partie prce qu'elle est dans une fonction (en bas)
 import Chart from 'chart.js/auto'
 const url = '../Json/annees.json';
+let myGraph = null;
 fetch(url)
     .then(response => response.json())
     .then((data) => {
@@ -22,10 +23,9 @@ fetch(url)
 
 const knob = document.querySelector(".bigknob__center");
 const knobRect = knob.getBoundingClientRect();
-
+const knobX = knobRect.left + knobRect.width / 2 ;
 let mousePosition = 0;
 let rotation = 0;
-
 knob.addEventListener("mousedown", onKnobClick);
 
 function onKnobClick (event) {
@@ -37,29 +37,23 @@ function onKnobClick (event) {
 function knobStop(){
     document.removeEventListener("mousemove", onMouseMove);
 }
-
-function onMouseMove(event) {
+function onMouseMove (event) {
     const click = event.clientX;
     const rootStyle = getComputedStyle(document.documentElement);
     const rotateValue = rootStyle.getPropertyValue('--rotateValue');
 
     if (mousePosition > click) {
-        rotation -= 4;
-        document.documentElement.style.setProperty("--rotateValue", rotation + "deg");
+        rotation -= 3;
         input.stepDown(1);
-    }
-    if (mousePosition < click) {
-        rotation += 4;
-        document.documentElement.style.setProperty("--rotateValue", rotation + "deg");
+    } else if (mousePosition < click) {
+        rotation += 3;
         input.stepUp(1);
     }
-
-    document.documentElement.style.setProperty("--rotateValue", rotation + "deg");
     mousePosition = click;
     console.log(mousePosition);
 }
 
-
+}
 
 //------------Input et changer le texte selon la date choisie
 
@@ -122,8 +116,7 @@ function getInputNumber () {
 
 //--------------Le Graphique chartjs-----------------
             
-        (async function() {
-            
+            (async function() {
                 const donnees = [
                     { year: data[choosenYear].top_10[elId - 1].topwords[0].mot, count: data[choosenYear].top_10[elId - 1].topwords[0].occurences },
                     { year: data[choosenYear].top_10[elId - 1].topwords[1].mot, count: data[choosenYear].top_10[elId - 1].topwords[1].occurences },
@@ -136,10 +129,16 @@ function getInputNumber () {
                     { year: data[choosenYear].top_10[elId - 1].topwords[8].mot, count: data[choosenYear].top_10[elId - 1].topwords[8].occurences },
                     { year: data[choosenYear].top_10[elId - 1].topwords[9].mot, count: data[choosenYear].top_10[elId - 1].topwords[9].occurences },
                 ];
-
-              new Chart(
-                document.getElementById('myChart'),
-                
+                const newLabels = donnees.map(row => row.year);
+                const newValue = donnees.map(row => row.count);
+                if(myGraph){
+                    myGraph.data.labels= newLabels;
+                    myGraph.data.datasets[0].data = newValue;
+                    myGraph.update();
+                }
+                else{
+                 myGraph = new Chart(
+                 document.getElementById('myChart'),
                 {
                   type: 'bar',
                   options: {
@@ -148,17 +147,16 @@ function getInputNumber () {
                     },
                   },
                   data: {
-                    labels: donnees.map(row => row.year),
+                    labels: newLabels,
                     datasets: [
                       {
                         label: 'Réccurence du mot dans la chanson',
-                        data: donnees.map(row => row.count)
+                        data: newValue
                       }
                     ]
                   }
                 }
-            
-              );
+              )}
             })();
         }
 
