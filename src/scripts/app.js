@@ -54,7 +54,7 @@ function onMouseMove (event) {
     console.log(mousePosition);
 }
 
-}
+
 
 //------------Input et changer le texte selon la date choisie
 
