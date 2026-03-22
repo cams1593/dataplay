@@ -1,5 +1,5 @@
 //Je pense qu'on peut supprimer cette partie prce qu'elle est dans une fonction (en bas)
-
+import Chart from 'chart.js/auto'
 const url = '../Json/annees.json';
 fetch(url)
     .then(response => response.json())
@@ -22,28 +22,56 @@ fetch(url)
 
 const knob = document.querySelector(".bigknob__center");
 const knobRect = knob.getBoundingClientRect();
-const knobX = knobRect.left + knobRect.width / 2 ;
 
 let mousePosition = 0;
+let rotation = 0;
 
 knob.addEventListener("mousedown", onKnobClick);
 
-function onKnobClick () {
-    document.addEventListener("mousemove", onMouseMove);
-}
-function onMouseMove (event) {
-    const click = event.clientX;
+function onKnobClick(event) {
+    // Crucial : enregistrer la position de départ au clic
+    mousePosition = event.clientX; 
     
+    document.addEventListener("mousemove", onMouseMove);
+    document.addEventListener("mouseup", onMouseStop); // On écoute quand on relâche
+}
+
+function onMouseMove(event) {
+    const click = event.clientX;
+    const margin = 200; 
+
+    const isOutside = 
+        event.clientX < knobRect.left - margin || 
+        event.clientX > knobRect.right + margin || 
+        event.clientY < knobRect.top - margin || 
+        event.clientY > knobRect.bottom + margin;
+
+    if (isOutside) {
+        onMouseStop();
+        return; 
+    }
+
+
     if (mousePosition > click) {
-        console.log("tu vas à gauche");
-        
+        rotation -= 3;
+        input.stepDown(1);
+    } else if (mousePosition < click) {
+        rotation += 3;
+        input.stepUp(1);
     }
-    if (mousePosition < click) {
-        console.log("tu vas à droite");
-        
-    }
+
+    document.documentElement.style.setProperty("--rotateValue", rotation + "deg");
     mousePosition = click;
 }
+
+function onMouseStop() {
+
+    document.removeEventListener("mousemove", onMouseMove);
+    document.removeEventListener("mouseup", onMouseStop);
+}
+
+
+
 //------------Input et changer le texte selon la date choisie
 
 
@@ -86,19 +114,68 @@ function getInputNumber () {
 
         listeLi.forEach(function(li){
             li.addEventListener("click", showLyrics);
+
             function showLyrics () {
             const elId = li.id;
             const songActive = document.querySelector(".songinfos__el--active");
             if (songActive){
                songActive.classList.remove("songinfos__el--active");  
             }
-           
             li.classList.add("songinfos__el--active");
             const lyricsParagraphe = document.querySelector(".songinfos__paragraphe");
             lyricsParagraphe.innerHTML = data[choosenYear].top_10[elId - 1].lyrics;
-           
+
+
+            
+
+
+
+
+//--------------Le Graphique chartjs-----------------
+            
+        (async function() {
+            
+                const donnees = [
+                    { year: data[choosenYear].top_10[elId - 1].topwords[0].mot, count: data[choosenYear].top_10[elId - 1].topwords[0].occurences },
+                    { year: data[choosenYear].top_10[elId - 1].topwords[1].mot, count: data[choosenYear].top_10[elId - 1].topwords[1].occurences },
+                    { year: data[choosenYear].top_10[elId - 1].topwords[2].mot, count: data[choosenYear].top_10[elId - 1].topwords[2].occurences },
+                    { year: data[choosenYear].top_10[elId - 1].topwords[3].mot, count: data[choosenYear].top_10[elId - 1].topwords[3].occurences },
+                    { year: data[choosenYear].top_10[elId - 1].topwords[4].mot, count: data[choosenYear].top_10[elId - 1].topwords[4].occurences},
+                    { year: data[choosenYear].top_10[elId - 1].topwords[5].mot, count: data[choosenYear].top_10[elId - 1].topwords[5].occurences},
+                    { year: data[choosenYear].top_10[elId - 1].topwords[6].mot, count: data[choosenYear].top_10[elId - 1].topwords[6].occurences },
+                    { year: data[choosenYear].top_10[elId - 1].topwords[7].mot, count: data[choosenYear].top_10[elId - 1].topwords[7].occurences },
+                    { year: data[choosenYear].top_10[elId - 1].topwords[8].mot, count: data[choosenYear].top_10[elId - 1].topwords[8].occurences },
+                    { year: data[choosenYear].top_10[elId - 1].topwords[9].mot, count: data[choosenYear].top_10[elId - 1].topwords[9].occurences },
+                ];
+
+              new Chart(
+                document.getElementById('myChart'),
+                
+                {
+                  type: 'bar',
+                  options: {
+                    tooltip: {
+                        enabled: false
+                    },
+                  },
+                  data: {
+                    labels: donnees.map(row => row.year),
+                    datasets: [
+                      {
+                        label: 'Réccurence du mot dans la chanson',
+                        data: donnees.map(row => row.count)
+                      }
+                    ]
+                  }
+                }
+            
+              );
+            })();
         }
-        })    
+
+
+        })
     })
     .catch(error => console.error("Erreur du fetch, l'année choisie n'est pas disponible :", error));
 }
+
