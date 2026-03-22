@@ -59,7 +59,7 @@
 .btn__years{
   @include flex-center;
   gap: 0;
-  @include section-style;
+  @include  content-style;
   @media (min-width: $size-tablet) {
     padding: 30px 70px;
     margin: auto;
@@ -122,7 +122,7 @@
   }
 }
 .songinfos__hitssection{
-  @include section-style;
+  @include  content-style;
   
   ul{
     list-style: none;
@@ -136,12 +136,11 @@
       align-items: flex-start; 
       padding-right: 10px;
       border-right: 1px solid $c-text;
-      border-radius: 0;
-      
+      border-radius: 0; 
     }
 }
 .songinfos__lyrics{
-  @include section-style;
+  @include  content-style;
   @media(min-width: $size-desktop){
     align-self: start;
   }}

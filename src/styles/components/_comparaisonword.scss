@@ -1,5 +1,5 @@
 .topyear{
-    @include section-style;
+    @include  content-style;
     h2{
         font-size: $size-base;
         align-items: center;
@@ -11,7 +11,7 @@
 
 }
 .topallwords{
-    @include section-style;
+    @include  content-style;
     h2{
         color: $c-green;
         font-family: $font-ManifoldExtdCF;

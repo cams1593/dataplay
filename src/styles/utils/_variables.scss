@@ -7,7 +7,12 @@ $c-bg:
 $c-alt: #e41612;
 $c-text: #ffffff;
 $c-result: #4DFF00;
-$c-bg-section: #151515;
+$c-bg-section:
+  radial-gradient(at -10% 100%, rgb(255 43 43 / 0.05), transparent 25%),
+  radial-gradient(at 80% 60%, rgb(59 98 255 / 0.05), transparent 20%),
+  radial-gradient(at 10% 5%,rgb(59 255 239 / 0.05), transparent 35%),
+  #0d0d0d;
+$c-bg-content: #151515;
 $c-bg-containner: #504e4e;
 $c-green:#00FF90;
 $size-base: 16px;
