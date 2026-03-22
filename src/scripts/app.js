@@ -1,6 +1,7 @@
 //Je pense qu'on peut supprimer cette partie prce qu'elle est dans une fonction (en bas)
 import Chart from 'chart.js/auto'
 const url = '../Json/annees.json';
+let myGraph = null;
 fetch(url)
     .then(response => response.json())
     .then((data) => {
@@ -123,44 +124,52 @@ function getInputNumber () {
 
 //--------------Le Graphique chartjs-----------------
             
-        (async function() {
-            
-                const donnees = [
-                    { year: data[choosenYear].top_10[elId - 1].topwords[0].mot, count: data[choosenYear].top_10[elId - 1].topwords[0].occurences },
-                    { year: data[choosenYear].top_10[elId - 1].topwords[1].mot, count: data[choosenYear].top_10[elId - 1].topwords[1].occurences },
-                    { year: data[choosenYear].top_10[elId - 1].topwords[2].mot, count: data[choosenYear].top_10[elId - 1].topwords[2].occurences },
-                    { year: data[choosenYear].top_10[elId - 1].topwords[3].mot, count: data[choosenYear].top_10[elId - 1].topwords[3].occurences },
-                    { year: data[choosenYear].top_10[elId - 1].topwords[4].mot, count: data[choosenYear].top_10[elId - 1].topwords[4].occurences},
-                    { year: data[choosenYear].top_10[elId - 1].topwords[5].mot, count: data[choosenYear].top_10[elId - 1].topwords[5].occurences},
-                    { year: data[choosenYear].top_10[elId - 1].topwords[6].mot, count: data[choosenYear].top_10[elId - 1].topwords[6].occurences },
-                    { year: data[choosenYear].top_10[elId - 1].topwords[7].mot, count: data[choosenYear].top_10[elId - 1].topwords[7].occurences },
-                    { year: data[choosenYear].top_10[elId - 1].topwords[8].mot, count: data[choosenYear].top_10[elId - 1].topwords[8].occurences },
-                    { year: data[choosenYear].top_10[elId - 1].topwords[9].mot, count: data[choosenYear].top_10[elId - 1].topwords[9].occurences },
-                ];
 
-              new Chart(
-                document.getElementById('myChart'),
-                
-                {
-                  type: 'bar',
-                  options: {
-                    tooltip: {
-                        enabled: false
-                    },
-                  },
-                  data: {
-                    labels: donnees.map(row => row.year),
-                    datasets: [
-                      {
-                        label: 'Réccurence du mot dans la chanson',
-                        data: donnees.map(row => row.count)
-                      }
-                    ]
-                  }
+
+(async function() {
+    const donnees = [
+        { year: data[choosenYear].top_10[elId - 1].topwords[0].mot, count: data[choosenYear].top_10[elId - 1].topwords[0].occurences },
+        { year: data[choosenYear].top_10[elId - 1].topwords[1].mot, count: data[choosenYear].top_10[elId - 1].topwords[1].occurences },
+        { year: data[choosenYear].top_10[elId - 1].topwords[2].mot, count: data[choosenYear].top_10[elId - 1].topwords[2].occurences },
+        { year: data[choosenYear].top_10[elId - 1].topwords[3].mot, count: data[choosenYear].top_10[elId - 1].topwords[3].occurences },
+        { year: data[choosenYear].top_10[elId - 1].topwords[4].mot, count: data[choosenYear].top_10[elId - 1].topwords[4].occurences},
+        { year: data[choosenYear].top_10[elId - 1].topwords[5].mot, count: data[choosenYear].top_10[elId - 1].topwords[5].occurences},
+        { year: data[choosenYear].top_10[elId - 1].topwords[6].mot, count: data[choosenYear].top_10[elId - 1].topwords[6].occurences },
+        { year: data[choosenYear].top_10[elId - 1].topwords[7].mot, count: data[choosenYear].top_10[elId - 1].topwords[7].occurences },
+        { year: data[choosenYear].top_10[elId - 1].topwords[8].mot, count: data[choosenYear].top_10[elId - 1].topwords[8].occurences },
+        { year: data[choosenYear].top_10[elId - 1].topwords[9].mot, count: data[choosenYear].top_10[elId - 1].topwords[9].occurences },
+    ];
+
+    const newLabels = donnees.map(row => row.year);
+    const newValue = donnees.map(row => row.count);
+    const canvasElement = document.getElementById('myChart'); // On récupère le canvas
+
+    if (myGraph) {
+        // Mise à jour si déjà existant
+        myGraph.data.labels = newLabels;
+        myGraph.data.datasets[0].data = newValue;
+        myGraph.update();
+    } 
+    else {
+        // Création initiale (Correction de l'argument id)
+        myGraph = new Chart(canvasElement, { 
+            type: 'bar',
+            options: {
+                scales: {
+                    y: { beginAtZero: true }
                 }
-            
-              );
-            })();
+            },
+            data: {
+                labels: newLabels,
+                datasets: [{
+                    label: 'Récurrence du mot',
+                    data: newValue,
+                  
+                }]
+            }
+        });
+    }
+})();
         }
 
 
