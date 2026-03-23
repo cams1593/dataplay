@@ -102,11 +102,29 @@ function getInputNumber () {
     const top10 = document.getElementById("10");
 //-----------------------------------------------
 
+const createColor = () => {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
 const colorWords = (data, choosenYear, elId) => {
-  console.log(data[choosenYear].top_10[elId - 1].topwords);
-  // @TODO
-  // Dans cette fonction, tu dois parcourir les topwords avec un forEach, et pour chaque mot, tu vas
-  // parser les paroles de la chanson (data[choosenYear].top_10[elId - 1].lyrics) et remplacer les mots par des spans avec une classe css qui va colorer le mot.
+  const topWords = data[choosenYear].top_10[elId - 1].topwords;
+  let paroles = data[choosenYear].top_10[elId - 1].lyrics;
+  topWords.forEach(word => {
+    const regex = new RegExp(`\\b${word.mot}\\b`, 'gi');
+    // @TODO plutôt que le rouge, il faut faire une couleur au hasard. Pour ça, tu 
+    // peux faire une fonction qui génère une couleur aléatoire et l'appeler ici pour chaque mot
+    // Je t'ai déjà préparé la fonction createColor() que tu peux utiliser pour ça
+    const coloredWord = `<span style="color:red">${word.mot}</span>`;
+    paroles = paroles.replace(regex, coloredWord);
+  });
+
+  const lyricsParagraphe = document.querySelector(".songinfos__paragraphe");
+  lyricsParagraphe.innerHTML = paroles;
 }
 
 
@@ -143,8 +161,6 @@ function showLyrics (li, data) {
     songActive.classList.remove("songinfos__el--active");  
   }
   li.classList.add("songinfos__el--active");
-  const lyricsParagraphe = document.querySelector(".songinfos__paragraphe");
-  lyricsParagraphe.innerHTML = data[choosenYear].top_10[elId - 1].lyrics;
 }
 
 //--------------Le Graphique chartjs-----------------
