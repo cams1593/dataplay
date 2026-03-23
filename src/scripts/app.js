@@ -207,3 +207,6 @@ fetch(urlYears)
     .catch(error => console.error("Erreur :", error));
 }
 
+
+//----------------Liste Page 2 Top 10 Mots------------
+
