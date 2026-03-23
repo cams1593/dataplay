@@ -3,6 +3,7 @@ import Chart from 'chart.js/auto'
 import { color } from 'chart.js/helpers';
 const url = '../Json/annees.json';
 let myGraph = null;
+let graphDonut = null;
 fetch(url)
     .then(response => response.json())
     .then((data) => {
@@ -259,6 +260,47 @@ fetch(urlYears)
     .then(response => response.json())
     .then((data) => {
         console.log(data[anneeChoisie]);
+        generateGraphDonut(data, anneeChoisie);
     })
     .catch(error => console.error("Erreur :", error));
-}
+
+async function generateGraphDonut(data, anneeChoisie){
+   
+const donneesDonut = [
+    { year: data[anneeChoisie].top10[0].mot, count: data[anneeChoisie].top10[0].occurence },
+    { year: data[anneeChoisie].top10[1].mot, count: data[anneeChoisie].top10[1].occurence },
+    { year: data[anneeChoisie].top10[2].mot, count: data[anneeChoisie].top10[2].occurence },
+    { year: data[anneeChoisie].top10[3].mot, count: data[anneeChoisie].top10[3].occurence },
+    { year: data[anneeChoisie].top10[4].mot, count: data[anneeChoisie].top10[4].occurence },
+    { year: data[anneeChoisie].top10[5].mot, count: data[anneeChoisie].top10[5].occurence },
+    { year: data[anneeChoisie].top10[6].mot, count: data[anneeChoisie].top10[6].occurence },
+    { year: data[anneeChoisie].top10[7].mot, count: data[anneeChoisie].top10[7].occurence },
+    { year: data[anneeChoisie].top10[8].mot, count: data[anneeChoisie].top10[8].occurence },
+    { year: data[anneeChoisie].top10[9].mot, count: data[anneeChoisie].top10[9].occurence },
+  ];
+  const canvasDonut =document.getElementById('myDonut');
+  const newLabelsDonut = donneesDonut.map(row => row.year);
+  const newValueDonut = donneesDonut.map(row => row.count);
+  if(graphDonut){
+    graphDonut.data.labels = newLabelsDonut;
+    graphDonut.data.datasets[0].data = newValueDonut;
+    graphDonut.update();
+  }else{
+  graphDonut = new Chart(canvasDonut,
+    {
+      type: 'pie',
+      options: {
+        tooltip: {
+            enabled: false
+        },
+      },
+      data: {
+        labels: newLabelsDonut,
+        datasets: [
+          {
+            label: 'occcurences',
+            data: newValueDonut
+              }]
+          }
+      });}
+  };}
