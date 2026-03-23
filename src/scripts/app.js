@@ -1,5 +1,6 @@
 //Je pense qu'on peut supprimer cette partie prce qu'elle est dans une fonction (en bas)
 import Chart from 'chart.js/auto'
+import { color } from 'chart.js/helpers';
 const url = '../Json/annees.json';
 let myGraph = null;
 fetch(url)
@@ -88,70 +89,108 @@ if (pageId === "index"){
     input.addEventListener("blur", getInputNumber);
 
 
-    function getInputNumber () {
-        const userInputValue = input.value;
-        const url = '../Json/annees.json';
-        choosenYear = `y_${userInputValue}`;
-    //-------------------Les li------------------
-        const top1 = document.getElementById("1");
-        const top2 = document.getElementById("2");
-        const top3 = document.getElementById("3");
-        const top4 = document.getElementById("4");
-        const top5 = document.getElementById("5");
-        const top6 = document.getElementById("6");
-        const top7 = document.getElementById("7");
-        const top8 = document.getElementById("8");
-        const top9 = document.getElementById("9");
-        const top10 = document.getElementById("10");
-    //-----------------------------------------------
+function getInputNumber () {
+    const userInputValue = parseInt(input.value);
 
-    const createColor = () => {
-        const letters = '0123456789ABCDEF';
-        let color = '#';
-        for (let i = 0; i < 6; i++) {
-          color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
-    }
+if (userInputValue >= 2023) {
+    input.value = 2025;
+} 
+else if (userInputValue >= 2018 && userInputValue <= 2022) {
+    input.value = 2020;
+}
+else if (userInputValue >= 2013 && userInputValue <= 2017) {
+    input.value = 2015;
+}
+else if (userInputValue >= 2008 && userInputValue <= 2012) {
+    input.value = 2010;
+}
+else if (userInputValue >= 2003 && userInputValue <= 2007) {
+    input.value = 2005;
+}
+else if (userInputValue >= 1998 && userInputValue <= 2002) {
+    input.value = 2000;
+}
+else if (userInputValue >= 1993 && userInputValue <= 1997) {
+    input.value = 1995;
+}
+else if (userInputValue >= 1988 && userInputValue <= 1992) {
+    input.value = 1990;
+}
+else if (userInputValue >= 1983 && userInputValue <= 1987) {
+    input.value = 1985;
+}
+else if (userInputValue >= 1978 && userInputValue <= 1982) {
+    input.value = 1980;
+}
+else if (userInputValue >= 1973 && userInputValue <= 1977) {
+    input.value = 1975;
+}
+else {
+    // Si c'est en dessous de 1973
+    input.value = 1970;
+}
+    const url = '../Json/annees.json';
+    choosenYear = `y_${userInputValue}`;
+//-------------------Les li------------------
+    const top1 = document.getElementById("1");
+    const top2 = document.getElementById("2");
+    const top3 = document.getElementById("3");
+    const top4 = document.getElementById("4");
+    const top5 = document.getElementById("5");
+    const top6 = document.getElementById("6");
+    const top7 = document.getElementById("7");
+    const top8 = document.getElementById("8");
+    const top9 = document.getElementById("9");
+    const top10 = document.getElementById("10");
+//-----------------------------------------------
+const allColors = ["#00DDFF","#4DFF00","#FF49AA","#FFAE00", "#00FFD9","#E375FF","#7A6EFF","#FFA8D6","#DDFF6E","#FF292C"];
 
-    const colorWords = (data, choosenYear, elId) => {
-      const topWords = data[choosenYear].top_10[elId - 1].topwords;
-      let paroles = data[choosenYear].top_10[elId - 1].lyrics;
-      topWords.forEach(word => {
-        const regex = new RegExp(`\\b${word.mot}\\b`, 'gi');
-        // @TODO plutôt que le rouge, il faut faire une couleur au hasard. Pour ça, tu 
-        // peux faire une fonction qui génère une couleur aléatoire et l'appeler ici pour chaque mot
-        // Je t'ai déjà préparé la fonction createColor() que tu peux utiliser pour ça
-        const coloredWord = `<span style="color:red">${word.mot}</span>`;
-        paroles = paroles.replace(regex, coloredWord);
-      });
+const createColor = (i) => {
+  return allColors[i % allColors.length];
+}
 
-      const lyricsParagraphe = document.querySelector(".songinfos__paragraphe");
-      lyricsParagraphe.innerHTML = paroles;
-    }
+const colorWords = (data, choosenYear, elId) => {
+  const topWords = data[choosenYear].top_10[elId - 1].topwords;
+  let paroles = data[choosenYear].top_10[elId - 1].lyrics;
 
+  topWords.forEach((word, i) => {
+    const regex = new RegExp(`\\b${word.mot}\\b`, 'gi');
+    
 
-    fetch(url)
-        .then(response => response.json())
-        .then((data) => {
-            top1.innerText = "#1 " + data[choosenYear].top_10[0].title;
-            top2.innerText = "#2 " + data[choosenYear].top_10[1].title;
-            top3.innerText = "#3 " + data[choosenYear].top_10[2].title;
-            top4.innerText = "#4 " + data[choosenYear].top_10[3].title;
-            top5.innerText = "#5 " + data[choosenYear].top_10[4].title;
-            top6.innerText = "#6 " + data[choosenYear].top_10[5].title;
-            top7.innerText = "#7 " + data[choosenYear].top_10[6].title;
-            top8.innerText = "#8 " + data[choosenYear].top_10[7].title;
-            top9.innerText = "#9 " + data[choosenYear].top_10[8].title;
-            top10.innerText = "#10 " + data[choosenYear].top_10[9].title;
+    const currentColor = createColor(i);
+    
+    const coloredWord = `<span style="color:${currentColor};">${word.mot}</span>`;
+    paroles = paroles.replace(regex, coloredWord);
+  });
 
-            const listeLi = document.querySelectorAll(".songinfos__el");
+  const lyricsParagraphe = document.querySelector(".songinfos__paragraphe");
+  if (lyricsParagraphe) {
+    lyricsParagraphe.innerHTML = paroles;
+  }
+}
 
-            listeLi.forEach((li) => {
-                li.addEventListener("click", () => showLyrics(li, data));
-            })
+fetch(url)
+    .then(response => response.json())
+    .then((data) => {
+        top1.innerText = "#1 " + data[choosenYear].top_10[0].title;
+        top2.innerText = "#2 " + data[choosenYear].top_10[1].title;
+        top3.innerText = "#3 " + data[choosenYear].top_10[2].title;
+        top4.innerText = "#4 " + data[choosenYear].top_10[3].title;
+        top5.innerText = "#5 " + data[choosenYear].top_10[4].title;
+        top6.innerText = "#6 " + data[choosenYear].top_10[5].title;
+        top7.innerText = "#7 " + data[choosenYear].top_10[6].title;
+        top8.innerText = "#8 " + data[choosenYear].top_10[7].title;
+        top9.innerText = "#9 " + data[choosenYear].top_10[8].title;
+        top10.innerText = "#10 " + data[choosenYear].top_10[9].title;
+
+        const listeLi = document.querySelectorAll(".songinfos__el");
+
+        listeLi.forEach((li) => {
+            li.addEventListener("click", () => showLyrics(li, data));
         })
-        .catch(error => console.error("Vous devez choisir une année entre 1970 et 2025 qui est divisible par 5", error));
+    })
+    .catch(error => console.error("Erreur du fetch, l'année choisie n'est pas disponible :", error));
+
 
 
     function showLyrics (li, data) {
@@ -212,6 +251,19 @@ if (pageId === "index"){
           });
       }
     };
+          },
+          data: {
+              labels: newLabels,
+              datasets: [{
+                  label: 'Récurrence du mot',
+                  data: newValue,
+                  backgroundColor: allColors,
+
+              }]
+          }
+      });
+  }
+};
 
 
     //----------------Graphique Donnut---------------------
