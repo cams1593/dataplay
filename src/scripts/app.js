@@ -251,19 +251,7 @@ fetch(url)
           });
       }
     };
-          },
-          data: {
-              labels: newLabels,
-              datasets: [{
-                  label: 'Récurrence du mot',
-                  data: newValue,
-                  backgroundColor: allColors,
-
-              }]
-          }
-      });
-  }
-};
+          
 
 
     //----------------Graphique Donnut---------------------
