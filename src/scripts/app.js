@@ -228,8 +228,39 @@ if (pageId === "index"){
 }
 
 if (pageId === "wordstats"){
-    
-    
+    const url = '../Json/wordstats.json';
+    const list = document.querySelector(".wordinsong__list");
+    const select = document.getElementById("select");
+    let toutesLesDonnees = []; 
 
+    fetch(url)
+        .then(function(res){
+        return res.json();
+        })
+        .then(function(data){
+        toutesLesDonnees = data;   
+    });
 
+    select.addEventListener("change", function(){
+        const choosenWord = select.value;
+        list.innerText = ""; 
+        let infosDuMot;
+        if (choosenWord) {
+            toutesLesDonnees.forEach(function(item) {
+            if (item.word === choosenWord) {
+            infosDuMot = item;
+        }
+        
+    });
+}
+        if (infosDuMot) {
+            if (infosDuMot.all_songs){
+                infosDuMot.all_songs.forEach(function(data) {
+                const li = document.createElement("li");
+                li.innerText = `${data.song}, ${data.occurence} fois`; 
+                list.appendChild(li);
+                });
+            } 
+        }
+    });
 }
