@@ -87,7 +87,45 @@ input.addEventListener("blur", getInputNumber);
 
 
 function getInputNumber () {
-    const userInputValue = input.value;
+    const userInputValue = parseInt(input.value);
+
+if (userInputValue >= 2023) {
+    input.value = 2025;
+} 
+else if (userInputValue >= 2018 && userInputValue <= 2022) {
+    input.value = 2020;
+}
+else if (userInputValue >= 2013 && userInputValue <= 2017) {
+    input.value = 2015;
+}
+else if (userInputValue >= 2008 && userInputValue <= 2012) {
+    input.value = 2010;
+}
+else if (userInputValue >= 2003 && userInputValue <= 2007) {
+    input.value = 2005;
+}
+else if (userInputValue >= 1998 && userInputValue <= 2002) {
+    input.value = 2000;
+}
+else if (userInputValue >= 1993 && userInputValue <= 1997) {
+    input.value = 1995;
+}
+else if (userInputValue >= 1988 && userInputValue <= 1992) {
+    input.value = 1990;
+}
+else if (userInputValue >= 1983 && userInputValue <= 1987) {
+    input.value = 1985;
+}
+else if (userInputValue >= 1978 && userInputValue <= 1982) {
+    input.value = 1980;
+}
+else if (userInputValue >= 1973 && userInputValue <= 1977) {
+    input.value = 1975;
+}
+else {
+    // Si c'est en dessous de 1973
+    input.value = 1970;
+}
     const url = '../Json/annees.json';
     choosenYear = `y_${userInputValue}`;
 //-------------------Les li------------------
@@ -148,7 +186,8 @@ fetch(url)
             li.addEventListener("click", () => showLyrics(li, data));
         })
     })
-    .catch(error => alert("Vous devez choisir une année entre 1970 et 2025 qui est divisible par 5", error));
+    .catch(error => console.error("Erreur du fetch, l'année choisie n'est pas disponible :", error));
+
 
 
 function showLyrics (li, data) {
