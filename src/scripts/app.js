@@ -67,7 +67,7 @@ function onMouseMove(event) {
 
     
 
-    document.documentElement.style.setProperty("--rotateValue", rotation + "deg"); // cette ligne ne sert à rien
+    document.documentElement.style.setProperty("--rotateValue", rotation + "deg"); // cette ligne ne sert à rien je pense
     mousePosition = click;
 
     
@@ -184,8 +184,6 @@ function getInputNumber () {
         })
     })
     .catch(error => alert("Vous devez choisir une année entre 1970 et 2025 qui est divisible par 5", error));
-
-
 }
 
 
