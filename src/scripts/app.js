@@ -104,9 +104,24 @@ function getInputNumber () {
 
 const colorWords = (data, choosenYear, elId) => {
   console.log(data[choosenYear].top_10[elId - 1].topwords);
+  const topWords = data[choosenYear].top_10[elId -1].topwords;
+  const paroles = data[choosenYear].top_10[elId -1].lyrics;
   // @TODO
   // Dans cette fonction, tu dois parcourir les topwords avec un forEach, et pour chaque mot, tu vas
   // parser les paroles de la chanson (data[choosenYear].top_10[elId - 1].lyrics) et remplacer les mots par des spans avec une classe css qui va colorer le mot.
+    // topWords.forEach((word) => {
+    //     console.log(word);
+    // });
+
+    const words = paroles.match(/("[^"]+"|[^"\s]+)/g);
+
+    words.forEach((index, word) => {
+        if (topWords.includes(word)) {
+            console.log(word);
+            word = "<span>" + word + "</span>";
+            words[index] = word;
+        }
+    })
 }
 
 
@@ -205,5 +220,33 @@ fetch(urlYears)
         console.log(data[anneeChoisie]);
     })
     .catch(error => console.error("Erreur :", error));
+ 
+(async function() {
+  const data = [
+    {}
+  ];
+ 
+  new Chart(
+    document.getElementById('myDonut'),
+    {
+      type: 'pie',
+      options: {
+        tooltip: {
+            enabled: false
+        },
+      },
+      data: {
+        labels: data.map(row => row.year),
+        datasets: [
+          {
+            label: 'Acquisitions by year',
+            data: data.map(row => row.count)
+          }
+        ]
+      }
+    }
+  );
+})();
+
 }
 
