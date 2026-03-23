@@ -23,23 +23,26 @@ fetch(url)
 
 const knob = document.querySelector(".bigknob__center");
 const knobRect = knob.getBoundingClientRect();
+let isDragging = false;
+let choosenYear = 'y_1970';
 
 let mousePosition = 0;
 let rotation = 0;
 
-
-
 knob.addEventListener("mousedown", onKnobClick);
+document.addEventListener("mousemove", (e) => {
+  if (isDragging) {
+    onMouseMove(e);
+  }
+});
+document.addEventListener("mouseup", () => {
+  getInputNumber();
+  isDragging = false;
+});
 
 function onKnobClick (event) {
     event.preventDefault();
-    document.addEventListener("mousemove", onMouseMove);
-    document.addEventListener("mouseup", knobStop);
-    document.addEventListener("mouseup", getInputNumber);
-}
-
-function knobStop(){
-    document.removeEventListener("mousemove", onMouseMove);
+    isDragging = true;
 }
 
 function onMouseMove(event) {
@@ -85,7 +88,7 @@ input.addEventListener("blur", getInputNumber);
 function getInputNumber () {
     const userInputValue = input.value;
     const url = '../Json/annees.json';
-    const choosenYear = `y_${userInputValue}`;
+    choosenYear = `y_${userInputValue}`;
 //-------------------Les li------------------
     const top1 = document.getElementById("1");
     const top2 = document.getElementById("2");
@@ -98,8 +101,16 @@ function getInputNumber () {
     const top9 = document.getElementById("9");
     const top10 = document.getElementById("10");
 //-----------------------------------------------
-    
-    fetch(url)
+
+const colorWords = (data, choosenYear, elId) => {
+  console.log(data[choosenYear].top_10[elId - 1].topwords);
+  // @TODO
+  // Dans cette fonction, tu dois parcourir les topwords avec un forEach, et pour chaque mot, tu vas
+  // parser les paroles de la chanson (data[choosenYear].top_10[elId - 1].lyrics) et remplacer les mots par des spans avec une classe css qui va colorer le mot.
+}
+
+
+fetch(url)
     .then(response => response.json())
     .then((data) => {
         top1.innerText = "#1 " + data[choosenYear].top_10[0].title;
@@ -115,28 +126,30 @@ function getInputNumber () {
 
         const listeLi = document.querySelectorAll(".songinfos__el");
 
-        listeLi.forEach(function(li){
-            li.addEventListener("click", showLyrics);
-
-            function showLyrics () {
-            const elId = li.id;
-            const songActive = document.querySelector(".songinfos__el--active");
-            if (songActive){
-               songActive.classList.remove("songinfos__el--active");  
-            }
-            li.classList.add("songinfos__el--active");
-            const lyricsParagraphe = document.querySelector(".songinfos__paragraphe");
-            lyricsParagraphe.innerHTML = data[choosenYear].top_10[elId - 1].lyrics;
+        listeLi.forEach((li) => {
+            li.addEventListener("click", () => showLyrics(li, data));
+        })
+    })
+    .catch(error => alert("Vous devez choisir une année entre 1970 et 2025 qui est divisible par 5", error));
 
 
+function showLyrics (li, data) {
+  const elId = li.id;
 
-
+  generateGraph(data, choosenYear, elId);
+  colorWords(data, choosenYear, elId);
+  const songActive = document.querySelector(".songinfos__el--active");
+  if (songActive){
+    songActive.classList.remove("songinfos__el--active");  
+  }
+  li.classList.add("songinfos__el--active");
+  const lyricsParagraphe = document.querySelector(".songinfos__paragraphe");
+  lyricsParagraphe.innerHTML = data[choosenYear].top_10[elId - 1].lyrics;
+}
 
 //--------------Le Graphique chartjs-----------------
             
-
-
-(async function() {
+async function generateGraph(data, choosenYear, elId) {
     const donnees = [
         { year: data[choosenYear].top_10[elId - 1].topwords[0].mot, count: data[choosenYear].top_10[elId - 1].topwords[0].occurences },
         { year: data[choosenYear].top_10[elId - 1].topwords[1].mot, count: data[choosenYear].top_10[elId - 1].topwords[1].occurences },
@@ -162,39 +175,27 @@ function getInputNumber () {
     } 
     else {
         // Création initiale (Correction de l'argument id)
-        myGraph = new Chart(canvasElement, { 
-            type: 'bar',
-            options: {
-                scales: {
-                    y: { beginAtZero: true }
-                }
-            },
-            data: {
-                labels: newLabels,
-                datasets: [{
-                    label: 'Récurrence du mot',
-                    data: newValue,
-                  
-                }]
-            }
-        });
-    }
-})();
-        }
+      myGraph = new Chart(canvasElement, { 
+          type: 'bar',
+          options: {
+              scales: {
+                  y: { beginAtZero: true }
+              }
+          },
+          data: {
+              labels: newLabels,
+              datasets: [{
+                  label: 'Récurrence du mot',
+                  data: newValue,
+
+              }]
+          }
+      });
+  }
+};
 
 
-        })
-    })
-    .catch(error => alert("Vous devez choisir une année entre 1970 et 2025 qui est divisible par 5", error));
-
-
-
-
-
-
-
-
-    //----------------Graphique Donnut---------------------
+//----------------Graphique Donnut---------------------
 
 const urlYears = '../Json/every_years.json';
 const anneeChoisie = `tw_${userInputValue}`;
