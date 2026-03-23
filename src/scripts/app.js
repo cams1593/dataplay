@@ -61,21 +61,11 @@ function onMouseMove(event) {
             input.stepUp(1); 
         }  
     }
-
-
-    
-
     document.documentElement.style.setProperty("--rotateValue", rotation + "deg"); // cette ligne ne sert à rien
     mousePosition = click;
-
-    
 }
 
-
-
 //------------Input et changer le texte selon la date choisie
-
-
 const input = document.querySelector(".inputnumber");
 input.addEventListener("blur", getInputNumber);
 
