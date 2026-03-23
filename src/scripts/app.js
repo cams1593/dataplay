@@ -20,206 +20,216 @@ fetch(url)
     .catch(error => console.error("Erreur du fetch, l'année choisie n'est pas disponible:", error));
 
 //----------------Le Bouton Qui Tourne-------------------
+const pageId = document.body.id;
+if (pageId === "index"){
 
-const knob = document.querySelector(".bigknob__center");
-const knobRect = knob.getBoundingClientRect();
-let isDragging = false;
-let choosenYear = 'y_1970';
 
-let mousePosition = 0;
-let rotation = 0;
+    const knob = document.querySelector(".bigknob__center");
+    const knobRect = knob.getBoundingClientRect();
+    let isDragging = false;
+    let choosenYear = 'y_1970';
 
-knob.addEventListener("mousedown", onKnobClick);
-document.addEventListener("mousemove", (e) => {
-  if (isDragging) {
-    onMouseMove(e);
-  }
-});
-document.addEventListener("mouseup", () => {
-  getInputNumber();
-  isDragging = false;
-});
+    let mousePosition = 0;
+    let rotation = 0;
 
-function onKnobClick (event) {
-    event.preventDefault();
-    isDragging = true;
-}
+    knob.addEventListener("mousedown", onKnobClick);
+    document.addEventListener("mousemove", (e) => {
+      if (isDragging) {
+        onMouseMove(e);
+      }
+    });
+    document.addEventListener("mouseup", () => {
+      getInputNumber();
+      isDragging = false;
+    });
 
-function onMouseMove(event) {
-    const click = event.clientX;
-    const rootStyle = getComputedStyle(document.documentElement);
-    const rotateValue = rootStyle.getPropertyValue('--rotateValue');
-
-    if (mousePosition > click) {
-        rotation -= 4;
-        document.documentElement.style.setProperty("--rotateValue", rotation + "deg");
-
-        if (rotation % 30 === 0){
-            input.stepDown(1);
-        }    
-    }
-    if (mousePosition < click) {
-        rotation += 4;
-        document.documentElement.style.setProperty("--rotateValue", rotation + "deg");
-
-        if (rotation % 30 === 0){
-            input.stepUp(1); 
-        }  
+    function onKnobClick (event) {
+        event.preventDefault();
+        isDragging = true;
     }
 
+    function onMouseMove(event) {
+        const click = event.clientX;
+        const rootStyle = getComputedStyle(document.documentElement);
+        const rotateValue = rootStyle.getPropertyValue('--rotateValue');
 
-    
+        if (mousePosition > click) {
+            rotation -= 4;
+            document.documentElement.style.setProperty("--rotateValue", rotation + "deg");
 
-    document.documentElement.style.setProperty("--rotateValue", rotation + "deg"); // cette ligne ne sert à rien
-    mousePosition = click;
+            if (rotation % 30 === 0){
+                input.stepDown(1);
+            }    
+        }
+        if (mousePosition < click) {
+            rotation += 4;
+            document.documentElement.style.setProperty("--rotateValue", rotation + "deg");
 
-    
-}
+            if (rotation % 30 === 0){
+                input.stepUp(1); 
+            }  
+        }
 
 
 
-//------------Input et changer le texte selon la date choisie
+
+        document.documentElement.style.setProperty("--rotateValue", rotation + "deg"); // cette ligne ne sert à rien
+        mousePosition = click;
 
 
-const input = document.querySelector(".inputnumber");
-input.addEventListener("blur", getInputNumber);
-
-
-function getInputNumber () {
-    const userInputValue = input.value;
-    const url = '../Json/annees.json';
-    choosenYear = `y_${userInputValue}`;
-//-------------------Les li------------------
-    const top1 = document.getElementById("1");
-    const top2 = document.getElementById("2");
-    const top3 = document.getElementById("3");
-    const top4 = document.getElementById("4");
-    const top5 = document.getElementById("5");
-    const top6 = document.getElementById("6");
-    const top7 = document.getElementById("7");
-    const top8 = document.getElementById("8");
-    const top9 = document.getElementById("9");
-    const top10 = document.getElementById("10");
-//-----------------------------------------------
-
-const createColor = () => {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
     }
-    return color;
-}
-
-const colorWords = (data, choosenYear, elId) => {
-  const topWords = data[choosenYear].top_10[elId - 1].topwords;
-  let paroles = data[choosenYear].top_10[elId - 1].lyrics;
-  topWords.forEach(word => {
-    const regex = new RegExp(`\\b${word.mot}\\b`, 'gi');
-    // @TODO plutôt que le rouge, il faut faire une couleur au hasard. Pour ça, tu 
-    // peux faire une fonction qui génère une couleur aléatoire et l'appeler ici pour chaque mot
-    // Je t'ai déjà préparé la fonction createColor() que tu peux utiliser pour ça
-    const coloredWord = `<span style="color:red">${word.mot}</span>`;
-    paroles = paroles.replace(regex, coloredWord);
-  });
-
-  const lyricsParagraphe = document.querySelector(".songinfos__paragraphe");
-  lyricsParagraphe.innerHTML = paroles;
-}
 
 
-fetch(url)
-    .then(response => response.json())
-    .then((data) => {
-        top1.innerText = "#1 " + data[choosenYear].top_10[0].title;
-        top2.innerText = "#2 " + data[choosenYear].top_10[1].title;
-        top3.innerText = "#3 " + data[choosenYear].top_10[2].title;
-        top4.innerText = "#4 " + data[choosenYear].top_10[3].title;
-        top5.innerText = "#5 " + data[choosenYear].top_10[4].title;
-        top6.innerText = "#6 " + data[choosenYear].top_10[5].title;
-        top7.innerText = "#7 " + data[choosenYear].top_10[6].title;
-        top8.innerText = "#8 " + data[choosenYear].top_10[7].title;
-        top9.innerText = "#9 " + data[choosenYear].top_10[8].title;
-        top10.innerText = "#10 " + data[choosenYear].top_10[9].title;
 
-        const listeLi = document.querySelectorAll(".songinfos__el");
-
-        listeLi.forEach((li) => {
-            li.addEventListener("click", () => showLyrics(li, data));
-        })
-    })
-    .catch(error => alert("Vous devez choisir une année entre 1970 et 2025 qui est divisible par 5", error));
+    //------------Input et changer le texte selon la date choisie
 
 
-function showLyrics (li, data) {
-  const elId = li.id;
+    const input = document.querySelector(".inputnumber");
+    input.addEventListener("blur", getInputNumber);
 
-  generateGraph(data, choosenYear, elId);
-  colorWords(data, choosenYear, elId);
-  const songActive = document.querySelector(".songinfos__el--active");
-  if (songActive){
-    songActive.classList.remove("songinfos__el--active");  
-  }
-  li.classList.add("songinfos__el--active");
-}
 
-//--------------Le Graphique chartjs-----------------
-            
-async function generateGraph(data, choosenYear, elId) {
-    const donnees = [
-        { year: data[choosenYear].top_10[elId - 1].topwords[0].mot, count: data[choosenYear].top_10[elId - 1].topwords[0].occurences },
-        { year: data[choosenYear].top_10[elId - 1].topwords[1].mot, count: data[choosenYear].top_10[elId - 1].topwords[1].occurences },
-        { year: data[choosenYear].top_10[elId - 1].topwords[2].mot, count: data[choosenYear].top_10[elId - 1].topwords[2].occurences },
-        { year: data[choosenYear].top_10[elId - 1].topwords[3].mot, count: data[choosenYear].top_10[elId - 1].topwords[3].occurences },
-        { year: data[choosenYear].top_10[elId - 1].topwords[4].mot, count: data[choosenYear].top_10[elId - 1].topwords[4].occurences},
-        { year: data[choosenYear].top_10[elId - 1].topwords[5].mot, count: data[choosenYear].top_10[elId - 1].topwords[5].occurences},
-        { year: data[choosenYear].top_10[elId - 1].topwords[6].mot, count: data[choosenYear].top_10[elId - 1].topwords[6].occurences },
-        { year: data[choosenYear].top_10[elId - 1].topwords[7].mot, count: data[choosenYear].top_10[elId - 1].topwords[7].occurences },
-        { year: data[choosenYear].top_10[elId - 1].topwords[8].mot, count: data[choosenYear].top_10[elId - 1].topwords[8].occurences },
-        { year: data[choosenYear].top_10[elId - 1].topwords[9].mot, count: data[choosenYear].top_10[elId - 1].topwords[9].occurences },
-    ];
+    function getInputNumber () {
+        const userInputValue = input.value;
+        const url = '../Json/annees.json';
+        choosenYear = `y_${userInputValue}`;
+    //-------------------Les li------------------
+        const top1 = document.getElementById("1");
+        const top2 = document.getElementById("2");
+        const top3 = document.getElementById("3");
+        const top4 = document.getElementById("4");
+        const top5 = document.getElementById("5");
+        const top6 = document.getElementById("6");
+        const top7 = document.getElementById("7");
+        const top8 = document.getElementById("8");
+        const top9 = document.getElementById("9");
+        const top10 = document.getElementById("10");
+    //-----------------------------------------------
 
-    const newLabels = donnees.map(row => row.year);
-    const newValue = donnees.map(row => row.count);
-    const canvasElement = document.getElementById('myChart'); // On récupère le canvas
+    const createColor = () => {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
 
-    if (myGraph) {
-        // Mise à jour si déjà existant
-        myGraph.data.labels = newLabels;
-        myGraph.data.datasets[0].data = newValue;
-        myGraph.update();
-    } 
-    else {
-        // Création initiale (Correction de l'argument id)
-      myGraph = new Chart(canvasElement, { 
-          type: 'bar',
-          options: {
-              scales: {
-                  y: { beginAtZero: true }
-              }
-          },
-          data: {
-              labels: newLabels,
-              datasets: [{
-                  label: 'Récurrence du mot',
-                  data: newValue,
-
-              }]
-          }
+    const colorWords = (data, choosenYear, elId) => {
+      const topWords = data[choosenYear].top_10[elId - 1].topwords;
+      let paroles = data[choosenYear].top_10[elId - 1].lyrics;
+      topWords.forEach(word => {
+        const regex = new RegExp(`\\b${word.mot}\\b`, 'gi');
+        // @TODO plutôt que le rouge, il faut faire une couleur au hasard. Pour ça, tu 
+        // peux faire une fonction qui génère une couleur aléatoire et l'appeler ici pour chaque mot
+        // Je t'ai déjà préparé la fonction createColor() que tu peux utiliser pour ça
+        const coloredWord = `<span style="color:red">${word.mot}</span>`;
+        paroles = paroles.replace(regex, coloredWord);
       });
-  }
-};
+
+      const lyricsParagraphe = document.querySelector(".songinfos__paragraphe");
+      lyricsParagraphe.innerHTML = paroles;
+    }
 
 
-//----------------Graphique Donnut---------------------
+    fetch(url)
+        .then(response => response.json())
+        .then((data) => {
+            top1.innerText = "#1 " + data[choosenYear].top_10[0].title;
+            top2.innerText = "#2 " + data[choosenYear].top_10[1].title;
+            top3.innerText = "#3 " + data[choosenYear].top_10[2].title;
+            top4.innerText = "#4 " + data[choosenYear].top_10[3].title;
+            top5.innerText = "#5 " + data[choosenYear].top_10[4].title;
+            top6.innerText = "#6 " + data[choosenYear].top_10[5].title;
+            top7.innerText = "#7 " + data[choosenYear].top_10[6].title;
+            top8.innerText = "#8 " + data[choosenYear].top_10[7].title;
+            top9.innerText = "#9 " + data[choosenYear].top_10[8].title;
+            top10.innerText = "#10 " + data[choosenYear].top_10[9].title;
 
-const urlYears = '../Json/every_years.json';
-const anneeChoisie = `tw_${userInputValue}`;
-fetch(urlYears)
-    .then(response => response.json())
-    .then((data) => {
-        console.log(data[anneeChoisie]);
-    })
-    .catch(error => console.error("Erreur :", error));
+            const listeLi = document.querySelectorAll(".songinfos__el");
+
+            listeLi.forEach((li) => {
+                li.addEventListener("click", () => showLyrics(li, data));
+            })
+        })
+        .catch(error => console.error("Vous devez choisir une année entre 1970 et 2025 qui est divisible par 5", error));
+
+
+    function showLyrics (li, data) {
+      const elId = li.id;
+
+      generateGraph(data, choosenYear, elId);
+      colorWords(data, choosenYear, elId);
+      const songActive = document.querySelector(".songinfos__el--active");
+      if (songActive){
+        songActive.classList.remove("songinfos__el--active");  
+      }
+      li.classList.add("songinfos__el--active");
+    }
+
+    //--------------Le Graphique chartjs-----------------
+
+    async function generateGraph(data, choosenYear, elId) {
+        const donnees = [
+            { year: data[choosenYear].top_10[elId - 1].topwords[0].mot, count: data[choosenYear].top_10[elId - 1].topwords[0].occurences },
+            { year: data[choosenYear].top_10[elId - 1].topwords[1].mot, count: data[choosenYear].top_10[elId - 1].topwords[1].occurences },
+            { year: data[choosenYear].top_10[elId - 1].topwords[2].mot, count: data[choosenYear].top_10[elId - 1].topwords[2].occurences },
+            { year: data[choosenYear].top_10[elId - 1].topwords[3].mot, count: data[choosenYear].top_10[elId - 1].topwords[3].occurences },
+            { year: data[choosenYear].top_10[elId - 1].topwords[4].mot, count: data[choosenYear].top_10[elId - 1].topwords[4].occurences},
+            { year: data[choosenYear].top_10[elId - 1].topwords[5].mot, count: data[choosenYear].top_10[elId - 1].topwords[5].occurences},
+            { year: data[choosenYear].top_10[elId - 1].topwords[6].mot, count: data[choosenYear].top_10[elId - 1].topwords[6].occurences },
+            { year: data[choosenYear].top_10[elId - 1].topwords[7].mot, count: data[choosenYear].top_10[elId - 1].topwords[7].occurences },
+            { year: data[choosenYear].top_10[elId - 1].topwords[8].mot, count: data[choosenYear].top_10[elId - 1].topwords[8].occurences },
+            { year: data[choosenYear].top_10[elId - 1].topwords[9].mot, count: data[choosenYear].top_10[elId - 1].topwords[9].occurences },
+        ];
+
+        const newLabels = donnees.map(row => row.year);
+        const newValue = donnees.map(row => row.count);
+        const canvasElement = document.getElementById('myChart'); // On récupère le canvas
+
+        if (myGraph) {
+            // Mise à jour si déjà existant
+            myGraph.data.labels = newLabels;
+            myGraph.data.datasets[0].data = newValue;
+            myGraph.update();
+        } 
+        else {
+            // Création initiale (Correction de l'argument id)
+          myGraph = new Chart(canvasElement, { 
+              type: 'bar',
+              options: {
+                  scales: {
+                      y: { beginAtZero: true }
+                  }
+              },
+              data: {
+                  labels: newLabels,
+                  datasets: [{
+                      label: 'Récurrence du mot',
+                      data: newValue,
+
+                  }]
+              }
+          });
+      }
+    };
+
+
+    //----------------Graphique Donnut---------------------
+
+    const urlYears = '../Json/every_years.json';
+    const anneeChoisie = `tw_${userInputValue}`;
+    fetch(urlYears)
+        .then(response => response.json())
+        .then((data) => {
+            console.log(data[anneeChoisie]);
+        })
+        .catch(error => console.error("Erreur :", error));
+    }
 }
 
+if (pageId === "wordstats"){
+    
+    
+
+
+}
