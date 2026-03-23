@@ -27,6 +27,8 @@ const knobRect = knob.getBoundingClientRect();
 let mousePosition = 0;
 let rotation = 0;
 
+
+
 knob.addEventListener("mousedown", onKnobClick);
 
 function onKnobClick (event) {
@@ -48,17 +50,27 @@ function onMouseMove(event) {
     if (mousePosition > click) {
         rotation -= 4;
         document.documentElement.style.setProperty("--rotateValue", rotation + "deg");
-        input.stepDown(1);
+
+        if (rotation % 30 === 0){
+            input.stepDown(1);
+        }    
     }
     if (mousePosition < click) {
         rotation += 4;
         document.documentElement.style.setProperty("--rotateValue", rotation + "deg");
-        input.stepUp(1);
+
+        if (rotation % 30 === 0){
+            input.stepUp(1); 
+        }  
     }
 
-    document.documentElement.style.setProperty("--rotateValue", rotation + "deg");
+
+    
+
+    document.documentElement.style.setProperty("--rotateValue", rotation + "deg"); // cette ligne ne sert à rien
     mousePosition = click;
-    console.log(mousePosition);
+
+    
 }
 
 
@@ -117,8 +129,6 @@ function getInputNumber () {
             lyricsParagraphe.innerHTML = data[choosenYear].top_10[elId - 1].lyrics;
 
 
-            
-
 
 
 
@@ -175,6 +185,6 @@ function getInputNumber () {
 
         })
     })
-    .catch(error => console.error("Erreur du fetch, l'année choisie n'est pas disponible :", error));
+    .catch(error => alert("Vous devez choisir une année entre 1970 et 2025 qui est divisible par 5", error));
 }
 
