@@ -3,6 +3,7 @@ import Chart from 'chart.js/auto'
 import { color } from 'chart.js/helpers';
 const url = '../Json/annees.json';
 let myGraph = null;
+let graphDonut = null;
 fetch(url)
     .then(response => response.json())
     .then((data) => {
@@ -256,17 +257,96 @@ fetch(url)
 
     //----------------Graphique Donnut---------------------
 
-    const urlYears = '../Json/every_years.json';
-    const anneeChoisie = `tw_${userInputValue}`;
-    fetch(urlYears)
-        .then(response => response.json())
-        .then((data) => {
-            console.log(data[anneeChoisie]);
-        })
-        .catch(error => console.error("Erreur :", error));
-    }
-}
+const urlYears = '../Json/every_years.json';
+const anneeChoisie = `tw_${userInputValue}`;
+fetch(urlYears)
+    .then(response => response.json())
+    .then((data) => {
+        console.log(data[anneeChoisie]);
+        generateGraphDonut(data, anneeChoisie);
+    })
+    .catch(error => console.error("Erreur :", error));
 
+async function generateGraphDonut(data, anneeChoisie){
+   
+const donneesDonut = [
+    { year: data[anneeChoisie].top10[0].mot, count: data[anneeChoisie].top10[0].occurence },
+    { year: data[anneeChoisie].top10[1].mot, count: data[anneeChoisie].top10[1].occurence },
+    { year: data[anneeChoisie].top10[2].mot, count: data[anneeChoisie].top10[2].occurence },
+    { year: data[anneeChoisie].top10[3].mot, count: data[anneeChoisie].top10[3].occurence },
+    { year: data[anneeChoisie].top10[4].mot, count: data[anneeChoisie].top10[4].occurence },
+    { year: data[anneeChoisie].top10[5].mot, count: data[anneeChoisie].top10[5].occurence },
+    { year: data[anneeChoisie].top10[6].mot, count: data[anneeChoisie].top10[6].occurence },
+    { year: data[anneeChoisie].top10[7].mot, count: data[anneeChoisie].top10[7].occurence },
+    { year: data[anneeChoisie].top10[8].mot, count: data[anneeChoisie].top10[8].occurence },
+    { year: data[anneeChoisie].top10[9].mot, count: data[anneeChoisie].top10[9].occurence },
+  ];
+  const canvasDonut =document.getElementById('myDonut');
+  const newLabelsDonut = donneesDonut.map(row => row.year);
+  const newValueDonut = donneesDonut.map(row => row.count);
+  if(graphDonut){
+    graphDonut.data.labels = newLabelsDonut;
+    graphDonut.data.datasets[0].data = newValueDonut;
+    graphDonut.update();
+  }else{
+  graphDonut = new Chart(canvasDonut,
+    {
+      type: 'pie',
+      options: {
+        tooltip: {
+            enabled: false
+        },
+      },
+      data: {
+        labels: newLabelsDonut,
+        datasets: [
+          {
+            label: 'occcurences',
+            data: newValueDonut
+              }]
+          }
+      });}
+  };}
+    (async function() {
+            
+                const donnees = [
+                    { year: data[choosenYear].top_10[elId - 1].topwords[0].mot, count: data[choosenYear].top_10[elId - 1].topwords[0].occurences },
+                    { year: data[choosenYear].top_10[elId - 1].topwords[1].mot, count: data[choosenYear].top_10[elId - 1].topwords[1].occurences },
+                    { year: data[choosenYear].top_10[elId - 1].topwords[2].mot, count: data[choosenYear].top_10[elId - 1].topwords[2].occurences },
+                    { year: data[choosenYear].top_10[elId - 1].topwords[3].mot, count: data[choosenYear].top_10[elId - 1].topwords[3].occurences },
+                    { year: data[choosenYear].top_10[elId - 1].topwords[4].mot, count: data[choosenYear].top_10[elId - 1].topwords[4].occurences},
+                    { year: data[choosenYear].top_10[elId - 1].topwords[5].mot, count: data[choosenYear].top_10[elId - 1].topwords[5].occurences},
+                    { year: data[choosenYear].top_10[elId - 1].topwords[6].mot, count: data[choosenYear].top_10[elId - 1].topwords[6].occurences },
+                    { year: data[choosenYear].top_10[elId - 1].topwords[7].mot, count: data[choosenYear].top_10[elId - 1].topwords[7].occurences },
+                    { year: data[choosenYear].top_10[elId - 1].topwords[8].mot, count: data[choosenYear].top_10[elId - 1].topwords[8].occurences },
+                    { year: data[choosenYear].top_10[elId - 1].topwords[9].mot, count: data[choosenYear].top_10[elId - 1].topwords[9].occurences },
+                ];
+
+              new Chart(
+                document.getElementById('myChart'),
+                
+                {
+                  type: 'bar',
+                  options: {
+                    tooltip: {
+                        enabled: false
+                    },
+                  },
+                  data: {
+                    labels: donnees.map(row => row.year),
+                    datasets: [
+                      {
+                        label: 'Réccurence du mot dans la chanson',
+                        data: donnees.map(row => row.count)
+                      }
+                    ]
+                  }
+                }
+            
+              );
+            })();
+        }
+        
 if (pageId === "wordstats"){
     const url = '../Json/wordstats.json';
     const list = document.querySelector(".wordinsong__list");
@@ -299,8 +379,4 @@ if (pageId === "wordstats"){
                 const li = document.createElement("li");
                 li.innerText = `${data.song}, ${data.occurence} fois`; 
                 list.appendChild(li);
-                });
-            } 
-        }
-    });
-}
+                })}}})}
