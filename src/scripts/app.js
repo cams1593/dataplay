@@ -186,47 +186,6 @@ function getInputNumber () {
     .catch(error => alert("Vous devez choisir une année entre 1970 et 2025 qui est divisible par 5", error));
 
 
-
-//----------------Graphique Donnut---------------------
-
-const urlYears = '../Json/every_years.json';
-const anneeChoisie = `tw_${userInputValue}`;
-fetch(urlYears)
-    .then(response => response.json())
-    .then((data) => {
-        console.log(data[anneeChoisie]);
-    })
-    .catch(error => console.error("Erreur :", error));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 
