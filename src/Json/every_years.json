@@ -1,0 +1,172 @@
+{
+    "tw_1970": {
+        "top10":[
+            {"mot": "get", "occurence": "40"},
+            {"mot": "let", "occurence": "39"},
+            {"mot": "ready", "occurence": "38"},
+            {"mot": "come", "occurence": "22"},
+            {"mot": "war", "occurence": "21"},
+            {"mot": "love", "occurence": "21"},
+            {"mot": "cause", "occurence": "20"},
+            {"mot": "nothing", "occurence": "19"},
+            {"mot": "good", "occurence": "17"},
+            {"mot": "like", "occurence": "16"}
+        ]
+    },
+
+    "tw_1975": {
+        "top_10": [
+            {"mot": "fame", "occurence": "55"},
+            {"mot": "love", "occurence": "39"},
+            {"mot": "one", "occurence": "20"},
+            {"mot": "shine", "occurence": "19"},
+            {"mot": "got", "occurence": "18"},
+            {"mot": "light", "occurence": "18"},
+            {"mot": "freedom", "occurence": "16"},
+            {"mot": "yeah", "occurence": "16"},
+            {"mot": "hand", "occurence": "16"},
+            {"mot": "philadelphia", "occurence": "15"}
+        ]
+    },
+
+    "tw_1980": {
+        "top_10": [
+            {"mot": "take", "occurence": "45"},
+            {"mot": "call", "occurence": "42"},
+            {"mot": "love", "occurence": "35"},
+            {"mot": "funkytown", "occurence": "28"},
+            {"mot": "coming", "occurence": "27"},
+            {"mot": "yeah", "occurence": "27"},
+            {"mot": "rock", "occurence": "25"},
+            {"mot": "thing", "occurence": "19"},
+            {"mot": "called", "occurence": "19"},
+            {"mot": "night", "occurence": "18"}
+        ]
+    },
+    "tw_1985": {
+        "top_10": [
+            {"mot": "feel", "occurence": "43"},
+            {"mot": "oh", "occurence": "41"},
+            {"mot": "love", "occurence": "40"},
+            {"mot": "take", "occurence": "34"},
+            {"mot": "wanna", "occurence": "32"},
+            {"mot": "want", "occurence": "29"},
+            {"mot": "shaka", "occurence": "29"},
+            {"mot": "know", "occurence": "26"},
+            {"mot": "let", "occurence": "25"},
+            {"mot": "yeah", "occurence": "23"}
+        ]
+    },
+    "tw_1990": {
+        "top_10": [
+            {"mot": "love", "occurence": "64"},
+            {"mot": "know", "occurence": "36"},
+            {"mot": "vogue", "occurence": "34"},
+            {"mot": "yeah", "occurence": "31"},
+            {"mot": "hold", "occurence": "29"},
+            {"mot": "go", "occurence": "25"},
+            {"mot": "poison", "occurence": "29"},
+            {"mot": "must", "occurence": "22"},
+            {"mot": "day", "occurence": "20"},
+            {"mot": "cradle", "occurence": "20"}
+        ]
+    },
+    "tw_1995": {
+        "top_10": [
+            {"mot": "love", "occurence": "47"},
+            {"mot": "baby", "occurence": "45"},
+            {"mot": "oh", "occurence": "41"},
+            {"mot": "know", "occurence": "32"},
+            {"mot": "one", "occurence": "30"},
+            {"mot": "night", "occurence": "29"},
+            {"mot": "take", "occurence": "26"},
+            {"mot": "sweet", "occurence": "25"},
+            {"mot": "say", "occurence": "24"},
+            {"mot": "another", "occurence": "24"}
+        ]
+    },
+    "tw_2000": {
+        "top_10": [
+            {"mot": "say", "occurence": "85"},
+            {"mot": "know", "occurence": "72"},
+            {"mot": "name", "occurence": "61"},
+            {"mot": "baby", "occurence": "41"},
+            {"mot": "oh", "occurence": "34"},
+            {"mot": "yeah", "occurence": "30"},
+            {"mot": "like", "occurence": "28"},
+            {"mot": "love", "occurence": "26"},
+            {"mot": "ain't", "occurence": "25"},
+            {"mot": "one", "occurence": "19"}
+        ]
+    },
+    "tw_2005": {
+        "top_10": [
+            {"mot": "get", "occurence": "64"},
+            {"mot": "ain't", "occurence": "48"},
+            {"mot": "girl", "occurence": "44"},
+            {"mot": "shit", "occurence": "39"},
+            {"mot": "baby", "occurence": "38"},
+            {"mot": "like", "occurence": "37"},
+            {"mot": "yeah", "occurence": "34"},
+            {"mot": "know", "occurence": "34"},
+            {"mot": "love", "occurence": "30"},
+            {"mot": "let", "occurence": "29"}
+        ]
+    },
+    "tw_2010": {
+        "top_10": [
+            {"mot": "oh", "occurence": "414"},
+            {"mot": "break", "occurence": "70"},
+            {"mot": "love", "occurence": "67"},
+            {"mot": "want", "occurence": "54"},
+            {"mot": "whoa", "occurence": "39"},
+            {"mot": "gonna", "occurence": "35"},
+            {"mot": "bad", "occurence": "32"},
+            {"mot": "like", "occurence": "31"},
+            {"mot": "way", "occurence": "25"},
+            {"mot": "romance", "occurence": "25"}
+        ]
+    },
+    "tw_2015": {
+        "top_10": [
+            {"mot": "watch", "occurence": "100"},
+            {"mot": "doh", "occurence": "83"},
+            {"mot": "yeah", "occurence": "73"},
+            {"mot": "ooh", "occurence": "47"},
+            {"mot": "love", "occurence": "43"},
+            {"mot": "bop", "occurence": "41"},
+            {"mot": "cause", "occurence": "36"},
+            {"mot": "baby", "occurence": "33"},
+            {"mot": "duff", "occurence": "30"},
+            {"mot": "uptown", "occurence": "29"}
+        ]
+    },
+    "tw_2020": {
+        "top_10": [
+            {"mot": "yeah", "occurence": "48"},
+            {"mot": "woo", "occurence": "40"},
+            {"mot": "let", "occurence": "35"},
+            {"mot": "oh", "occurence": "32"},
+            {"mot": "nigga", "occurence": "31"},
+            {"mot": "away", "occurence": "29"},
+            {"mot": "got", "occurence": "29"},
+            {"mot": "like", "occurence": "28"},
+            {"mot": "know", "occurence": "28"},
+            {"mot": "back", "occurence": "28"}
+        ]
+    },
+    "tw_2025": {
+        "top_10": [
+            {"mot": "wanna", "occurence": "31"},
+            {"mot": "oh", "occurence": "29"},
+            {"mot": "know", "occurence": "22"},
+            {"mot": "love", "occurence": "22"},
+            {"mot": "world", "occurence": "20"},
+            {"mot": "like", "occurence": "19"},
+            {"mot": "take", "occurence": "17"},
+            {"mot": "got", "occurence": "17"},
+            {"mot": "next", "occurence": "16"},
+            {"mot": "want", "occurence": "16"}
+        ]
+    }
+}
