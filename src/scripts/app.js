@@ -189,3 +189,16 @@ function getInputNumber () {
 
 
 
+//------------------Page 2 Top 10 des Mots-------------
+
+const url_wordstats = '../Json/wordstats.json';
+
+fetch(url_wordstats)
+    .then(response => response.json())
+    .then((data) => {
+
+        console.log("yfehf")
+
+
+    })
+    .catch(error => console.error("Erreur du fetch", error));
