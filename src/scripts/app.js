@@ -1,5 +1,6 @@
 //Je pense qu'on peut supprimer cette partie prce qu'elle est dans une fonction (en bas)
 import Chart from 'chart.js/auto'
+import { color } from 'chart.js/helpers';
 const url = '../Json/annees.json';
 let myGraph = null;
 fetch(url)
@@ -101,32 +102,31 @@ function getInputNumber () {
     const top9 = document.getElementById("9");
     const top10 = document.getElementById("10");
 //-----------------------------------------------
+const allColors = ["#00DDFF","#4DFF00","#FF49AA","#FFAE00", "#00FFD9","#E375FF","#7A6EFF","#FFA8D6","#DDFF6E","#FF292C"];
 
-const createColor = () => {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
+const createColor = (i) => {
+  return allColors[i % allColors.length];
 }
 
 const colorWords = (data, choosenYear, elId) => {
   const topWords = data[choosenYear].top_10[elId - 1].topwords;
   let paroles = data[choosenYear].top_10[elId - 1].lyrics;
-  topWords.forEach(word => {
+
+  topWords.forEach((word, i) => {
     const regex = new RegExp(`\\b${word.mot}\\b`, 'gi');
-    // @TODO plutôt que le rouge, il faut faire une couleur au hasard. Pour ça, tu 
-    // peux faire une fonction qui génère une couleur aléatoire et l'appeler ici pour chaque mot
-    // Je t'ai déjà préparé la fonction createColor() que tu peux utiliser pour ça
-    const coloredWord = `<span style="color:red">${word.mot}</span>`;
+    
+
+    const currentColor = createColor(i);
+    
+    const coloredWord = `<span style="color:${currentColor};">${word.mot}</span>`;
     paroles = paroles.replace(regex, coloredWord);
   });
 
   const lyricsParagraphe = document.querySelector(".songinfos__paragraphe");
-  lyricsParagraphe.innerHTML = paroles;
+  if (lyricsParagraphe) {
+    lyricsParagraphe.innerHTML = paroles;
+  }
 }
-
 
 fetch(url)
     .then(response => response.json())
@@ -203,6 +203,7 @@ async function generateGraph(data, choosenYear, elId) {
               datasets: [{
                   label: 'Récurrence du mot',
                   data: newValue,
+                  backgroundColor: allColors,
 
               }]
           }
