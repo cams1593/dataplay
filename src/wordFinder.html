@@ -14,7 +14,7 @@
   <script src="scripts/app.js" defer></script>
   <link rel="stylesheet" href="https://use.typekit.net/alo5tfq.css">
 </head>
-<body id="wordFinder">
+<body id="wordstats">
 <header id="top">
   <h1 class ="title">Word <span class="title__span">Finder</span></h1>
   <nav>
@@ -22,17 +22,17 @@
   </nav>
 </header>
 <main class="main__wordfinder">
-      <select class="choseword">
+      <select class="choseword" id="select">
     <option value="default" disabled selected>Choose a word</option>
-      <option value="oh">Oh</option>
-      <option value="love">Love</option>
-      <option value="yeah">Yeah</option>
+      <option value="oh">oh</option>
+      <option value="love">love</option>
+      <option value="yeah">yeah</option>
     </select>
     <p class="text__result">Résultat de la recherche: <span id="result" class="result">Love</span></p>
   <section class="wordinsong">
     <h2>Chansons avec le mot <span id="result" class="result">Love</span> dedans</h2>
         <div class="wordinsong__container">
-            <ul class="wordinsong__list">   
+            <ul class="wordinsong__list">
             </ul>
         </div>
   </section>
