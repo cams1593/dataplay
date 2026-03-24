@@ -310,6 +310,10 @@ if (pageId === "wordstats"){
         let infosDuMot;
 
         if (choosenWord) {
+            const result = document.querySelectorAll(".result");
+            result.forEach(function(test){
+                test.innerText = choosenWord;
+            })
             toutesLesDonnees.forEach(function(item) {
             if (item.word === choosenWord) {
             infosDuMot = item;
@@ -322,6 +326,5 @@ if (pageId === "wordstats"){
             }
         });
         }
-        
     });
 }
