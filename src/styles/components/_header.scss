@@ -1,7 +1,10 @@
 .title{
-   font-family: $font-strelka;
-   $size: $size-title;
-   text-align: center;
+  align-self: center;
+  justify-self: start;
+  font-family: $font-strelka;
+  $size: $size-title;
+  text-align: center;
+  width: fit-content;
   /* width: 50%; */
   margin: 0 5%;
   padding-bottom: 30px;
@@ -14,28 +17,45 @@
     font-size: $size-spantitle;
     font-style: italic;
     font-weight: 300;
-    
    }
 }
 header{
-   margin: 20px 2%;
+ display: flex;
+ flex-direction: column-reverse;
+ @media (min-width: $size-desktop){
+  margin: 20px 2%;
   display: flex;
   flex-direction: row-reverse;
   padding: 0;
   justify-content: space-around;
+   }
+  
   a{
     padding-right: 5%;
   }
 .header__line{
+  display:none; 
   align-self: center;
   width: 25%;
+   @media (min-width: $size-desktop){
+    display: block;
+   }
 }
 .header__line2{
+  display:none; 
   align-self: center;
   width: 15%;
-}
+  @media (min-width: $size-desktop){
+    display: block;
+   }
+} // SCSS 
  nav{
-  align-self: center;
-  justify-self: start;
+  margin: 20px;
+    align-self: start;
+    justify-self: start;
+  @media (min-width: $size-desktop){
+    align-self: center;
+    justify-self: start;
+  }
  }
 }
