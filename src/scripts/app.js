@@ -320,6 +320,6 @@ if (pageId === "wordstats"){
             if (infosDuMot.all_songs){
                 infosDuMot.all_songs.forEach(function(data) {
                 const li = document.createElement("li");
-                li.innerText = `${data.song}, ${data.occurence} fois`; 
+                li.innerHTML = `<p>${data.song}</p> <p>${data.occurence} fois</p>`; 
                 list.appendChild(li);
                 })}}})}
