@@ -92,44 +92,19 @@ if (pageId === "index"){
 
 function getInputNumber () {
     const userInputValue = parseInt(input.value);
+    let result;
 
 if (userInputValue >= 2023) {
-    input.value = 2025;
-} 
-else if (userInputValue >= 2018 && userInputValue <= 2022) {
-    input.value = 2020;
+    result = 2025;
 }
-else if (userInputValue >= 2013 && userInputValue <= 2017) {
-    input.value = 2015;
-}
-else if (userInputValue >= 2008 && userInputValue <= 2012) {
-    input.value = 2010;
-}
-else if (userInputValue >= 2003 && userInputValue <= 2007) {
-    input.value = 2005;
-}
-else if (userInputValue >= 1998 && userInputValue <= 2002) {
-    input.value = 2000;
-}
-else if (userInputValue >= 1993 && userInputValue <= 1997) {
-    input.value = 1995;
-}
-else if (userInputValue >= 1988 && userInputValue <= 1992) {
-    input.value = 1990;
-}
-else if (userInputValue >= 1983 && userInputValue <= 1987) {
-    input.value = 1985;
-}
-else if (userInputValue >= 1978 && userInputValue <= 1982) {
-    input.value = 1980;
-}
-else if (userInputValue >= 1973 && userInputValue <= 1977) {
-    input.value = 1975;
-}
-else {
+else if (1973 > userInputValue) {
     // Si c'est en dessous de 1973
-    input.value = 1970;
+    result = 1970;
 }
+else{
+    result = Math.floor((userInputValue - 3) / 5) * 5 + 5;
+};
+input.value = result;
     const url = '../Json/annees.json';
     choosenYear = `y_${userInputValue}`;
 //-------------------Les li------------------
