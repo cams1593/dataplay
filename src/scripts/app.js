@@ -294,8 +294,7 @@ if (pageId === "wordstats"){
         });
 
     function generateGraphLine(timeByYears) {
-     t
-        const labels = timeByYears.map(item => item.annee);
+            const labels = timeByYears.map(item => item.annee);
         const values = timeByYears.map(item => item.occurence); 
         
         const canvasElement = document.getElementById('chartTime');
