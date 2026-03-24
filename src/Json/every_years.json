@@ -1,6 +1,6 @@
 {
     "tw_1970": {
-        "top10":[
+        "top_10":[
             {"mot": "get", "occurence": "40"},
             {"mot": "let", "occurence": "39"},
             {"mot": "ready", "occurence": "38"},

@@ -3,6 +3,7 @@ import Chart from 'chart.js/auto'
 import { color } from 'chart.js/helpers';
 const url = '../Json/annees.json';
 let myGraph = null;
+let graphDonut = null;
 fetch(url)
     .then(response => response.json())
     .then((data) => {
@@ -91,44 +92,23 @@ if (pageId === "index"){
 
 function getInputNumber () {
     const userInputValue = parseInt(input.value);
+    let result;
 
 if (userInputValue >= 2023) {
-    input.value = 2025;
-} 
-else if (userInputValue >= 2018 && userInputValue <= 2022) {
-    input.value = 2020;
+    result = 2025;
 }
-else if (userInputValue >= 2013 && userInputValue <= 2017) {
-    input.value = 2015;
-}
-else if (userInputValue >= 2008 && userInputValue <= 2012) {
-    input.value = 2010;
-}
-else if (userInputValue >= 2003 && userInputValue <= 2007) {
-    input.value = 2005;
-}
-else if (userInputValue >= 1998 && userInputValue <= 2002) {
-    input.value = 2000;
-}
-else if (userInputValue >= 1993 && userInputValue <= 1997) {
-    input.value = 1995;
-}
-else if (userInputValue >= 1988 && userInputValue <= 1992) {
-    input.value = 1990;
-}
-else if (userInputValue >= 1983 && userInputValue <= 1987) {
-    input.value = 1985;
-}
-else if (userInputValue >= 1978 && userInputValue <= 1982) {
-    input.value = 1980;
-}
-else if (userInputValue >= 1973 && userInputValue <= 1977) {
-    input.value = 1975;
-}
-else {
+else if (1973 > userInputValue) {
     // Si c'est en dessous de 1973
-    input.value = 1970;
+    result = 1970;
 }
+else{
+    result = Math.floor((userInputValue - 3) / 5) * 5 + 5;
+};
+input.value = result;
+  const year = document.querySelector(".year");
+  if(year){
+    year.innerHTML = userInputValue;
+  }
     const url = '../Json/annees.json';
     choosenYear = `y_${userInputValue}`;
 //-------------------Les li------------------
@@ -245,6 +225,7 @@ fetch(url)
                   datasets: [{
                       label: 'Récurrence du mot',
                       data: newValue,
+                      backgroundColor: allColors,
 
                   }]
               }
@@ -256,17 +237,59 @@ fetch(url)
 
     //----------------Graphique Donnut---------------------
 
-    const urlYears = '../Json/every_years.json';
-    const anneeChoisie = `tw_${userInputValue}`;
-    fetch(urlYears)
-        .then(response => response.json())
-        .then((data) => {
-            console.log(data[anneeChoisie]);
-        })
-        .catch(error => console.error("Erreur :", error));
-    }
-}
+const urlYears = '../Json/every_years.json';
+const anneeChoisie = `tw_${userInputValue}`;
+fetch(urlYears)
+    .then(response => response.json())
+    .then((data) => {
+        console.log(data[anneeChoisie]);
+        generateGraphDonut(data, anneeChoisie);
+    })
+    .catch(error => console.error("Erreur :", error));
 
+async function generateGraphDonut(data, anneeChoisie){
+   
+const donneesDonut = [
+    { year: data[anneeChoisie].top_10[0].mot, count: data[anneeChoisie].top_10[0].occurence },
+    { year: data[anneeChoisie].top_10[1].mot, count: data[anneeChoisie].top_10[1].occurence },
+    { year: data[anneeChoisie].top_10[2].mot, count: data[anneeChoisie].top_10[2].occurence },
+    { year: data[anneeChoisie].top_10[3].mot, count: data[anneeChoisie].top_10[3].occurence },
+    { year: data[anneeChoisie].top_10[4].mot, count: data[anneeChoisie].top_10[4].occurence },
+    { year: data[anneeChoisie].top_10[5].mot, count: data[anneeChoisie].top_10[5].occurence },
+    { year: data[anneeChoisie].top_10[6].mot, count: data[anneeChoisie].top_10[6].occurence },
+    { year: data[anneeChoisie].top_10[7].mot, count: data[anneeChoisie].top_10[7].occurence },
+    { year: data[anneeChoisie].top_10[8].mot, count: data[anneeChoisie].top_10[8].occurence },
+    { year: data[anneeChoisie].top_10[9].mot, count: data[anneeChoisie].top_10[9].occurence },
+  ];
+  const canvasDonut =document.getElementById('myDonut');
+  const newLabelsDonut = donneesDonut.map(row => row.year);
+  const newValueDonut = donneesDonut.map(row => row.count);
+  if(graphDonut){
+    graphDonut.data.labels = newLabelsDonut;
+    graphDonut.data.datasets[0].data = newValueDonut;
+    graphDonut.update();
+  }else{
+  graphDonut = new Chart(canvasDonut,
+    {
+      type: 'pie',
+      options: {
+        tooltip: {
+            enabled: false
+        },
+      },
+      data: {
+        labels: newLabelsDonut,
+        datasets: [
+          {
+            label: 'occcurences',
+            data: newValueDonut
+              }]
+          }
+      });}
+  };}
+
+}
+        
 if (pageId === "wordstats"){
     const url = '../Json/wordstats.json';
     const list = document.querySelector(".wordinsong__list");
