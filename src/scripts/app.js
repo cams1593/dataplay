@@ -188,18 +188,10 @@ fetch(url)
     //--------------Le Graphique chartjs-----------------
 
     async function generateGraph(data, choosenYear, elId) {
-        const donnees = [
-            { year: data[choosenYear].top_10[elId - 1].topwords[0].mot, count: data[choosenYear].top_10[elId - 1].topwords[0].occurences },
-            { year: data[choosenYear].top_10[elId - 1].topwords[1].mot, count: data[choosenYear].top_10[elId - 1].topwords[1].occurences },
-            { year: data[choosenYear].top_10[elId - 1].topwords[2].mot, count: data[choosenYear].top_10[elId - 1].topwords[2].occurences },
-            { year: data[choosenYear].top_10[elId - 1].topwords[3].mot, count: data[choosenYear].top_10[elId - 1].topwords[3].occurences },
-            { year: data[choosenYear].top_10[elId - 1].topwords[4].mot, count: data[choosenYear].top_10[elId - 1].topwords[4].occurences},
-            { year: data[choosenYear].top_10[elId - 1].topwords[5].mot, count: data[choosenYear].top_10[elId - 1].topwords[5].occurences},
-            { year: data[choosenYear].top_10[elId - 1].topwords[6].mot, count: data[choosenYear].top_10[elId - 1].topwords[6].occurences },
-            { year: data[choosenYear].top_10[elId - 1].topwords[7].mot, count: data[choosenYear].top_10[elId - 1].topwords[7].occurences },
-            { year: data[choosenYear].top_10[elId - 1].topwords[8].mot, count: data[choosenYear].top_10[elId - 1].topwords[8].occurences },
-            { year: data[choosenYear].top_10[elId - 1].topwords[9].mot, count: data[choosenYear].top_10[elId - 1].topwords[9].occurences },
-        ];
+        const donnees = data[choosenYear].top_10[elId - 1].topwords.map(item => ({
+    year: item.mot, 
+    count: item.occurences
+})); 
 
         const newLabels = donnees.map(row => row.year);
         const newValue = donnees.map(row => row.count);
@@ -249,18 +241,10 @@ fetch(urlYears)
 
 async function generateGraphDonut(data, anneeChoisie){
    
-const donneesDonut = [
-    { year: data[anneeChoisie].top_10[0].mot, count: data[anneeChoisie].top_10[0].occurence },
-    { year: data[anneeChoisie].top_10[1].mot, count: data[anneeChoisie].top_10[1].occurence },
-    { year: data[anneeChoisie].top_10[2].mot, count: data[anneeChoisie].top_10[2].occurence },
-    { year: data[anneeChoisie].top_10[3].mot, count: data[anneeChoisie].top_10[3].occurence },
-    { year: data[anneeChoisie].top_10[4].mot, count: data[anneeChoisie].top_10[4].occurence },
-    { year: data[anneeChoisie].top_10[5].mot, count: data[anneeChoisie].top_10[5].occurence },
-    { year: data[anneeChoisie].top_10[6].mot, count: data[anneeChoisie].top_10[6].occurence },
-    { year: data[anneeChoisie].top_10[7].mot, count: data[anneeChoisie].top_10[7].occurence },
-    { year: data[anneeChoisie].top_10[8].mot, count: data[anneeChoisie].top_10[8].occurence },
-    { year: data[anneeChoisie].top_10[9].mot, count: data[anneeChoisie].top_10[9].occurence },
-  ];
+const donneesDonut = data[anneeChoisie].top_10.map(item => ({
+    year: item.mot, 
+    count: item.occurences
+}));
   const canvasDonut =document.getElementById('myDonut');
   const newLabelsDonut = donneesDonut.map(row => row.year);
   const newValueDonut = donneesDonut.map(row => row.count);
@@ -295,36 +279,75 @@ if (pageId === "wordstats"){
     const list = document.querySelector(".wordinsong__list");
     const select = document.getElementById("select");
     let toutesLesDonnees = []; 
+    let GraphLine =null;
+   if (pageId === "wordstats") {
+    const url = '../Json/wordstats.json';
+    const list = document.querySelector(".wordinsong__list");
+    const select = document.getElementById("select");
+    let toutesLesDonnees = []; 
+    let GraphLine = null;
 
     fetch(url)
-        .then(function(res){
-        return res.json();
-        })
-        .then(function(data){
-        toutesLesDonnees = data;   
+        .then(res => res.json())
+        .then(data => {
+            toutesLesDonnees = data; 
         });
 
-    select.addEventListener("change", function(){
+    function generateGraphLine(timeByYears) {
+            const labels = timeByYears.map(item => item.annee);
+        const values = timeByYears.map(item => item.occurence); 
+        
+        const canvasElement = document.getElementById('chartTime');
+
+        if (GraphLine) {
+          
+            GraphLine.data.labels = labels;
+            GraphLine.data.datasets[0].data = values;
+            GraphLine.update();
+        } else {
+            // Création initiale
+            GraphLine = new Chart(canvasElement, { 
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Fluctuation du mot dans le temps',
+                        data: values,
+                        borderColor: '#00DDFF',
+                        backgroundColor: 'rgba(0, 221, 255, 0.1)',
+                        fill: true
+                    }]
+                },
+                options: {
+                    scales: { y: { beginAtZero: true } }
+                }
+            });
+        }
+    }
+
+    select.addEventListener("change", function() {
         const choosenWord = select.value;
-        list.innerText = ""; 
-        let infosDuMot;
+        list.innerHTML = ""; 
 
         if (choosenWord) {
-            const result = document.querySelectorAll(".result");
-            result.forEach(function(test){
-                test.innerText = choosenWord;
-            })
-            toutesLesDonnees.forEach(function(item) {
-            if (item.word === choosenWord) {
-            infosDuMot = item;
             
-            infosDuMot.all_songs.forEach(function(data) {
-            const li = document.createElement("li");
-            li.innerText = `${data.song}, ${data.occurence} fois`; 
-            list.appendChild(li);
+            document.querySelectorAll(".result").forEach(el => el.innerText = choosenWord);
+
+            // On cherche les données du mot choisi
+            toutesLesDonnees.forEach(function(item) {
+                if (item.word === choosenWord) {
+                    
+                    // 1. On remplit la liste des chansons
+                    item.all_songs.forEach(function(songData) {
+                        const li = document.createElement("li");
+                        li.innerHTML = `<p><strong>${songData.song}</strong></p><p>${songData.occurence} fois</p>`;
+                        list.appendChild(li);
+                    });
+
+                
+                    generateGraphLine(item.time_by_years);
+                }
             });
-            }
-        });
         }
     });
-}
+   }}
