@@ -233,5 +233,47 @@
             {"song": "Lose Control", "occurence": "3"},
             {"song": "I Had Some Help", "occurence": "8"}
         ]
+    },
+    {
+        "word": "baby",
+        "time_in_top10": "21",
+        "time_in_55years": "190",
+        "time_by_years": [
+            {"annee": "1970", "occurence": "11"},
+            {"annee": "1975", "occurence": "3"},
+            {"annee": "1980", "occurence": "11"},
+            {"annee": "1985", "occurence": "14"},
+            {"annee": "1990", "occurence": "13"},
+            {"annee": "1995", "occurence": "45"},
+            {"annee": "2000", "occurence": "41"},
+            {"annee": "2005", "occurence": "38"},
+            {"annee": "2010", "occurence": "22"},
+            {"annee": "2015", "occurence": "33"},
+            {"annee": "2020", "occurence": "12"},
+            {"annee": "2025", "occurence": "15"}
+        ],
+        "all_songs": [
+            {"song": "I'll Be There", "occurence": "3"},
+            {"song": "Get Ready", "occurence": "6"},
+            {"song": "2", "occurence": "2"},
+            {"song": "Do That To Me One More Time", "occurence": "5"},
+            {"song": "I Feel For You", "occurence": "10"},
+            {"song": "Hold On", "occurence": "7"},
+            {"song": "Kiss From A Rose", "occurence": "6"},
+            {"song": "Fantasy", "occurence": "13"},
+            {"song": "Don't Take It Personal (Just On Of Dem Days)", "occurence": "19"},
+            {"song": "Breathe", "occurence": "5"},
+            {"song": "Say My Name", "occurence": "26"},
+            {"song": "Amazed", "occurence": "5"},
+            {"song": "We Belong Together", "occurence": "12"},
+            {"song": "Let Me Love You", "occurence": "16"},
+            {"song": "OMG", "occurence": "8"},
+            {"song": "Break Your Heart", "occurence": "3"},
+            {"song": "Thinking Out Loud", "occurence": "5"},
+            {"song": "Trap Queen", "occurence": "20"},
+            {"song": "Earned It ( Fifty Shades Of Grey)", "occurence": "5"},
+            {"song": "Birds Of A Feather", "occurence": "3"},
+            {"song": "I Had Some Help", "occurence": "3"}
+        ]
     }
 ]
