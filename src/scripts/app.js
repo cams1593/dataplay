@@ -245,16 +245,16 @@ fetch(urlYears)
 async function generateGraphDonut(data, anneeChoisie){
    
 const donneesDonut = [
-    { year: data[anneeChoisie].top10[0].mot, count: data[anneeChoisie].top10[0].occurence },
-    { year: data[anneeChoisie].top10[1].mot, count: data[anneeChoisie].top10[1].occurence },
-    { year: data[anneeChoisie].top10[2].mot, count: data[anneeChoisie].top10[2].occurence },
-    { year: data[anneeChoisie].top10[3].mot, count: data[anneeChoisie].top10[3].occurence },
-    { year: data[anneeChoisie].top10[4].mot, count: data[anneeChoisie].top10[4].occurence },
-    { year: data[anneeChoisie].top10[5].mot, count: data[anneeChoisie].top10[5].occurence },
-    { year: data[anneeChoisie].top10[6].mot, count: data[anneeChoisie].top10[6].occurence },
-    { year: data[anneeChoisie].top10[7].mot, count: data[anneeChoisie].top10[7].occurence },
-    { year: data[anneeChoisie].top10[8].mot, count: data[anneeChoisie].top10[8].occurence },
-    { year: data[anneeChoisie].top10[9].mot, count: data[anneeChoisie].top10[9].occurence },
+    { year: data[anneeChoisie].top_10[0].mot, count: data[anneeChoisie].top_10[0].occurence },
+    { year: data[anneeChoisie].top_10[1].mot, count: data[anneeChoisie].top_10[1].occurence },
+    { year: data[anneeChoisie].top_10[2].mot, count: data[anneeChoisie].top_10[2].occurence },
+    { year: data[anneeChoisie].top_10[3].mot, count: data[anneeChoisie].top_10[3].occurence },
+    { year: data[anneeChoisie].top_10[4].mot, count: data[anneeChoisie].top_10[4].occurence },
+    { year: data[anneeChoisie].top_10[5].mot, count: data[anneeChoisie].top_10[5].occurence },
+    { year: data[anneeChoisie].top_10[6].mot, count: data[anneeChoisie].top_10[6].occurence },
+    { year: data[anneeChoisie].top_10[7].mot, count: data[anneeChoisie].top_10[7].occurence },
+    { year: data[anneeChoisie].top_10[8].mot, count: data[anneeChoisie].top_10[8].occurence },
+    { year: data[anneeChoisie].top_10[9].mot, count: data[anneeChoisie].top_10[9].occurence },
   ];
   const canvasDonut =document.getElementById('myDonut');
   const newLabelsDonut = donneesDonut.map(row => row.year);
