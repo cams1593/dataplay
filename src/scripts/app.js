@@ -302,7 +302,7 @@ if (pageId === "wordstats"){
         })
         .then(function(data){
         toutesLesDonnees = data;   
-    });
+        });
 
     select.addEventListener("change", function(){
         const choosenWord = select.value;
@@ -319,9 +319,9 @@ if (pageId === "wordstats"){
             li.innerText = `${data.song}, ${data.occurence} fois`; 
             list.appendChild(li);
             });
+            }
+        });
         }
-    });
-}
         
     });
 }
