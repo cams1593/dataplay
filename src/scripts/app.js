@@ -285,22 +285,20 @@ if (pageId === "wordstats"){
         const choosenWord = select.value;
         list.innerText = ""; 
         let infosDuMot;
+
         if (choosenWord) {
             toutesLesDonnees.forEach(function(item) {
             if (item.word === choosenWord) {
             infosDuMot = item;
+            
+            infosDuMot.all_songs.forEach(function(data) {
+            const li = document.createElement("li");
+            li.innerText = `${data.song}, ${data.occurence} fois`; 
+            list.appendChild(li);
+            });
         }
-        
     });
 }
-        if (infosDuMot) {
-            if (infosDuMot.all_songs){
-                infosDuMot.all_songs.forEach(function(data) {
-                const li = document.createElement("li");
-                li.innerText = `${data.song}, ${data.occurence} fois`; 
-                list.appendChild(li);
-                });
-            } 
-        }
+        
     });
 }
