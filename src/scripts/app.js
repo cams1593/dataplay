@@ -105,6 +105,10 @@ else{
     result = Math.floor((userInputValue - 3) / 5) * 5 + 5;
 };
 input.value = result;
+  const year = document.querySelector(".year");
+  if(year){
+    year.innerHTML = userInputValue;
+  }
     const url = '../Json/annees.json';
     choosenYear = `y_${userInputValue}`;
 //-------------------Les li------------------
@@ -221,6 +225,7 @@ fetch(url)
                   datasets: [{
                       label: 'Récurrence du mot',
                       data: newValue,
+                      backgroundColor: allColors,
 
                   }]
               }
@@ -282,45 +287,8 @@ const donneesDonut = [
           }
       });}
   };}
-    (async function() {
-            
-                const donnees = [
-                    { year: data[choosenYear].top_10[elId - 1].topwords[0].mot, count: data[choosenYear].top_10[elId - 1].topwords[0].occurences },
-                    { year: data[choosenYear].top_10[elId - 1].topwords[1].mot, count: data[choosenYear].top_10[elId - 1].topwords[1].occurences },
-                    { year: data[choosenYear].top_10[elId - 1].topwords[2].mot, count: data[choosenYear].top_10[elId - 1].topwords[2].occurences },
-                    { year: data[choosenYear].top_10[elId - 1].topwords[3].mot, count: data[choosenYear].top_10[elId - 1].topwords[3].occurences },
-                    { year: data[choosenYear].top_10[elId - 1].topwords[4].mot, count: data[choosenYear].top_10[elId - 1].topwords[4].occurences},
-                    { year: data[choosenYear].top_10[elId - 1].topwords[5].mot, count: data[choosenYear].top_10[elId - 1].topwords[5].occurences},
-                    { year: data[choosenYear].top_10[elId - 1].topwords[6].mot, count: data[choosenYear].top_10[elId - 1].topwords[6].occurences },
-                    { year: data[choosenYear].top_10[elId - 1].topwords[7].mot, count: data[choosenYear].top_10[elId - 1].topwords[7].occurences },
-                    { year: data[choosenYear].top_10[elId - 1].topwords[8].mot, count: data[choosenYear].top_10[elId - 1].topwords[8].occurences },
-                    { year: data[choosenYear].top_10[elId - 1].topwords[9].mot, count: data[choosenYear].top_10[elId - 1].topwords[9].occurences },
-                ];
 
-              new Chart(
-                document.getElementById('myChart'),
-                
-                {
-                  type: 'bar',
-                  options: {
-                    tooltip: {
-                        enabled: false
-                    },
-                  },
-                  data: {
-                    labels: donnees.map(row => row.year),
-                    datasets: [
-                      {
-                        label: 'Réccurence du mot dans la chanson',
-                        data: donnees.map(row => row.count)
-                      }
-                    ]
-                  }
-                }
-            
-              );
-            })();
-        }
+}
         
 if (pageId === "wordstats"){
     const url = '../Json/wordstats.json';
