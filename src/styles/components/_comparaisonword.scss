@@ -108,11 +108,8 @@
 }
 .comparaisonword{
     @include section-style;
-    @media (min-width: $size-desktop) {
-/*         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-column: 2;
-        align-self: start; */
-        /* height: 90%; */
-    }
+}
+.topallwords__graph--year{
+     @include style-container;
+     width: 80%;
 }
