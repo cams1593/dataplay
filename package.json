@@ -29,6 +29,7 @@
     "sass-loader": "^12.4.0"
   },
   "dependencies": {
+    "@simondmc/popup-js": "^1.4.4",
     "chart.js": "^4.5.1"
   }
 }

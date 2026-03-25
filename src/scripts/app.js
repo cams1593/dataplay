@@ -4,28 +4,39 @@ import { color } from 'chart.js/helpers';
 const url = '../Json/annees.json';
 let myGraph = null;
 let graphDonut = null;
-//fetch(url)
-//    .then(response => response.json())
-//    .then((data) => {
-////        console.log(data.top_10[0].title);
-////        console.log(data.top_10[0].rang);
-//
-////        console.log(data.y_1980.top_10[6].topwords[2]);
-//
-//
-//
-//        // Pour lister tous les titres du top_10
-////        data.top_10.forEach(chanson => {
-////            console.log(`Rang ${chanson.rang} : ${chanson.title}`);
-////        });
-//    })
-//    .catch(error => console.error("Erreur du fetch, l'année choisie n'est pas disponible:", error));
+const btnProjet = document.querySelector(".projet");
+const Popup = document.querySelector(".popup__container");
+const popupBackground = document.querySelector('.popup__background');
+btnProjet.addEventListener("click", ShowPopup);
+popupBackground.addEventListener('click', ClosePopup)
+function ShowPopup(){
+    Popup.classList.toggle("open");
+}
+function ClosePopup(){
+    Popup.classList.remove("open")
+}
+fetch(url)
+    .then(response => response.json())
+    .then((data) => {
+//        console.log(data.top_10[0].title);
+//        console.log(data.top_10[0].rang);
+
+//        console.log(data.y_1980.top_10[6].topwords[2]);
+
+
+
+        // Pour lister tous les titres du top_10
+//        data.top_10.forEach(chanson => {
+//            console.log(`Rang ${chanson.rang} : ${chanson.title}`);
+//        });
+    })
+    .catch(error => console.error("Erreur du fetch, l'année choisie n'est pas disponible:", error));
 
 //----------------Le Bouton Qui Tourne-------------------
 const pageId = document.body.id;
 if (pageId === "index"){
 
-
+     const year = document.querySelector(".year");
     const knob = document.querySelector(".bigknob__center");
     const knobRect = knob.getBoundingClientRect();
     let isDragging = false;
@@ -76,33 +87,33 @@ if (pageId === "index"){
 
     }
 
-
-
     //------------Input et changer le texte selon la date choisie
 
 
     const input = document.querySelector(".inputnumber");
     input.addEventListener("blur", getInputNumber);
-
+    input.value = 1970;
 
 function getInputNumber () {
+    
     const userInputValue = parseInt(input.value);
-    let result;
-
+    
 if (userInputValue >= 2023) {
-    result = 2025;
+    input.value = 2025;
+    
 }
 else if (1973 > userInputValue) {
     // Si c'est en dessous de 1973
-    result = 1970;
+    input.value = 1970;
+   
 }
 else{
-    result = Math.floor((userInputValue - 3) / 5) * 5 + 5;
+    input.value = Math.floor((userInputValue - 3) / 5) * 5 + 5;
+    
 };
-input.value = result;
-  const year = document.querySelector(".year");
+
   if(year){
-    year.innerHTML = userInputValue;
+    year.innerText = userInputValue;
   }
     const url = '../Json/annees.json';
     choosenYear = `y_${userInputValue}`;
