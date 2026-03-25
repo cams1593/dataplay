@@ -25,7 +25,7 @@ fetch(url)
 const pageId = document.body.id;
 if (pageId === "index"){
 
-
+     const year = document.querySelector(".year");
     const knob = document.querySelector(".bigknob__center");
     const knobRect = knob.getBoundingClientRect();
     let isDragging = false;
@@ -101,9 +101,8 @@ else{
     result = Math.floor((userInputValue - 3) / 5) * 5 + 5;
 };
 input.value = result;
-  const year = document.querySelector(".year");
   if(year){
-    year.innerHTML = userInputValue;
+    year.innerText = userInputValue;
   }
     const url = '../Json/annees.json';
     choosenYear = `y_${userInputValue}`;
@@ -239,7 +238,7 @@ async function generateGraphDonut(data, anneeChoisie){
    
 const donneesDonut = data[anneeChoisie].top_10.map(item => ({
     year: item.mot, 
-    count: item.occurences
+    count: item.occurence
 }));
   const canvasDonut =document.getElementById('myDonut');
   const newLabelsDonut = donneesDonut.map(row => row.year);
