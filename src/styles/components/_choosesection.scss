@@ -1,7 +1,12 @@
 .choosesection{
 @include flex-center;
+@media (min-width: $size-tablet){
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 50px;
+}
 @media (min-width: $size-desktop) { 
- display: grid;
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows:  auto minmax(350px, 400px);
   
@@ -11,29 +16,29 @@
 /*   height: 90%; */
 }}
 .year__ref{
-    font-family: $font-ManifoldExtdCF;
-    width: fit-content;
-    font-size: 14px;
+  font-family: $font-ManifoldExtdCF;
+  width: fit-content;
+  font-size: 14px;
 }
 .years__refs{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: -20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: -20px;
 }
 .inputnumber{
-   border: none;
-   color: $c-green;
+  border: none;
+  color: $c-green;
   appearance: none;
   font-size: $size-result;
   text-align: center;
   background-color: transparent; }
-  .inputnumber::placeholder{
-    border: none;
-    font-size: $size-base;
-    color: $c-green;
-    width: fit-content;
-    text-align: center;
+.inputnumber::placeholder{
+  border: none;
+  font-size: $size-base;
+  color: $c-green;
+  width: fit-content;
+  text-align: center;
 }
 :root{
   --rotateValue: 0deg;
@@ -61,9 +66,13 @@
     padding: 30px 70px;
     margin: auto;
     grid-column: 1 / span 2;
-    grid-row: 2;
+    grid-row: 1;
     border-top: 1px solid $c-text;
-    border-radius: 0;}
+    border-radius: 0;
+  }
+  @media (min-width: $size-desktop){
+    grid-row: 2;
+  }
     
 }
 .bigknob__center{
@@ -118,6 +127,7 @@
   }
 }
 .songinfos__hitssection{
+  min-width: 250px;
   @include  content-style;
   
   ul{

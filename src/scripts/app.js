@@ -273,13 +273,7 @@ const donneesDonut = data[anneeChoisie].top_10.map(item => ({
   };}
 
 }
-        
-if (pageId === "wordstats"){
-    const url = '../Json/wordstats.json';
-    const list = document.querySelector(".wordinsong__list");
-    const select = document.getElementById("select");
-    let toutesLesDonnees = []; 
-    let GraphLine =null;
+
    if (pageId === "wordstats") {
     const url = '../Json/wordstats.json';
     const list = document.querySelector(".wordinsong__list");
@@ -350,4 +344,4 @@ if (pageId === "wordstats"){
             });
         }
     });
-   }}
+   }
