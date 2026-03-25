@@ -4,6 +4,12 @@ import { color } from 'chart.js/helpers';
 const url = '../Json/annees.json';
 let myGraph = null;
 let graphDonut = null;
+const btnProjet = document.querySelector(".projet");
+const Popup = document.querySelector(".popup");
+btnProjet.addEventListener("click", ShowPopup);
+function ShowPopup(){
+    Popup.classList.toggle("popup--open");
+}
 fetch(url)
     .then(response => response.json())
     .then((data) => {
