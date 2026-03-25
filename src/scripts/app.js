@@ -288,6 +288,7 @@ const donneesDonut = data[anneeChoisie].top_10.map(item => ({
     let toutesLesDonnees = []; 
     let GraphLine = null;
 
+
     fetch(url)
         .then(res => res.json())
         .then(data => {
