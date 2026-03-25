@@ -22,6 +22,47 @@
 }
 .topallwords__graph{
     @include style-container;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    row-gap: 5px;
+    column-gap: 5px;
+    background-color: transparent;
+    *{
+        width: 100%;
+        height: 100%;
+        border-radius: 8%;
+    }
+    .oh{
+        background-color: red;
+    }
+    .love{
+        background-color: green;
+    }
+    .yeah{
+        background-color: blue;
+    }
+    .know{
+        background-color: pink;
+    }
+    .like{
+        background-color: orange;
+    }
+    .get{
+        background-color: brown;
+    }
+    .say{
+        background-color:black;
+    }
+    .baby{
+        background-color: blueviolet;
+    }
+    .come{
+        background-color: magenta;
+    }
+    .cause{
+        background-color: snow;
+    }
 }
 
 .comparaisonword{
