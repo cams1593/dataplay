@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Word Finder</title>
+  <title>Word Finder - Search a Word</title>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta name="description" content="">
+  <meta name="description" content="Page de recherche de mot">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:site_name" content="Word Finder">
+  <meta property="og:title" content="Word Finder : Recherche d'un mot">
+  <meta property="og:description" content="Page de recherche de mot">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gaspardberthe.be/projets/dataplay/wordFinder">
+  <meta property="og:image" content="https://gaspardberthe.be/projets/dataplay/images_partage/wordfinder.png">
+  <meta property="og:image:width" content="1800">
+  <meta property="og:image:height" content="945">
 
   <link rel="stylesheet" href="styles/app.css">
 
@@ -16,9 +25,15 @@
 </head>
 <body id="wordstats">
 <header id="top">
+    <svg class="header__line" height="2" width="900" xmlns="http://www.w3.org/2000/svg">
+    <line x1="0" y1="0" x2="900" style="stroke:rgb(255, 255, 255);stroke-width:2" />
+  </svg>
   <h1 class ="title">Word <span class="title__span">Finder</span></h1>
+     <svg class="header__line2" height="2" width="900" xmlns="http://www.w3.org/2000/svg">
+    <line x1="0" y1="0" x2="900" style="stroke:rgb(255, 255, 255);stroke-width:2" />
+  </svg>
   <nav>
-  <a>Le Projet</a>
+    <a>Le&nbsp;Projet</a>
   </nav>
 </header>
 <main class="main__wordfinder">
@@ -35,32 +50,157 @@
       <option value="say">say</option>
       <option value="cause">cause</option>
     </select>
-    <p class="text__result">Résultat de la recherche: <span id="result" class="result">Love</span></p>
+    <p class="text__result">Résultat de la recherche: <span class="result"></span></p>
   <section class="wordinsong">
-    <h2>Chansons avec le mot <span id="result" class="result">Love</span> dedans</h2>
+    <h2>Chansons avec le mot <span class="result"></span> dedans</h2>
         <div class="wordinsong__container">
             <ul class="wordinsong__list">
             </ul>
         </div>
   </section>
   <section class="graphicword">
-    <h2>Nombre de fois que le mot <span id="result" class="result">Love</span> apparaît dans le temps</h2>
+    <h2>Nombre de fois que le mot <span class="result"></span> apparaît dans le temps</h2>
     <div class="graphicword__container">
-       
+      <canvas id="chartTime"></canvas>
     </div>
   </section>
  <section class="top55">
-        <h2>Sur 55 ans</h2>
-        <div class="topallwords__graph">Graphique? Liste? Mots de la date choisie en évidence => A moitié statique</div>
+        <h2>Top sur 55 ans</h2>
+        <div class="topallwords__graph">
+          <div class="oh"></div>
+          <div class="oh"></div>
+          <div class="oh"></div>
+          <div class="oh"></div>
+          <div class="oh"></div>
+          <div class="oh"></div>
+          <div class="oh"></div>
+          <div class="oh"></div>
+          <div class="oh"></div>
+          <div class="oh"></div>
+          <div class="oh"></div>
+          <div class="oh"></div>
+          <div class="oh"></div>
+          <div class="oh"></div>
+          <div class="oh"></div>
+          <div class="oh"></div>
+          <div class="oh"></div>
+          <div class="oh"></div>
+          <div class="oh"></div>
+          <div class="oh"></div>
+          <div class="oh"></div>
+          <div class="oh"></div>
+
+          <div class="love"></div>
+          <div class="love"></div>
+          <div class="love"></div>
+          <div class="love"></div>
+          <div class="love"></div>
+          <div class="love"></div>
+          <div class="love"></div>
+          <div class="love"></div>
+          <div class="love"></div>
+          <div class="love"></div>
+          <div class="love"></div>
+          <div class="love"></div>
+          <div class="love"></div>
+          <div class="love"></div>
+          <div class="love"></div>
+
+          <div class="yeah"></div>
+          <div class="yeah"></div>
+          <div class="yeah"></div>
+          <div class="yeah"></div>
+          <div class="yeah"></div>
+          <div class="yeah"></div>
+          <div class="yeah"></div>
+          <div class="yeah"></div>
+          <div class="yeah"></div>
+          <div class="yeah"></div>
+          <div class="yeah"></div>
+          <div class="yeah"></div>
+
+          <div class="know"></div>
+          <div class="know"></div>
+          <div class="know"></div>
+          <div class="know"></div>
+          <div class="know"></div>
+          <div class="know"></div>
+          <div class="know"></div>
+          <div class="know"></div>
+          <div class="know"></div>
+          <div class="know"></div>
+          <div class="know"></div>
+
+          <div class="like"></div>
+          <div class="like"></div>
+          <div class="like"></div>
+          <div class="like"></div>
+          <div class="like"></div>
+          <div class="like"></div>
+          <div class="like"></div>
+          <div class="like"></div>
+
+          <div class="get"></div>
+          <div class="get"></div>
+          <div class="get"></div>
+          <div class="get"></div>
+          <div class="get"></div>
+          <div class="get"></div>
+          <div class="get"></div>
+
+          <div class="say"></div>
+          <div class="say"></div>
+          <div class="say"></div>
+          <div class="say"></div>
+          <div class="say"></div>
+          <div class="say"></div>
+          <div class="say"></div>
+
+          <div class="baby"></div>
+          <div class="baby"></div>
+          <div class="baby"></div>
+          <div class="baby"></div>
+          <div class="baby"></div>
+          <div class="baby"></div>
+          
+          <div class="come"></div>
+          <div class="come"></div>
+          <div class="come"></div>
+          <div class="come"></div>
+          <div class="come"></div>
+          <div class="come"></div>
+
+          <div class="cause"></div>
+          <div class="cause"></div>
+          <div class="cause"></div>
+          <div class="cause"></div>
+          <div class="cause"></div>
+          <div class="cause"></div>
+      </div>
+      <div class="mot55">
+        <ul class="mot55__ul">
+          <li class="mots55__li--oh">oh 22%</li>
+          <li class="mots55__li--love">love 15%</li>
+          <li class="mots55__li--yeah">yeah 12%</li>
+          <li class="mots55__li--know">know 11%</li>
+          <li class="mots55__li--like">like 8%</li>
+          <li class="mots55__li--get">get 7%</li>
+          <li class="mots55__li--say">say 7%</li>
+          <li class="mots55__li--baby">baby 6%</li>
+          <li class="mots55__li--come">come 6%</li>
+          <li class="mots55__li--cause">cause 6%</li>
+        </ul>
+      </div>
+      <p>*Ce graphique représente le top 10 des mots les plus fréquents sur 55 ans et la proportion qu'ils occupent dans ce top 10.</p>
 
   </section>
   <section class="btnacceuil">
-  <a class="btn__acceuil" href="index.html">Voir le top des musiques</a>
+  <a class="btn__acceuil btn__acceuil--wordfinder" href="index.html">Voir le top des musiques</a>
   <a href="#top" class="btn__top"><svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m18.787 9.473s-4.505-4.502-6.259-6.255c-.147-.146-.339-.22-.53-.22-.192 0-.384.074-.531.22-1.753 1.753-6.256 6.252-6.256 6.252-.147.147-.219.339-.217.532.001.19.075.38.221.525.292.293.766.295 1.056.004l4.977-4.976v14.692c0 .414.336.75.75.75.413 0 .75-.336.75-.75v-14.692l4.978 4.978c.289.29.762.287 1.055-.006.145-.145.219-.335.221-.525.002-.192-.07-.384-.215-.529z" fill-rule="nonzero"/></svg></a>
   </section>
 </main>
    <footer>
-        <a href="#" class="credits">Crédits</a>
+        <a href="credits.html" class="credits">Crédits</a>
         <small>© 2026—Interface Design & Development</small>
     </footer>
 </body>

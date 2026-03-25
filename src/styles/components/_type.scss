@@ -6,21 +6,31 @@ body{
     margin: 0;
 }
 .main__index{
-    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    margin: 50px 50px 0 50px;
+    @media (min-width: $size-tablet){
+        max-width: 600px;
+        margin: auto;
+    }
      @media (min-width: $size-desktop) {
+        max-width: none;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         column-gap: 70px;
-        row-gap: 70px;
-    margin: 0 50px;
+        row-gap: 60px;
+        margin: 0 50px;
     }
 }
 .main__wordfinder{
-    display: flex;
+    display: flex; //SCSS AVEC MAIN INDEX
     justify-content: center;
     flex-direction: column;
-    margin-top: 50px;
-    @media (min-width: 1025px) {
+    /* align-items: center; */
+    margin: 50px 50px 0 50px;
+    @media (min-width: $size-desktop) {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         row-gap: 0px;

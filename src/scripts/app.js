@@ -3,22 +3,23 @@ import Chart from 'chart.js/auto'
 import { color } from 'chart.js/helpers';
 const url = '../Json/annees.json';
 let myGraph = null;
-fetch(url)
-    .then(response => response.json())
-    .then((data) => {
-//        console.log(data.top_10[0].title);
-//        console.log(data.top_10[0].rang);
-
-//        console.log(data.y_1980.top_10[6].topwords[2]);
-
-
-
-        // Pour lister tous les titres du top_10
-//        data.top_10.forEach(chanson => {
-//            console.log(`Rang ${chanson.rang} : ${chanson.title}`);
-//        });
-    })
-    .catch(error => console.error("Erreur du fetch, l'année choisie n'est pas disponible:", error));
+let graphDonut = null;
+//fetch(url)
+//    .then(response => response.json())
+//    .then((data) => {
+////        console.log(data.top_10[0].title);
+////        console.log(data.top_10[0].rang);
+//
+////        console.log(data.y_1980.top_10[6].topwords[2]);
+//
+//
+//
+//        // Pour lister tous les titres du top_10
+////        data.top_10.forEach(chanson => {
+////            console.log(`Rang ${chanson.rang} : ${chanson.title}`);
+////        });
+//    })
+//    .catch(error => console.error("Erreur du fetch, l'année choisie n'est pas disponible:", error));
 
 //----------------Le Bouton Qui Tourne-------------------
 const pageId = document.body.id;
@@ -51,13 +52,14 @@ if (pageId === "index"){
 
     function onMouseMove(event) {
         const click = event.clientX;
+        
         const rootStyle = getComputedStyle(document.documentElement);
         const rotateValue = rootStyle.getPropertyValue('--rotateValue');
+        
 
         if (mousePosition > click) {
             rotation -= 4;
             document.documentElement.style.setProperty("--rotateValue", rotation + "deg");
-
             if (rotation % 30 === 0){
                 input.stepDown(1);
             }    
@@ -65,18 +67,12 @@ if (pageId === "index"){
         if (mousePosition < click) {
             rotation += 4;
             document.documentElement.style.setProperty("--rotateValue", rotation + "deg");
-
             if (rotation % 30 === 0){
                 input.stepUp(1); 
             }  
         }
-
-
-
-
-        document.documentElement.style.setProperty("--rotateValue", rotation + "deg"); // cette ligne ne sert à rien
+        document.documentElement.style.setProperty("--rotateValue", rotation + "deg"); // cette ligne ne sert à rien je pense
         mousePosition = click;
-
 
     }
 
@@ -91,44 +87,23 @@ if (pageId === "index"){
 
 function getInputNumber () {
     const userInputValue = parseInt(input.value);
+    let result;
 
 if (userInputValue >= 2023) {
-    input.value = 2025;
-} 
-else if (userInputValue >= 2018 && userInputValue <= 2022) {
-    input.value = 2020;
+    result = 2025;
 }
-else if (userInputValue >= 2013 && userInputValue <= 2017) {
-    input.value = 2015;
-}
-else if (userInputValue >= 2008 && userInputValue <= 2012) {
-    input.value = 2010;
-}
-else if (userInputValue >= 2003 && userInputValue <= 2007) {
-    input.value = 2005;
-}
-else if (userInputValue >= 1998 && userInputValue <= 2002) {
-    input.value = 2000;
-}
-else if (userInputValue >= 1993 && userInputValue <= 1997) {
-    input.value = 1995;
-}
-else if (userInputValue >= 1988 && userInputValue <= 1992) {
-    input.value = 1990;
-}
-else if (userInputValue >= 1983 && userInputValue <= 1987) {
-    input.value = 1985;
-}
-else if (userInputValue >= 1978 && userInputValue <= 1982) {
-    input.value = 1980;
-}
-else if (userInputValue >= 1973 && userInputValue <= 1977) {
-    input.value = 1975;
-}
-else {
+else if (1973 > userInputValue) {
     // Si c'est en dessous de 1973
-    input.value = 1970;
+    result = 1970;
 }
+else{
+    result = Math.floor((userInputValue - 3) / 5) * 5 + 5;
+};
+input.value = result;
+  const year = document.querySelector(".year");
+  if(year){
+    year.innerHTML = userInputValue;
+  }
     const url = '../Json/annees.json';
     choosenYear = `y_${userInputValue}`;
 //-------------------Les li------------------
@@ -208,18 +183,10 @@ fetch(url)
     //--------------Le Graphique chartjs-----------------
 
     async function generateGraph(data, choosenYear, elId) {
-        const donnees = [
-            { year: data[choosenYear].top_10[elId - 1].topwords[0].mot, count: data[choosenYear].top_10[elId - 1].topwords[0].occurences },
-            { year: data[choosenYear].top_10[elId - 1].topwords[1].mot, count: data[choosenYear].top_10[elId - 1].topwords[1].occurences },
-            { year: data[choosenYear].top_10[elId - 1].topwords[2].mot, count: data[choosenYear].top_10[elId - 1].topwords[2].occurences },
-            { year: data[choosenYear].top_10[elId - 1].topwords[3].mot, count: data[choosenYear].top_10[elId - 1].topwords[3].occurences },
-            { year: data[choosenYear].top_10[elId - 1].topwords[4].mot, count: data[choosenYear].top_10[elId - 1].topwords[4].occurences},
-            { year: data[choosenYear].top_10[elId - 1].topwords[5].mot, count: data[choosenYear].top_10[elId - 1].topwords[5].occurences},
-            { year: data[choosenYear].top_10[elId - 1].topwords[6].mot, count: data[choosenYear].top_10[elId - 1].topwords[6].occurences },
-            { year: data[choosenYear].top_10[elId - 1].topwords[7].mot, count: data[choosenYear].top_10[elId - 1].topwords[7].occurences },
-            { year: data[choosenYear].top_10[elId - 1].topwords[8].mot, count: data[choosenYear].top_10[elId - 1].topwords[8].occurences },
-            { year: data[choosenYear].top_10[elId - 1].topwords[9].mot, count: data[choosenYear].top_10[elId - 1].topwords[9].occurences },
-        ];
+        const donnees = data[choosenYear].top_10[elId - 1].topwords.map(item => ({
+    year: item.mot, 
+    count: item.occurences
+})); 
 
         const newLabels = donnees.map(row => row.year);
         const newValue = donnees.map(row => row.count);
@@ -238,81 +205,150 @@ fetch(url)
               options: {
                   scales: {
                       y: { beginAtZero: true }
-                  }
+                  },
               },
               data: {
                   labels: newLabels,
                   datasets: [{
                       label: 'Récurrence du mot',
                       data: newValue,
+                      backgroundColor: allColors,
 
                   }]
               }
           });
       }
     };
-          },
-          data: {
-              labels: newLabels,
-              datasets: [{
-                  label: 'Récurrence du mot',
-                  data: newValue,
-                  backgroundColor: allColors,
-
-              }]
-          }
-      });
-  }
-};
+          
 
 
     //----------------Graphique Donnut---------------------
 
-    const urlYears = '../Json/every_years.json';
-    const anneeChoisie = `tw_${userInputValue}`;
-    fetch(urlYears)
-        .then(response => response.json())
-        .then((data) => {
-            console.log(data[anneeChoisie]);
-        })
-        .catch(error => console.error("Erreur :", error));
-    }
+const urlYears = '../Json/every_years.json';
+const anneeChoisie = `tw_${userInputValue}`;
+fetch(urlYears)
+    .then(response => response.json())
+    .then((data) => {
+        console.log(data[anneeChoisie]);
+        generateGraphDonut(data, anneeChoisie);
+    })
+    .catch(error => console.error("Erreur :", error));
+
+async function generateGraphDonut(data, anneeChoisie){
+   
+const donneesDonut = data[anneeChoisie].top_10.map(item => ({
+    year: item.mot, 
+    count: item.occurence
+}));
+  const canvasDonut =document.getElementById('myDonut');
+  const newLabelsDonut = donneesDonut.map(row => row.year);
+  const newValueDonut = donneesDonut.map(row => row.count);
+  if(graphDonut){
+    graphDonut.data.labels = newLabelsDonut;
+    graphDonut.data.datasets[0].data = newValueDonut;
+    graphDonut.update();
+  }else{
+  graphDonut = new Chart(canvasDonut,
+    {
+      type: 'pie',
+      options: {
+        tooltip: {
+            enabled: false
+        },
+        plugins:{
+            legend:{
+                position : 'right',
+                labels : {
+                    boxWidth : 10,
+                    font : {
+                        size :16,
+                    }
+                },
+            }
+        },
+        maintainAspectRatio: false,
+      },
+      data: {
+        labels: newLabelsDonut,
+        datasets: [
+          {
+            label: 'occcurences',
+            data: newValueDonut
+              }]
+          }
+      });}
+  };}
+
 }
 
-if (pageId === "wordstats"){
+   if (pageId === "wordstats") {
     const url = '../Json/wordstats.json';
     const list = document.querySelector(".wordinsong__list");
     const select = document.getElementById("select");
     let toutesLesDonnees = []; 
+    let GraphLine = null;
 
     fetch(url)
-        .then(function(res){
-        return res.json();
-        })
-        .then(function(data){
-        toutesLesDonnees = data;   
-    });
+        .then(res => res.json())
+        .then(data => {
+            toutesLesDonnees = data; 
+        });
 
-    select.addEventListener("change", function(){
-        const choosenWord = select.value;
-        list.innerText = ""; 
-        let infosDuMot;
-        if (choosenWord) {
-            toutesLesDonnees.forEach(function(item) {
-            if (item.word === choosenWord) {
-            infosDuMot = item;
-        }
+    function generateGraphLine(timeByYears) {
+            const labels = timeByYears.map(item => item.annee);
+        const values = timeByYears.map(item => item.occurence); 
         
-    });
-}
-        if (infosDuMot) {
-            if (infosDuMot.all_songs){
-                infosDuMot.all_songs.forEach(function(data) {
-                const li = document.createElement("li");
-                li.innerText = `${data.song}, ${data.occurence} fois`; 
-                list.appendChild(li);
-                });
-            } 
+        const canvasElement = document.getElementById('chartTime');
+
+        if (GraphLine) {
+          
+            GraphLine.data.labels = labels;
+            GraphLine.data.datasets[0].data = values;
+            GraphLine.update();
+        } else {
+            // Création initiale
+            GraphLine = new Chart(canvasElement, { 
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Fluctuation du mot dans le temps',
+                        data: values,
+                        borderColor: '#00DDFF',
+                        backgroundColor: 'rgba(0, 221, 255, 0.1)',
+                        fill: true
+                    }]
+                },
+                options: {
+                    scales: { y: { beginAtZero: true } }
+                }
+            });
+        }
+    }
+
+    select.addEventListener("change", function() {
+        const choosenWord = select.value;
+        list.innerHTML = ""; 
+
+        if (choosenWord) {
+            
+            document.querySelectorAll(".result").forEach(el => el.innerText = choosenWord);
+
+            // On cherche les données du mot choisi
+            toutesLesDonnees.forEach(function(item) {
+                if (item.word === choosenWord) {
+                    
+                    // 1. On remplit la liste des chansons
+                    item.all_songs.forEach(function(songData) {
+                        const li = document.createElement("li");
+                        li.innerHTML = `<p><strong>${songData.song}</strong></p><p>${songData.occurence} fois</p>`;
+                        list.appendChild(li);
+                    });
+
+                
+                    generateGraphLine(item.time_by_years);
+                }
+            });
         }
     });
-}
+   }

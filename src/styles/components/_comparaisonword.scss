@@ -22,15 +22,94 @@
 }
 .topallwords__graph{
     @include style-container;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    row-gap: 5px;
+    column-gap: 5px;
+    background-color: transparent;
+    height: 150px;
+    *{
+        width: 100%;
+        height: 100%;
+        border-radius: 8%;
+/*         opacity: 0.8; */
+    }
+    .oh{
+        background-color: $color-oh;
+    }
+    .love{
+        background-color: $color-love;
+    }
+    .yeah{
+        background-color: $color-yeah;
+    }
+    .know{
+        background-color: $color-know;
+    }
+    .like{
+        background-color: $color-like;
+    }
+    .get{
+        background-color: $color-get;
+    }
+    .say{
+        background-color: $color-say;
+    }
+    .baby{
+        background-color: $color-baby;
+    }
+    .come{
+        background-color: $color-come;
+    }
+    .cause{
+        background-color: $color-cause;
+    }
 }
-
+.mot55__ul{
+    list-style: none;
+    display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     @media (min-width: $size-desktop){
+         display: flex;
+         justify-content: space-between;
+         padding: 0;
+     }
+    .mots55__li--oh{
+        color: $color-oh;
+    }
+    .mots55__li--love{
+        color: $color-love;
+    }
+    .mots55__li--yeah{
+        color:$color-yeah;
+    }
+    .mots55__li--know{
+        color: $color-know;
+    }
+    .mots55__li--like{
+        color: $color-like;
+    }
+    .mots55__li--get{
+        color: $color-get;
+    }
+    .mots55__li--say{
+        color: $color-say;
+    }
+    .mots55__li--baby{
+        color: $color-baby
+    }
+    .mots55__li--come{
+        color: $color-come
+    }
+    .mots55__li--cause{
+        color: $color-cause
+    }
+}
 .comparaisonword{
     @include section-style;
-    @media (min-width: $size-desktop) {
-/*         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-column: 2;
-        align-self: start; */
-        /* height: 90%; */
-    }
+}
+.topallwords__graph--year{
+     @include style-container;
+     width: 80%;
 }

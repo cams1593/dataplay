@@ -5,7 +5,11 @@
         padding-bottom: 5px;
     }
     ul{
+        @include scrollable;
         padding: 0;
+        @media (min-width: $size-desktop){
+            height: 800px;
+        }
         li{
             margin: 10px 0;
             display: flex;
@@ -19,6 +23,6 @@
     }
     @media (min-width: $size-desktop) {
         grid-column: 1;
-        grid-row: 2 / 4;
+        grid-row: 2 / span 2;
     }
 }
