@@ -52,13 +52,14 @@ if (pageId === "index"){
 
     function onMouseMove(event) {
         const click = event.clientX;
+        
         const rootStyle = getComputedStyle(document.documentElement);
         const rotateValue = rootStyle.getPropertyValue('--rotateValue');
+        
 
         if (mousePosition > click) {
             rotation -= 4;
             document.documentElement.style.setProperty("--rotateValue", rotation + "deg");
-
             if (rotation % 30 === 0){
                 input.stepDown(1);
             }    
@@ -66,16 +67,11 @@ if (pageId === "index"){
         if (mousePosition < click) {
             rotation += 4;
             document.documentElement.style.setProperty("--rotateValue", rotation + "deg");
-
             if (rotation % 30 === 0){
                 input.stepUp(1); 
             }  
         }
-
-
-
-
-        document.documentElement.style.setProperty("--rotateValue", rotation + "deg"); // cette ligne ne sert à rien
+        document.documentElement.style.setProperty("--rotateValue", rotation + "deg"); // cette ligne ne sert à rien je pense
         mousePosition = click;
 
 
