@@ -47,11 +47,12 @@
     color: $c-green;
   }
 .bigknob{
-  background: linear-gradient(0deg,rgb(69, 67, 67) 0%, rgb(123, 120, 120) 100%);
+  background: linear-gradient(0deg,rgba(41, 40, 40, 1) 0%, rgba(24, 24, 24, 1) 100%);
   border-radius: 50%;
+  border: 2px solid rgb(72, 72, 72);
   width: 117px;
   height: 117px;
-  box-shadow: 0 0 69.4px #b7c4b8;
+  box-shadow: 0 0 69.4px #444444;
   @include flex-center;
   @media (min-width: $size-desktop){
     width: 230px;
