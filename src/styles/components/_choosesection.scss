@@ -32,7 +32,9 @@
   appearance: none;
   font-size: $size-result;
   text-align: center;
-  background-color: transparent; }
+  background-color: transparent;
+  min-width: 120px;
+}
 .inputnumber::placeholder{
   border: none;
   font-size: $size-base;
@@ -156,4 +158,3 @@
   }
   background: $c-bg-section;
 }
-  

@@ -42,9 +42,12 @@
 }
 @mixin scrollable{
   width: 100%;
-  height: 600px;
+  height: 400px;
   overflow-y: scroll;
   scrollbar-color: grey transparent;
   margin: 0;
+  @media (min-width: $size-desktop){
+    height: 600px;
+  }
 }
  
