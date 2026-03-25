@@ -16,29 +16,29 @@
 /*   height: 90%; */
 }}
 .year__ref{
-    font-family: $font-ManifoldExtdCF;
-    width: fit-content;
-    font-size: 14px;
+  font-family: $font-ManifoldExtdCF;
+  width: fit-content;
+  font-size: 14px;
 }
 .years__refs{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: -20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: -20px;
 }
 .inputnumber{
-   border: none;
-   color: $c-green;
+  border: none;
+  color: $c-green;
   appearance: none;
   font-size: $size-result;
   text-align: center;
   background-color: transparent; }
-  .inputnumber::placeholder{
-    border: none;
-    font-size: $size-base;
-    color: $c-green;
-    width: fit-content;
-    text-align: center;
+.inputnumber::placeholder{
+  border: none;
+  font-size: $size-base;
+  color: $c-green;
+  width: fit-content;
+  text-align: center;
 }
 :root{
   --rotateValue: 0deg;
