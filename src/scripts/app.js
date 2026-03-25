@@ -249,7 +249,7 @@ async function generateGraphDonut(data, anneeChoisie){
    
 const donneesDonut = data[anneeChoisie].top_10.map(item => ({
     year: item.mot, 
-    count: item.occurences
+    count: item.occurence
 }));
   const canvasDonut =document.getElementById('myDonut');
   const newLabelsDonut = donneesDonut.map(row => row.year);
