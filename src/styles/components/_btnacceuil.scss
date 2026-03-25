@@ -1,11 +1,13 @@
 .btnacceuil{  
     margin: 0;
     @media (min-width: $size-desktop){
-/*         display: flex;
-        justify-content: center;
-        margin: 0 2%;
-        align-items: center; */
+        grid-column: 3;
+        justify-self: end;
     } 
+}
+.btn__acceuil--index{
+    grid-column: 2;
+    justify-self: end;
 }
 .btn__acceuil{
     margin: 0;
