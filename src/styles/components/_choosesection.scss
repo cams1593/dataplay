@@ -63,12 +63,13 @@
   @include flex-center;
   gap: 0;
   @include  content-style;
+  background: none;
   @media (min-width: $size-tablet) {
     padding: 30px 70px;
     margin: auto;
     grid-column: 1 / span 2;
     grid-row: 1;
-    border-top: 1px solid $c-text;
+    border-top: 1px solid #595959;
     border-radius: 0;
   }
   @media (min-width: $size-desktop){
@@ -130,6 +131,7 @@
 .songinfos__hitssection{
   min-width: 250px;
   @include  content-style;
+  background: none;
   
   ul{
     list-style: none;
@@ -142,12 +144,14 @@
     @media (min-width: $size-desktop) {
       align-self: start; 
       padding-right: 10px;
-      border-right: 1px solid $c-text;
+      border-right: 1px solid #595959;
       border-radius: 0; 
     }
 }
 .songinfos__lyrics{
   @include  content-style;
+  background: none;
   @media(min-width: $size-desktop){
     align-self: start;
   }}
+  

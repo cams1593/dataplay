@@ -74,7 +74,6 @@ if (pageId === "index"){
         document.documentElement.style.setProperty("--rotateValue", rotation + "deg"); // cette ligne ne sert à rien je pense
         mousePosition = click;
 
-
     }
 
 
