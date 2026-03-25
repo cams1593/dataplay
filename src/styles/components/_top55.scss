@@ -3,9 +3,6 @@
     h2{
         color:$c-green;
     }
-    div{
-        @include style-container;
-    }
     @media (min-width: $size-desktop) {
         grid-column: 2 / span 3;
         grid-row: 3;
