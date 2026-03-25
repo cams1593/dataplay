@@ -28,7 +28,7 @@
   max-width: 100%;
 }
 @mixin content-style {
-  background: $c-bg-content;
+  /* background: $c-bg-content; */
   height: fit-content;
   margin: 30px 2%;
   border-radius: 8px;
@@ -36,7 +36,7 @@
   max-width: 100%;
 } // CHANGER LA STRUCTURE POUR SCSS
 @mixin style-container{ 
-  background-color: $c-bg-containner;
+/*   background-color: $c-bg-containner; */
   height: 150px;
   border-radius: 8px;
   width: 100%;
