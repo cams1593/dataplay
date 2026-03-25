@@ -1,24 +1,31 @@
 .btnacceuil{  
     margin: 0;
     @media (min-width: $size-desktop){
-        grid-column: 3;
-        justify-self: end;
+        grid-column: 2;
+        justify-self: center;
+        margin-top: 60px;
     } 
 }
 .btn__acceuil--index{
-    grid-column: 2;
-    justify-self: end;
+    grid-column: 1 / span 2;
+    justify-self: center;
+    margin-top: 0;
 }
 .btn__acceuil{
     margin: 0;
     border: $c-green solid 1px;
+    background-color: black;
     border-radius: 8px;
     width: fit-content;
     align-self: center;
     padding: 10px;
     color: $c-green;
     text-decoration: none;
+    transition: 0.3s;
 }
+.btn__acceuil:hover{
+       background-color: transparent; 
+    }
 .btn__top{
     display: flex;
     align-self: center;
