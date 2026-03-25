@@ -5,4 +5,10 @@
     }
 }
 .graphicword__container{
-    @include style-container;}
+    @include style-container;
+    height: 100%;
+    #chartime{
+        width: 100%;
+        height: 100%;
+    }
+}
