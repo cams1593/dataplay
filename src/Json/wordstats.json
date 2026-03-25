@@ -307,5 +307,90 @@
             {"song": "The Box", "occurence": "6"},
             {"song": "Rockstar", "occurence": "10"}
         ]
+    },
+    {
+        "word": "let",
+        "time_in_top10": "8",
+        "time_in_55years": "179",
+        "time_by_years": [
+            {"annee": "1970", "occurence": "39"},
+            {"annee": "1975", "occurence": "5"},
+            {"annee": "1980", "occurence": "4"},
+            {"annee": "1985", "occurence": "25"},
+            {"annee": "1990", "occurence": "16"},
+            {"annee": "1995", "occurence": "6"},
+            {"annee": "2000", "occurence": "3"},
+            {"annee": "2005", "occurence": "29"},
+            {"annee": "2010", "occurence": "10"},
+            {"annee": "2015", "occurence": "6"},
+            {"annee": "2020", "occurence": "35"},
+            {"annee": "2025", "occurence": "1"}
+        ],
+        "all_songs": [
+            {"song": "Let It Be", "occurence": "36"},
+            {"song": "I Feel For You", "occurence": "25"},
+            {"song": "Let Me Love You", "occurence": "16"},
+            {"song": "1, 2 Step", "occurence": "6"},
+            {"song": "Circles", "occurence": "8"},
+            {"song": "Adore You", "occurence": "9"}
+        ]
+    },
+    {
+        "word": "say",
+        "time_in_top10": "6",
+        "time_in_55years": "202",
+        "time_by_years": [
+            {"annee": "1970", "occurence": "15"},
+            {"annee": "1975", "occurence": "2"},
+            {"annee": "1980", "occurence": "10"},
+            {"annee": "1985", "occurence": "9"},
+            {"annee": "1990", "occurence": "6"},
+            {"annee": "1995", "occurence": "24"},
+            {"annee": "2000", "occurence": "85"},
+            {"annee": "2005", "occurence": "6"},
+            {"annee": "2010", "occurence": "7"},
+            {"annee": "2015", "occurence": "10"},
+            {"annee": "2020", "occurence": "18"},
+            {"annee": "2025", "occurence": "10"}
+        ],
+        "all_songs": [
+            {"song": "War", "occurence": "11"},
+            {"song": "Coming Up", "occurence": "4"},
+            {"song": "The Rose", "occurence": "4"},
+            {"song": "Take On Me", "occurence": "5"},
+            {"song": "Take A Bow", "occurence": "14"},
+            {"song": "Say My Name", "occurence": "79"}
+        ]
+    },
+    {
+        "word": "cause",
+        "time_in_top10": "10",
+        "time_in_55years": "169",
+        "time_by_years": [
+            {"annee": "1970", "occurence": "20"},
+            {"annee": "1975", "occurence": "7"},
+            {"annee": "1980", "occurence": "1"},
+            {"annee": "1985", "occurence": "19"},
+            {"annee": "1990", "occurence": "6"},
+            {"annee": "1995", "occurence": "13"},
+            {"annee": "2000", "occurence": "11"},
+            {"annee": "2005", "occurence": "21"},
+            {"annee": "2010", "occurence": "16"},
+            {"annee": "2015", "occurence": "36"},
+            {"annee": "2020", "occurence": "16"},
+            {"annee": "2025", "occurence": "3"}
+        ],
+        "all_songs": [
+            {"song": "Get Ready", "occurence": "12"},
+            {"song": "Wake Me Up Before You", "occurence": "5"},
+            {"song": "I Feel For You", "occurence": "13"},
+            {"song": "Another Day In Paradise", "occurence": "4"},
+            {"song": "Creep", "occurence": "5"},
+            {"song": "We Belong Together", "occurence": "7"},
+            {"song": "Dynamite", "occurence": "10"},
+            {"song": "Sugar", "occurence": "9"},
+            {"song": "Blank Space", "occurence": "7"},
+            {"song": "Memories", "occurence": "6"}
+        ]
     }
 ]
