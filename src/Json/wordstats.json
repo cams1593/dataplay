@@ -137,7 +137,7 @@
             {"song": "I Wanna Know", "occurence": "10"},      
             {"song": "He Wasn't Man Enough", "occurence": "8"},
             {"song": "Let Me Love You", "occurence": "11"},
-            {"song": "Since You Been Gone", "occurence": "14"},
+            {"song": "Since U Been Gone", "occurence": "14"},
             {"song": "Dynamite", "occurence": "12"},
             {"song": "See You Again", "occurence": "9"},
             {"song": "Trap Queen", "occurence": "20"},
@@ -232,6 +232,80 @@
             {"song": "Die With A Smile", "occurence": "4"},
             {"song": "Lose Control", "occurence": "3"},
             {"song": "I Had Some Help", "occurence": "8"}
+        ]
+    },
+    {
+        "word": "baby",
+        "time_in_top10": "21",
+        "time_in_55years": "190",
+        "time_by_years": [
+            {"annee": "1970", "occurence": "11"},
+            {"annee": "1975", "occurence": "3"},
+            {"annee": "1980", "occurence": "11"},
+            {"annee": "1985", "occurence": "14"},
+            {"annee": "1990", "occurence": "13"},
+            {"annee": "1995", "occurence": "45"},
+            {"annee": "2000", "occurence": "41"},
+            {"annee": "2005", "occurence": "38"},
+            {"annee": "2010", "occurence": "22"},
+            {"annee": "2015", "occurence": "33"},
+            {"annee": "2020", "occurence": "12"},
+            {"annee": "2025", "occurence": "15"}
+        ],
+        "all_songs": [
+            {"song": "I'll Be There", "occurence": "3"},
+            {"song": "Get Ready", "occurence": "6"},
+            {"song": "2", "occurence": "2"},
+            {"song": "Do That To Me One More Time", "occurence": "5"},
+            {"song": "I Feel For You", "occurence": "10"},
+            {"song": "Hold On", "occurence": "7"},
+            {"song": "Kiss From A Rose", "occurence": "6"},
+            {"song": "Fantasy", "occurence": "13"},
+            {"song": "Don't Take It Personal (Just One Of Dem Days)", "occurence": "19"},
+            {"song": "Breathe", "occurence": "5"},
+            {"song": "Say My Name", "occurence": "26"},
+            {"song": "Amazed", "occurence": "5"},
+            {"song": "We Belong Together", "occurence": "12"},
+            {"song": "Let Me Love You", "occurence": "16"},
+            {"song": "OMG", "occurence": "8"},
+            {"song": "Break Your Heart", "occurence": "3"},
+            {"song": "Thinking Out Loud", "occurence": "5"},
+            {"song": "Trap Queen", "occurence": "20"},
+            {"song": "Earned It (Fifty Shades  Of Grey)", "occurence": "5"},
+            {"song": "Birds Of A Feather", "occurence": "3"},
+            {"song": "I Had Some Help", "occurence": "3"}
+        ]
+    },
+    {
+        "word": "get",
+        "time_in_top10": "10",
+        "time_in_55years": "211",
+        "time_by_years": [
+            {"annee": "1970", "occurence": "40"},
+            {"annee": "1975", "occurence": "4"},
+            {"annee": "1980", "occurence": "14"},
+            {"annee": "1985", "occurence": "13"},
+            {"annee": "1990", "occurence": "5"},
+            {"annee": "1995", "occurence": "15"},
+            {"annee": "2000", "occurence": "10"},
+            {"annee": "2005", "occurence": "64"},
+            {"annee": "2010", "occurence": "7"},
+            {"annee": "2015", "occurence": "11"},
+            {"annee": "2020", "occurence": "24"},
+            {"annee": "2025", "occurence": "4"}
+        ],
+        "all_songs": [
+            {"song": "Get Ready", "occurence": "38"},
+            {"song": "Crazy Little Thing Called Love", "occurence": "6"},
+            {"song": "Money For Nothing", "occurence": "12"},
+            {"song": "Kiss From A Rose", "occurence": "5"},
+            {"song": "This Is How We Do It", "occurence": "4"},
+            {"song": "Bent", "occurence": "5"},
+            {"song": "Since U Been Gone", "occurence": "9"},
+            {"song": "1, 2 Step", "occurence": "12"},
+            {"song": "Gold Digger", "occurence": "30"},
+            {"song": "The Box", "occurence": "6"},
+            {"song": "Rockstar", "occurence": "10"}
         ]
     }
 ]
