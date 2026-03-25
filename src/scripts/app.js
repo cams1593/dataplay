@@ -83,30 +83,31 @@ if (pageId === "index"){
 
     }
 
-
-
     //------------Input et changer le texte selon la date choisie
 
 
     const input = document.querySelector(".inputnumber");
     input.addEventListener("blur", getInputNumber);
-
+    input.value = 1970;
 
 function getInputNumber () {
+    
     const userInputValue = parseInt(input.value);
-    let result;
-
+    
 if (userInputValue >= 2023) {
-    result = 2025;
+    input.value = 2025;
+    
 }
 else if (1973 > userInputValue) {
     // Si c'est en dessous de 1973
-    result = 1970;
+    input.value = 1970;
+   
 }
 else{
-    result = Math.floor((userInputValue - 3) / 5) * 5 + 5;
+    input.value = Math.floor((userInputValue - 3) / 5) * 5 + 5;
+    
 };
-input.value = result;
+
   if(year){
     year.innerText = userInputValue;
   }
