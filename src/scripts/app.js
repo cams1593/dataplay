@@ -4,6 +4,17 @@ import { color } from 'chart.js/helpers';
 const url = '../Json/annees.json';
 let myGraph = null;
 let graphDonut = null;
+const btnProjet = document.querySelector(".projet");
+const Popup = document.querySelector(".popup__container");
+const popupBackground = document.querySelector('.popup__background');
+btnProjet.addEventListener("click", ShowPopup);
+popupBackground.addEventListener('click', ClosePopup)
+function ShowPopup(){
+    Popup.classList.toggle("open");
+}
+function ClosePopup(){
+    Popup.classList.remove("open")
+}
 //fetch(url)
 //    .then(response => response.json())
 //    .then((data) => {
@@ -25,7 +36,7 @@ let graphDonut = null;
 const pageId = document.body.id;
 if (pageId === "index"){
 
-
+     const year = document.querySelector(".year");
     const knob = document.querySelector(".bigknob__center");
     const knobRect = knob.getBoundingClientRect();
     let isDragging = false;
@@ -76,33 +87,33 @@ if (pageId === "index"){
 
     }
 
-
-
     //------------Input et changer le texte selon la date choisie
 
 
     const input = document.querySelector(".inputnumber");
     input.addEventListener("blur", getInputNumber);
-
+    input.value = 1970;
 
 function getInputNumber () {
+    
     const userInputValue = parseInt(input.value);
-    let result;
-
+    
 if (userInputValue >= 2023) {
-    result = 2025;
+    input.value = 2025;
+    
 }
 else if (1973 > userInputValue) {
     // Si c'est en dessous de 1973
-    result = 1970;
+    input.value = 1970;
+   
 }
 else{
-    result = Math.floor((userInputValue - 3) / 5) * 5 + 5;
+    input.value = Math.floor((userInputValue - 3) / 5) * 5 + 5;
+    
 };
-input.value = result;
-  const year = document.querySelector(".year");
+
   if(year){
-    year.innerHTML = userInputValue;
+    year.innerText = userInputValue;
   }
     const url = '../Json/annees.json';
     choosenYear = `y_${userInputValue}`;
@@ -287,6 +298,7 @@ const donneesDonut = data[anneeChoisie].top_10.map(item => ({
     const select = document.getElementById("select");
     let toutesLesDonnees = []; 
     let GraphLine = null;
+
 
     fetch(url)
         .then(res => res.json())
