@@ -33,6 +33,7 @@
         width: 100%;
         height: 100%;
         border-radius: 8%;
+/*         opacity: 0.8; */
     }
     .oh{
         background-color: $color-oh;
@@ -107,4 +108,8 @@
 }
 .comparaisonword{
     @include section-style;
+}
+.topallwords__graph--year{
+     @include style-container;
+     width: 80%;
 }
