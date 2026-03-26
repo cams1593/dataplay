@@ -272,7 +272,7 @@ const donneesDonut = data[anneeChoisie].top_10.map(item => ({
                 labels : {
                     boxWidth : 10,
                     font : {
-                        size :16,
+                        size :14,
                     }
                 },
             }
